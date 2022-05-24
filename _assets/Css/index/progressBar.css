@@ -1,0 +1,235 @@
+@import './global.css';
+
+/*--- Inicio progress bar ---*/
+.cont_progressBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    background-color: var(--bg-secundario);
+  }
+  
+  .progress_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1400px;
+    max-width: 1400px;
+    height: inherit;
+  }
+  
+  .progress1, .progress2, .progress3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70%;
+    width: 30%;
+    margin: 0 20px;
+  }
+  
+  .progress1 h3, .progress2 h3, .progress3 h3{
+    font-family: var(--font-principal);
+    font-size: 2.2rem;
+    color: var(--lilas-placeholder);
+    margin-bottom: 15px;
+  }
+  
+  .circuloExterno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid var(--lilas-secundario);
+  }
+  
+  .circuloIterno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #151219;
+    border: 5px solid var(--lilas-secundario);
+    box-shadow: 1px 1px 15px rgba(145, 125, 178, .7);
+  }
+  
+  .circuloIterno span {
+    font-size: 2rem;
+    font-family: var(--font-secundaria);
+    font-weight: 500;
+    color: var(--lilas-secundario);
+  }
+
+
+/* --- Responsive progressBar --- */
+/* Extra small devices (portrait phones, less than 576px)*/
+@media screen and (max-width: 575.98px) {
+  .cont_progressBar{
+    height: 100%;
+    background-color: transparent;
+    margin-top: 70px;
+    
+  }
+
+  .progress_items {
+      flex-direction: column;
+      max-width: 500px;
+  }
+
+  .progress1, .progress2, .progress3 {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid var(--lilas-secundario);
+      width: 90%;
+      padding:  10px 20px;
+      margin-bottom: 20px;
+      background-color: var(--bg-secundario);
+      border-radius: 10px;
+  }
+
+  .progress1 h3, .progress2 h3, .progress3 h3 {
+      font-size: 1.7rem;
+      margin: 0;
+  }
+
+  .circuloExterno {
+      width: 70px;
+      height: 70px;
+  }
+
+  .circuloIterno {
+      width: 50px;
+      height: 50px;
+  }
+
+  .circuloIterno span {
+      font-size: 1rem;
+  }
+}
+
+/* Small devices (tablet, 576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  .cont_progressBar{
+    height: 100%;
+    background-color: transparent;
+  }
+
+  .progress_items {
+      flex-direction: column;
+      max-width: 767px;
+  }
+
+  .progress1, .progress2, .progress3 {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid var(--lilas-secundario);
+      width: 90%;
+      padding:  10px 20px;
+      margin-bottom: 20px;
+      background-color: var(--bg-secundario);
+      border-radius: 10px;
+  }
+
+  .progress1 h3, .progress2 h3, .progress3 h3 {
+      font-size: 2rem;
+      margin: 0;
+  }
+
+  .circuloExterno {
+      width: 80px;
+      height: 80px;
+  }
+
+  .circuloIterno {
+      width: 60px;
+      height: 60px;
+  }
+
+  .circuloIterno span {
+      font-size: 1.2rem;
+  }
+}
+
+/* Small devices (tablet modo paisagem) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  .progress_items {
+    max-width: 768px;
+  }
+
+  .progress1 h3, .progress2 h3, .progress3 h3 {
+      font-size: 1.5rem;
+  }
+
+  .circuloExterno {
+      width: 100px;
+      height: 100px;
+  }
+
+  .circuloIterno {
+      width: 80px;
+      height: 80px;
+  }
+
+  .circuloIterno span {
+      font-size: 1.5rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .progress_items {
+    max-width: 992px;
+  }
+
+  .progress1 h3, .progress2 h3, .progress3 h3 {
+      font-size: 1.8rem;
+  }
+
+  .circuloExterno {
+      width: 110px;
+      height: 110px;
+  }
+
+  .circuloIterno {
+      width: 90px;
+      height: 90px;
+  }
+
+  .circuloIterno span {
+      font-size: 1.7rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .progress_items {
+    max-width: 1200px;
+  }
+
+
+  .progress1 h3, .progress2 h3, .progress3 h3 {
+      font-size: 2rem;
+  }
+
+  .circuloExterno {
+      width: 130px;
+      height: 130px;
+  }
+
+  .circuloIterno {
+      width: 110px;
+      height: 110px;
+  }
+
+  .circuloIterno span {
+      font-size: 1.9rem;
+  }
+}

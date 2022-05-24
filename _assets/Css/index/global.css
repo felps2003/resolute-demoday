@@ -1,0 +1,50 @@
+@import url("http://fonts.cdnfonts.com/css/abraham");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--cor-primaria);
+  border-radius: 1000px
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--bg-primario);
+}
+
+:root{
+  --cor-primaria: #FF8080;
+  --lilas-secundario: #CFB3FF;
+  --amarelo-secundario: #FFF0CC;
+  --texto-primario: #E6E6E6;
+  --placeholder-color: #808080;
+  --bg-primario: #151219;
+  --bg-secundario: #1D1B26;
+  --lilas-placeholder: #917DB2;
+  --bg-red: #261313; 
+  --grey: #B2B2B2;
+  --font-principal: "Abraham", sans-serif;
+  --font-secundaria: "Inter", sans-serif;
+}
