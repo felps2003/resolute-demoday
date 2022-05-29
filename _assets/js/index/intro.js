@@ -1,15 +1,3 @@
-/* ---- Marcador de página navbar ---- */
-const currentLocation = location.href;
-const navItems = document.querySelectorAll('a');
-const navLenght = navItems.length;
-
-for(let i = 0; i < navLenght; i++){
-    if(navItems[i].href === currentLocation){
-        navItems[i].className = 'active';
-    }
-} 
-
-
 /* ---- Introdução negocio ---- */
 const divPrincipios = document.querySelector('.principios');
 const divValores = document.querySelector('.valores');
@@ -48,6 +36,7 @@ window.addEventListener('scroll', () =>{
         }
     })
 })
+
 
 
 /* --- Modelo de negocio mobile --- */ 
@@ -90,11 +79,3 @@ function handleInformation(valorOpen, valorClosed1, valorCloses2, indexCircle) {
 }
 
 window.addEventListener("DOMContentLoaded", () => handleInformation(principiosTexto, valoresTexto, missoesTexto, 0));
-
-
-
-
-
-
-
-

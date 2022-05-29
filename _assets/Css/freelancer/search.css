@@ -2,23 +2,178 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100vh;
-    border: 1px solid red;
 }
 
 .profissionais_items {
     display: grid;
     grid-template-columns: 1fr 2fr;
     width: 1400px;
-    height: inherit;
+    height: 100%;
     gap: 3rem;
 }
 
-
+/* formatação filtro */
 .filtro {
-    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-secundario);
+    padding: 40px;
+    border-radius: 4px;
+    height: 100%;
+    max-height: 1200px;
 }
 
+.filtro h2 {
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 20px;
+}
+
+.filtro h3 {
+    color: var(--texto-primario);
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    margin: 15px 0;
+}
+
+.containerSelect {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background-color: #151219;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.paddingExtra {
+    margin-bottom: 12px;
+}
+
+.select {
+    width: 90%;
+    background-color: transparent;
+    color: #808080;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+
+.classes_btn {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80px;
+}
+
+.btn_classe {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-primario);
+    font-family: "Inter", sans-serif;
+    font-size: .85rem;
+    padding: 10px 25px;
+    height: 30px;
+    border-radius: 20px;
+    color: var(--lilas-placeholder);
+    cursor: pointer;
+    transition: all ease .3s;
+    margin-right: 10px;
+    transition: all ease .3s;
+}
+
+.btn_classe:hover, .btn_classe.classeActive {
+    outline: 1px solid var(--lilas-secundario);
+    color: var(--lilas-secundario);
+    background-color: #261F33;
+}
+
+.five, .for, .tree  {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.starText{
+    font-family: "Inter", sans-serif;
+    padding-left: 10px;
+    color: var(--placeholder-color);
+    font-size: 1rem;
+    transition: all ease .3s;
+    cursor: pointer;
+}
+
+.starText i {
+    font-size: .8rem;
+} 
+
+.inputRadio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-primario);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.inputRadio.border {
+    border: 1px solid var(--lilas-secundario);
+}
+
+.inputInterno {
+    opacity: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--lilas-secundario);
+    transition: all ease .3s;
+}
+
+.inputInterno.internoActive {
+    opacity: 1;
+}
+
+
+.starActiveText {
+    color: var(--lilas-secundario);
+}
+
+.projetos {
+    display: flex;
+}
+
+.btn_qtdProjetos {
+   background-color: var(--bg-primario);
+   font-family: "Inter", sans-serif;
+   font-size: 1rem;
+   padding: 12px 15px;
+   margin: 0 10px 0 0;
+   border-radius: 4px;
+   color: #808080;
+   cursor: pointer;
+   transition: all ease .3s;
+}
+
+.btn_qtdProjetos:hover {
+    outline: 1px solid var(--lilas-secundario);
+    color: var(--lilas-secundario); 
+    
+}
+
+.btnProjetosActive {
+    outline: 1px solid var(--lilas-secundario);
+    color: var(--lilas-secundario);
+}
+
+
+
+
+/* formatação profissionais */
 .profissionais {
     border: 1px solid yellow;
+    height: 1600px;
 }

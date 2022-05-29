@@ -50,11 +50,16 @@ footer {
     width: 130px;
     height: 40px;
     color: var(--cor-primaria);
-    background-color: var(--bg-primario);
+    background-color: transparent;
     cursor: pointer;
-    padding-left: 10px;
     border-radius: 4px;
     font-weight: 400;
+}
+
+.lang {
+    background-color: var(--bg-primario);
+    padding: 0 10px;
+    border-radius: 4px;
 }
 
 
