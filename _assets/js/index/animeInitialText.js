@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded',(event) =>{
     //Array com textos para digitar na máquina de escrever
-    var dataText = [ "Tenha acesso aos melhores profissionais da galaxia", "SEGUNDA frase aparecendo", "terceira frase aparecendo."];
+    var dataText = [ "Tenha acesso aos melhores profissionais da galaxia", "A vaga que voce procura esta aqui", "Alcance novos ares!"];
     
     // digita um texto na máquina de escrever
     // continua chamando a si mesmo até que o texto termine

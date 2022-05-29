@@ -14,11 +14,11 @@
 
    <!-- Styles -->
    <link rel="stylesheet" href="_assets/Css/index/header.css">
-   <link rel="stylesheet" href="_assets/Css/index/intro.css">
-   <link rel="stylesheet" href="_assets/Css/index/progressBar.css">
-   <link rel="stylesheet" href="_assets/Css/index/responsividade.css">
+   <link rel="stylesheet" href="_assets/Css/freelancer/top.css">
+   <link rel="stylesheet" href="_assets/Css/freelancer/search.css">
+   <link rel="stylesheet" href="_assets/Css/freelancer/footer.css">
+  
    
-
    <title>Resolute - Ideias de outro mundo</title>
 </head>
 <body>
@@ -54,146 +54,161 @@
 
             
             <button class="btn_mobile"></button>
-            
-
         </div>
 
-      
+    
+        <div class="menu_mobile">
+          
+                <a href="index.html">
+                    <button class="mobile_home backgroundIconAtivo">
+                        <div class="iconHome iconHomeAtivo"></div>
+                    </button>
+                </a>
 
+                <a href="#">
+                    <button class="mobile_salvo">
+                        <div class="iconSalvo"></div>
+                    </button>
+                </a>
+
+                <a href="#">
+                    <button class="mobile_pesq">
+                        <div class="iconPesq"></div>
+                    </button>
+                </a>
+
+                <a href="#">
+                    <button class="mobile_user">
+                        <div class="iconUser"></div>
+                    </button>
+                </a>
+        
+        </div>
     </header>
     <!--Final header-->
 
-    <!--ínicio introdução-->
-    <section class="cont_intro">
+    <!--Conteudo principal-->
+    <main>
 
-        <div class="intro_text">
-                <h1>Resolute</h1>
-                <h2>Tenha acesso aos melhores profissionais da galaxia!</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tempora officiis nobis officia, quae totam culpa cumque iste voluptatum consequatur voluptatibus itaque saepe nulla dicta commodi asperiores quasi ducimus alias!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                </p>
-                <div class="search">
-                    <input type="text" name="search" id="search" placeholder="Buscar profissionais">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
+        <!--Conteudo topo-->
+        <section class="cont_topo">
+           <div class="cont_items">
+                <div class="topo_info">
 
-                <div class="scroll-indicador">
-                    <div class="linha"></div>
-                        <span><i class="fa-solid fa-chevron-down"></i></span>
-                    <div class="linha"></div>
-                </div>
-        </div>
-
-        <div class="intro_negocio">
-
-                <div class="principios" data-anime="principios">
-                    <div class="linha-vert"></div> 
-
-                    <div class="intro_items" >
-                         <!--Circle animation -->
-                         <div class="circulo3"></div>
-                             <div class="circulo2"></div>
-                                 <div class="circulo1">
-                                     <span>01</span>
-                                 </div>
-                         <!--//Circle animation -->
-
-                        <h3>Principios</h3>
-                        <p class="textColor">Nossa meta é suprir a demanda crescente de profissionais de TI nos próximos anos.</p>
-                        <p class="textColor">Permitindo que as stratups, empresas de tecnologia  e impacto consigam atingir seus objetivos e gerar soluções capazes mudar o mundo</p>
-                        <p class="textColor">Acessibilizar profissionais para os pequenos negócios.</p>
+                    <div class="diretorio">
+                        <ul>
+                            <li><a href="index.html">Resolute ></a></li>
+                            <li><a href="#cont_header" class="pageActive">Buscar Profissional</a></li>
+                        </ul>
                     </div>
 
-                </div>
 
-
-                <div class="valores" data-anime="valores">
-                    <div class="linha-vert"></div>
-
-                     <div class="intro_items">
-                         <!--Circle animation -->
-                        <div class="circulo3"></div>
-                            <div class="circulo2"></div>
-                                <div class="circulo1">
-                                    <span>02</span>
-                                </div>
-                        <!--//Circle animation -->
-
-                        <h3>Valores</h3>
-                        <p class="textColor">
-                            Intermediar os profissionais com deficiência para o mercado de trabalho, promover a acessibilidade nas empresas, responsabilidade e propor uma cultura de diversidade, inovação e resiliência. 
+                    <div class="infos">
+                        <h2>Cadastre um projeto na resolute</h2>
+                        <p>Se deseja que os freelancers cheguem ate você, então crie um projeto na seção 
+                        de vagas de emprego, para que a procura por profissionais se torne ainda mais 
+                        eficiente!
                         </p>
-                     </div>
-
-                </div>
-
-
-                <div class="missoes" data-anime="missoes">
-                    <div class="linha-vert"></div>
-
-                    <div class="intro_items">
-                         <!--Circle animation -->
-                         <div class="circulo3"></div>
-                            <div class="circulo2"></div>
-                                <div class="circulo1">
-                                  <span>03</span>
-                                </div>
-                          <!--//Circle animation -->
-
-                        <h3>Missoes</h3>
-                        <p class="textColor">
-                            Somos um marketplace de prestadores de serviço da área de tecnologia. Garantimos o encontro de Statups, Empresas de impacto e pequenos negócios, com engenheiros de software, profissionais de comunicação e infraestrutura.
-                        </p>
-                    </div>
-                   
-                    
-                </div>
-
-        </div>
-    </section>
-    <!--Final introdução-->
-
-    <!--ínicio barra de progressão-->
-    <section class="cont_progressBar">
-        <div class="progress_items">
-
-            <div class="progress1">
-                <h3>Profissionais cadastrados</h3>
-                 <div class="circuloExterno">
-                    <div class="circuloIterno">
-                        <span>45</span>
+                        <input type="submit" class="btn_criar" value="Crie uma oferta de projeto">
                     </div>
                 </div>
-                
-            </div>
 
-            <div class="progress2">
-                <h3>Empresas cadastradas</h3>
-                 <div class="circuloExterno">
-                    <div class="circuloIterno">
-                        <span>45</span>
-                    </div>
+                <div class="topo_img">
+                    <img src="_assets/img/astronauta.png" alt="Vetor Astronauta">
                 </div>
+           </div>
+        </section>
+        <!-- //Conteudo topo-->
+
+        <section class="cont_buscar">
+            <div class="profissionais_items">
+
+                <div class="filtro">
+                    a
+                </div>
+
+                <div class="profissionais">
+                    b
+                </div>
+
 
             </div>
 
-            <div class="progress3">
-                <h3>Negocios fechados</h3>
-                <div class="circuloExterno">
-                    <div class="circuloIterno">
-                        <span>45</span>
-                    </div>
-                </div>
+        </section>
 
+
+    </main>
+    <!--Final principal-->
+
+    <footer>
+        <div class="footerCopy">
+
+            <div class="logoFooter">
+                <div class="logoImg">
+                    <img src="_assets/img/logoFooter.png">
+                    <h1>Resolute</h1>
+                </div>
+                <p>&copy; 2022 | resolute - todos os direitos reservados</p>
             </div>
+
+
+            <select name="lang">
+                <option value="portugues">Português</option>
+                <option value="ingles">English</option>
+            </select>
         </div>
 
-    </section>
-    <!--Final barra de progressão-->
+        <div class="footerLinks">
+            <div class="footerInfo">
+                <p>Informações sobre a Resolute</p>
 
-    
+                <ul class="footerLista">
+                    <li><a href="#">Quem somos nós</a></li>
+                    <li><a href="#">Contatos</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">LGPD</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Parcerias e instituições</a></li>
+                </ul>
+            </div>
 
 
+            <div class="footerFreelas">
+                <p>Encontre os freelancers</p>
+                <ul class="footerLista">
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Comunicação</a></li>
+                    <li><a href="#">Marketing e vendas</a></li>
+                    <li><a href="#">Programadores</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footerParcerias">
+                <p>Parcerias</p>
+                <ul class="footerLista">
+                    <li><a href="#">Empresas parceiras</a></li>
+                    <li><a href="#">instituições parceiras</a></li>
+                    <li><a href="#">Torne-se uma empresa parceira</a></li>
+                    <li><a href="#">Benefícios</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footerAcessibilidade">
+                <p>Acessibilidade</p>
+                <ul class="footerLista">
+                    <li><a href="#">Leitores da tela</a></li>
+                    <li><a href="#">Aumento de fonte e contraste</a></li>
+                    <li><a href="#">Cores para Daltonicos</a></li>
+                    <li><a href="#">Documentação da Acessibilidade</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+  
 
 
 
@@ -204,7 +219,10 @@
 
     
     <!--Scripts-->
-    <script src="_assets/js/index.js"></script>
+    <script src="_assets/js/index/index.js"></script>
+    <script src="_assets/js/index/mobileMenu.js"></script>
+    
+    
 </body>
 
 
