@@ -57,9 +57,10 @@
 
 .topo_info h2 {
     font-family: var(--font-principal);
-    color: var(--cor-primaria);
+    color: #FFF0CC;
     font-size: 3.1rem;
     font-weight: 400;
+    width: 420px;
 }
 
 .topo_info p {

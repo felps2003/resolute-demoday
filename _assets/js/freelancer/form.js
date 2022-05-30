@@ -4,6 +4,7 @@ const inputInterno = document.querySelectorAll('.inputInterno');
 const starTextBtn = document.querySelectorAll('.starText');
 
 
+
 function selectStar(i, category){
     const starText = document.querySelector(`.${category} p`);
     

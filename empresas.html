@@ -14,12 +14,12 @@
 
    <!-- Styles -->
    <link rel="stylesheet" href="_assets/Css/index/header.css">
-   <link rel="stylesheet" href="_assets/Css/freelancer/top.css">
-   <link rel="stylesheet" href="_assets/Css/freelancer/search.css">
+   <link rel="stylesheet" href="_assets/Css/empresas/top.css">
+   <link rel="stylesheet" href="_assets/Css/empresas/search.css">
    <link rel="stylesheet" href="_assets/Css/freelancer/footer.css">
   
    
-   <title>Resolute - Buscar profissionais</title>
+   <title>Resolute - Vagas de empresas</title>
 </head>
 <body>
 
@@ -98,18 +98,17 @@
                     <div class="diretorio">
                         <ul>
                             <li><a href="index.html">Resolute ></a></li>
-                            <li><a href="#cont_header" class="pageActive">Buscar Profissional</a></li>
+                            <li><a href="#cont_header" class="pageActive">Vagas de Emprego</a></li>
                         </ul>
                     </div>
 
 
                     <div class="infos">
-                        <h2>Cadastre um projeto na resolute</h2>
-                        <p>Se deseja que os freelancers cheguem ate você, então crie um projeto na seção 
-                        de vagas de emprego, para que a procura por profissionais se torne ainda mais 
-                        eficiente!
+                        <h2>Tenha mais chances de ser contratado</h2>
+                        <p>Assine os nossos planos profissionais para que aumente sua chance de ser contratado
+                            pelas empresas e saia na frente de seus concorrentes!
                         </p>
-                        <input type="submit" class="btn_criar" value="Crie uma oferta de projeto">
+                        <input type="submit" class="btn_criar" value="Visualizar os planos profissionais">
                     </div>
                 </div>
 
@@ -124,53 +123,94 @@
             <div class="profissionais_items">
 
                 <div class="filtro">
-                    <h2>Profissionais Freelancers</h2>
+                    <h2>Projetos de empresas</h2>
 
                     <!--Profissinal PCD-->
-                    <h3>Profissional PCD</h3>
+                    <h3>Categorias</h3>
+                    <div class="categorias">
+
+                        <div class="opcaoCateg">
+                            <div class="inputCateg"></div>
+                            <p>Programação e TI</p>
+                        </div>
+
+                        <div class="opcaoCateg">
+                            <div class="inputCateg"></div>
+                            <p>Design</p>
+                        </div>
+
+                        <div class="opcaoCateg">
+                            <div class="inputCateg"></div>
+                            <p>Infraestrutura</p>
+                        </div>
+
+                        <div class="opcaoCateg">
+                            <div class="inputCateg"></div>
+                            <p>Marketing e Vendas</p>
+                        </div>
+
+                        <div class="opcaoCateg">
+                            <div class="inputCateg"></div>
+                            <p>Comunicação</p>
+                        </div>
+                    </div>
+
+
+                     <!--Especialização exigidas-->
+                     <h3>Especializações exigidas</h3>
+                     <div class="containerSelect">
+                         <select name="selectEspec" class="select">
+                             <option>Todas as especializações</option>
+                         </select>
+                     </div>
+
+
+                      <!--Tipo de vaga-->
+                    <h3>Tipo de vaga</h3>
+                    <div class="classes_btn">
+                        <div class="btn_classe classeActive">Todas</div>
+                        <div class="btn_classe">Equipe</div>
+                        <div class="btn_classe">Freelancers</div>
+                    </div>
+
+
+                    <!--Profissinal PCD-->
+                    <h3>Preferências de vagas PCD</h3>
                     <div class="containerSelect">
                         <select name="selectPCD" class="select">
-                            <option>Todas as profissões</option>
+                            <option>Exclusiva para PCD</option>
                         </select>
                     </div>
 
-                     <!--Profissinal Freelancer-->
-                    <h3>Profissional freelancer</h3>
+                    <!--Deficiencia especifica-->
+                    <h3>Deficiência específica </h3>
+                    <div class="deficienias">
+                        <div class="btn_deficiencias">Deficiência Visual</div>
+                        <div class="btn_deficiencias">Deficiência Auditiva</div>
+                        <div class="btn_deficiencias">Deficiência Física</div>
+                        <div class="btn_deficiencias">Deficiência Mental</div>
+                    </div>
+
+                     <!--Ambiente de trabalho adaptado-->
+                    <h3>Ambiente de trabalho adaptado</h3>
                     <div class="containerSelect">
-                        <select name="selectFrela" class="select">
-                            <option>Todas as profissões</option>
+                        <select name="selectAmbiente" class="select">
+                            <option>Adaptado e acessível</option>
                         </select>
                     </div>
 
-                     <!--Especialização-->
-                    <h3>Especializações</h3>
-                    <div class="containerSelect">
-                        <select name="selectEspec" class="select">
-                            <option>Todas as especializações</option>
-                        </select>
-                    </div>
-
-                     <!--Classe do profissional-->
-                    <h3>Classe de profissionais</h3>
-                    <div class="classes_btn">
-                        <div class="btn_classe classeActive">Todos</div>
-                        <div class="btn_classe">Equipe</div>
-                        <div class="btn_classe">Agência</div>
-                        <div class="btn_classe">Freelancer</div>
-                        <div class="btn_classe">PCD</div>
-                    </div>
-
-                     <!--Lozalicação profissinal-->
-                    <h3>Localização do Freelancer</h3>
+                    
+                     <!--Lozalicação empresa-->
+                    <h3>Localização da Empresa</h3>
                     <div class="containerSelect paddingExtra">
-                        <select name="selectEspec" class="select">
-                            <option>Selecionae o país do profissional</option>
+                        <select name="selectLoc" class="select">
+                            <option>Selecionae o país da empresa</option>
                         </select>
                     </div>
 
                     <div class="containerSelect">
-                        <select name="selectEspec" class="select">
-                            <option>Selecione a região do profissional</option>
+                        <select name="selectLoc" class="select">
+                            <option>Selecione a região da empresa</option>
                         </select>
                     </div>
 
@@ -231,6 +271,25 @@
                         </div>
                     </div>
 
+                    <!--Data de publicação-->
+                    <h3>Data da publicação</h3>
+                    <div class="containerSelect">
+                        <select name="selectData" class="select">
+                            <option>Qualquer momento</option>
+                        </select>
+
+                    </div>
+
+                    <!--Tipo de trabalho-->
+                    <h3>Ambiente de trabalho</h3>
+                    <div class="ambiente">
+                        <div class="btn_ambiente ambActive">Todos</div>
+                        <div class="btn_ambiente">Híbrido</div>
+                        <div class="btn_ambiente">Home Office</div>
+                        <div class="btn_ambiente">Presencial</div>
+                    </div>
+
+
                     <!--Projetos-->
                     <h3>Projetos finalizados</h3>
                     <div class="projetos">
@@ -239,13 +298,7 @@
                         <div class="btn_qtdProjetos">+10</div>
                     </div>
 
-                     <!--Preço por hora-->
-                     <h3>Preço por hora</h3>
-                     <div class="containerSelect">
-                         <select name="selectPreco" class="select">
-                             <option>Seleciona o idioma</option>
-                         </select>
-                     </div>
+                   
 
 
 

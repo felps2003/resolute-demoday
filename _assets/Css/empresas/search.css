@@ -19,8 +19,8 @@
     background-color: var(--bg-secundario);
     padding: 40px;
     border-radius: 4px;
-    height: 100%;
-    max-height: 1300px;
+    height: 1700px;
+    max-height: 1700px;
 }
 
 .filtro h2 {
@@ -59,14 +59,48 @@
     font-family: "Inter", sans-serif;
 }
 
+.categorias {
+    display: flex;
+    flex-direction: column;
+}
+
+.opcaoCateg{
+    display: flex;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-size: .9rem;
+    margin-bottom: 10px;
+    color: var(--texto-primario);
+    cursor: pointer;
+}
+
+.opcaoCateg p {
+    padding-left: 10px;
+}
+
+.inputCateg {
+    width: 15px;
+    height: 15px;
+    background-color: var(--texto-primario);
+    border-radius: 4px;
+}
+
+
 .classes_btn {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 40px;
+}
+
+.deficienias, .ambiente{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     height: 80px;
 }
 
-.btn_classe {
+.btn_classe, .btn_deficiencias, .btn_ambiente {
     display: flex;
     align-items: center;
     background-color: var(--bg-primario);
@@ -87,6 +121,19 @@
     color: var(--lilas-secundario);
     background-color: #261F33;
 }
+
+.btn_deficiencias:hover, .btn_deficiencias.defActive {
+    outline: 1px solid var(--lilas-secundario);
+    color: var(--lilas-secundario);
+    background-color: #261F33;
+}
+
+.btn_ambiente:hover, .btn_ambiente.ambActive {
+    outline: 1px solid var(--lilas-secundario);
+    color: var(--lilas-secundario);
+    background-color: #261F33;
+}
+
 
 .five, .for, .tree  {
     padding: 5px 0;
@@ -169,16 +216,13 @@
     color: var(--lilas-secundario);
 }
 
-
-
-
 /* formatação profissionais */
 .profissionais {
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid yellow;
-    height: 1600px;
+    height: 2000px;
 }
 
 .search {
