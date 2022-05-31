@@ -1,0 +1,57 @@
+.cont_projeto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.project_items {
+    display: flex;
+    align-items: center;
+    width: 750px;
+    height: 190px;
+    background-color: var(--bg-secundario);
+    border-radius: 12px;
+    position: relative;
+}
+
+.project_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+    margin-left: 90px;
+}
+
+
+.project_text h3 {
+    font-family: var(--font-principal);
+    font-size: 2rem;
+    color: var(--texto-primario);
+    font-weight: 400;
+}
+
+.project_text p {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: var(--texto-primario);
+    margin: 10px 0;
+}
+
+.project_text input {
+    background-color: #261F33;
+    color: var(--lilas-placeholder);
+    width: 200px;
+    height: 45px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.img {
+    position: absolute;
+    left: -70px;
+}
+
