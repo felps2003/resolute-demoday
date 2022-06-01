@@ -83,8 +83,13 @@
     height: 15px;
     background-color: var(--texto-primario);
     border-radius: 4px;
+    transition: all ease .3s;
 }
 
+.inputCateg:hover, .inputCateg.cateActive {
+    background-color: var(--lilas-secundario);
+    box-shadow: 1px 1px 10px rgb(207, 179, 255);
+}
 
 .classes_btn {
     display: flex;

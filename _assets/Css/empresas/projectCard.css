@@ -21,6 +21,7 @@
     justify-content: center;
     height: inherit;
     margin-left: 90px;
+    position: relative;
 }
 
 
@@ -55,3 +56,12 @@
     left: -70px;
 }
 
+
+.border_project {
+    width: 753px;
+    height: 194px;
+    background: linear-gradient(to bottom, #CFB3FF 30%, #151219);
+    border-radius: 12px;
+    position: absolute;
+    z-index: -1;
+}
