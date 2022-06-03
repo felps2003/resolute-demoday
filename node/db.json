@@ -1,0 +1,45 @@
+{
+  "vagas": [
+    {
+      "id": 1,
+      "name": "Vaga um"
+    },
+    {
+      "id": 2,
+      "name": "Vaga dois"
+    },
+    {
+      "id": 3,
+      "name": "Vaga tres"
+    }
+  ],
+
+
+  "categories": [
+    {
+      "id": 1,
+      "name": "Programação e TI"
+    },
+    {
+      "id": 2,
+      "name": "Design"
+    },
+    {
+      "id": 3,
+      "name": "Infraestrutura"
+    },
+    {
+      "id": 4,
+      "name": "Marketing e Vendas"
+    },
+    {
+      "id": 5,
+      "name": "Comunicação"
+    },
+    {
+      "id": 6,
+      "name": "Lucca o mais fraco do backend"
+    }
+    
+  ]
+}

@@ -79,3 +79,5 @@ function handleInformation(valorOpen, valorClosed1, valorCloses2, indexCircle) {
 }
 
 window.addEventListener("DOMContentLoaded", () => handleInformation(principiosTexto, valoresTexto, missoesTexto, 0));
+
+

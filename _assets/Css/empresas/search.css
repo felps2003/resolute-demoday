@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+    border: 1px solid red;
 }
 
 .profissionais_items {
@@ -25,14 +28,14 @@
 
 .filtro h2 {
     color: #fff;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-secundaria);
     margin-bottom: 20px;
 }
 
 .filtro h3 {
     color: var(--texto-primario);
     font-size: 1rem;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-secundaria);
     font-weight: 300;
     margin: 25px 0 15px 0;
 }
@@ -56,7 +59,7 @@
     background-color: transparent;
     color: #808080;
     cursor: pointer;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-secundaria);
 }
 
 .categorias {
@@ -67,7 +70,7 @@
 .opcaoCateg{
     display: flex;
     align-items: center;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-secundaria);
     font-size: .9rem;
     margin-bottom: 10px;
     color: var(--texto-primario);
@@ -109,7 +112,7 @@
     display: flex;
     align-items: center;
     background-color: var(--bg-primario);
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-secundaria);
     font-size: .85rem;
     padding: 10px 25px;
     height: 30px;
@@ -148,7 +151,7 @@
 }
 
 .starText{
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-secundaria);
     padding-left: 10px;
     color: var(--placeholder-color);
     font-size: 1rem;
@@ -200,7 +203,7 @@
 
 .btn_qtdProjetos {
    background-color: var(--bg-primario);
-   font-family: "Inter", sans-serif;
+   font-family: var(--font-secundaria);
    font-size: 1rem;
    padding: 12px 15px;
    margin: 0 10px 0 0;
@@ -226,15 +229,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid yellow;
-    height: 2000px;
+    height: 100%;
 }
 
+/* search  */
 .search {
     display: flex;
-    width: 550px;
+    width: 700px;
     height: 40px;
-    margin: 20px;
+    margin-bottom: 20px;
     border-radius: 4px 0px 0px 4px;
     background-color: var(--bg-secundario);
 }
@@ -260,4 +263,225 @@
 
 .btn_search:hover {
     background-color: var(--cor-primaria);
+}
+
+/* Filtros aplicados  */
+.filtrosAplicados {
+    display: flex;
+    width: 700px;
+    height: 40px;
+    border: 1px solid red;
+}
+
+.filtrosAplicados p {
+    color: #fff;
+}
+
+/* vagas  */
+.container_vagas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.vaga {
+    display: flex;
+    background-color: var(--bg-secundario);
+    width: 700px;
+    height: 325px;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.vaga_items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+   
+}
+
+/* --- Informações empresa ---*/
+.vaga_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.empresa {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.avatar img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.empresa_text {
+    margin-left: 15px;
+}
+
+.empresa_text h2 {
+    font-family: var(--font-secundaria);
+    font-size: 22px;
+    color: var(--texto-primario);
+}
+
+.empresa_text p {
+    font-family: var(--font-secundaria);
+    font-size: 12px;
+    color: var(--placeholder-color);
+    margin: 5px 0;
+}
+
+.avaliacao i {
+    font-size: 12px;
+    color: var(--placeholder-color);
+}
+
+.avaliacao i.valid {
+    color: var(--lilas-secundario);
+}
+
+
+.preco {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.preco h2 {
+    font-family: var(--font-principal);
+    color: var(--cor-primaria);
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.preco P {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-secundaria);
+    color: var(--cor-primaria);
+    width: 100%;
+    height: 40px;
+    background-color: var(--bg-primario);
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+
+/* --- Descricao da vaga ---*/
+.descricao_vaga {
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    width: 80%;
+    margin-top: 15px;
+}
+
+.descricao_vaga h3 {
+    font-family: var(--font-secundaria);
+    font-size: .9rem;
+    color: var(--lilas-secundario);
+    margin-bottom: 3px;
+}
+
+.descricao_vaga p {
+    font-family: var(--font-secundaria);
+    font-size: .9rem;
+    color: var(--texto-primario);
+    font-weight: 300;
+}
+
+.descricao_vaga a {
+    font-family: var(--font-secundaria);
+    font-size: .9rem;
+    color: var(--lilas-secundario);
+    font-weight: 300;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+
+
+/* --- Requisitos vagas ---*/
+.req {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 80%;
+    margin-top: 3px;
+}
+
+.reqItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    height: 34px;
+    border-radius: 50px;
+    background-color: var(--bg-primario);
+    margin-right: 15px;
+}
+
+.reqItem p {
+    font-family: var(--font-secundaria);
+    color: var(--lilas-secundario);
+    font-size: 14px;
+}
+
+
+
+
+/* --- Botoes vagas ---*/
+.cont_btns {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.btn_enviarProposta {
+    background-color: var(--bg-primario);
+    width: 210px;
+    height: 43px;
+    margin-right: 20px;
+    font-family: var(--font-secundaria);
+    font-size: 14px;
+    color: var(--placeholder-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn_detalhesVaga {
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid var(--lilas-placeholder);
+    width: 190px;
+    height: 43px;
+    font-family: var(--font-secundaria);
+    font-size: 14px;
+    color: var(--lilas-placeholder);
+    cursor: pointer;
 }
