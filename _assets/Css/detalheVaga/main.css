@@ -1,0 +1,341 @@
+.cont_topo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.cont_items {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 1400px;
+    height: inherit;
+}
+
+.topo_img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.topo_img img {
+    border: 12px solid var(--bg-secundario);
+    border-radius: 24px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.topo_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 20px;
+}
+
+.diretorio {
+    display: flex;
+    position: absolute;
+    top: 150px;
+}
+
+.diretorio ul li{
+    display: inline-block;
+}
+
+.diretorio li a {
+    font-family: "Inter", sans-serif;
+    color: #808080;
+    font-style: italic;
+}
+
+.diretorio li a.pageActive {
+    color: var(--cor-primaria);
+}
+
+
+.cont_org {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    width: 380px;
+    height: 95px;
+    margin-top: 100px;
+    border-radius: 12px;
+    border: 1px solid var(--cor-primaria);
+    padding: 10px;
+    position: relative;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.avatar img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.org_text {
+    padding-left: 15px;
+}
+
+.org_text h1 {
+    font-family: var(--font-secundaria);
+    font-size: 22px;
+    color: var(--texto-primario);
+    font-weight: 600;
+}
+
+.org_text p {
+    font-family: var(--font-secundaria);
+    font-size: 12px;
+    color: var(--placeholder-color);
+    margin: 5px 0;
+}
+
+.aval {
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    width: 110px;
+    background-color: var(--bg-primario);
+    position: absolute;
+    left: 25%;
+    bottom: -11px;
+}
+
+.aval i {
+    color: var(--placeholder-color);
+    font-size: 12px;
+    padding: 4px;
+}
+
+.aval i.valid {
+    color: var(--cor-primaria);
+}
+
+/* --- Oferta --- */
+
+.cont_oferta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+}
+
+
+/* --- Titulo oferta --- */
+.titulo_oferta {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.titulo_oferta h2 {
+    font-family: var(--font-secundaria);
+    font-size: 1.8rem;
+    color: var(--texto-primario);
+}
+
+.circle {
+    width: 9px;
+    height: 9px;
+    background-color: var(--lilas-placeholder);
+    border-radius: 50%;
+    margin: 0px 10px;
+}
+
+.titulo_oferta p span{
+    font-weight: bold;
+}
+
+.titulo_oferta p {
+    font-family: var(--font-secundaria);
+    font-size: .9rem;
+    color: var(--lilas-placeholder);
+    margin-right: 20px;
+}
+
+/* --- descrição  e atividade --- */
+.desc_oferta, .atividade_oferta {
+    display: flex;
+    background-color: var(--bg-secundario);
+    padding: 15px;
+    max-width: 90%;
+    max-height: 110px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.desc_oferta h3, .atividade_oferta h3 {
+    font-family: var(--font-secundaria);
+    font-size: 1rem;
+    color: var(--lilas-secundario);
+    font-weight: 600;
+    min-width: 180px;
+}
+
+.desc_oferta p, .atividade_oferta p {
+    font-family: var(--font-secundaria);
+    font-size: 1rem;
+    color: var(--texto-primario);
+    font-weight: 350;
+    max-width: 90%;
+    max-height: 100px;
+}
+
+/* --- Habilidade --- */
+.habilidade {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-secundario);
+    padding: 15px;
+    max-width: 90%;
+    max-height: 150px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.habilidade h3 {
+    font-family: var(--font-secundaria);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--texto-primario);
+}
+
+.btnHabilidade {
+    height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btnHabilidade {
+    display: flex;
+}
+
+.habItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    height: 34px;
+    border-radius: 50px;
+    background-color: var(--bg-primario);
+    margin: 15px 15px 0 0;
+}
+
+.habItem p {
+    font-family: var(--font-secundaria);
+    color: var(--lilas-placeholder);
+    font-size: 14px;
+}
+
+.habItemPcd {
+    background-color: var(--cor-primaria);
+}
+
+.habItemPcd p {
+    color: var(--bg-primario);
+    font-weight: 600;
+}
+
+
+
+/* --- Preço hora --- */
+
+.cont_preco {
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+
+.naveIcon {
+    position: absolute;
+    left: 15%;
+    bottom: 58.5%;
+    z-index: -1;
+}
+
+.box_preco {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   flex-direction: column;
+   width: 250px;
+   height: 245px;
+   border-radius: 12px;
+   background-color: var(--bg-secundario);
+   padding: 20px;
+}
+
+.box_preco h4 {
+    font-family: var(--font-principal);
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.box_preco p {
+    font-family: var(--font-secundaria);
+    font-size: 1.2rem;
+    color: var(--cor-primaria);
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn_proposta {
+    background-color: var(--cor-primaria);
+    color: var(--bg-primario);
+    font-family: var(--font-secundaria);
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    width: 210px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.box_preco a {
+    font-family: var(--font-secundaria);
+    font-size: .9rem;
+    color: var(--placeholder-color);
+    cursor: pointer;
+}
+
+.box_preco a:hover {
+    text-decoration: underline;
+}
+
+.iconPerg {
+    background-image: url(../../img/iconSalvo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45%;
+    width: 12%;
+    height: 100%;
+    margin-top: 2px;
+}
+
+.perg {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
