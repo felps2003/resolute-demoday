@@ -134,6 +134,14 @@ function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco,
     btnDetalhes.className = "btn_detalhesVaga";
     btnDetalhes.innerHTML = "Detalhes da vaga";
 
+    
+    btnDetalhes.addEventListener("click", () => {
+        let attId = new AlterandoID(id);
+        idReserv(attId)
+        direcionando();
+    });
+
+
     botoes.appendChild(btnEnviar);
     botoes.appendChild(btnDetalhes);
 
@@ -152,27 +160,40 @@ function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco,
     container.appendChild(divProject); 
 
    
-    
-
-
-   
 }
 
+class AlterandoID{
+    constructor(newId) {
+        this.id = newId;
+    }
+}
 
-function teste(id) {
-
-    fetch("http://localhost:5000/vagas")
-    .then(resp => resp.json())
-    .then(data => {
-        console.log(data[id])
+async function idReserv(id){
+    fetch("http://localhost:5000/cont", {
+        method: "PUT",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify(id)
     })
+    .then(resp => resp.json())
+    .catch(error => console.error(error))
     
 }
 
+function direcionando(){
+    window.location.href = "http://127.0.0.1:5500/detalheVaga.html";
+}
+
+
+window.addEventListener("load", projects) 
 
 
 
-window.addEventListener("load", projects)
+
+
+
+
 
 
 

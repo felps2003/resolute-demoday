@@ -18,6 +18,7 @@
    <link rel="stylesheet" href="_assets/Css/empresas/search.css">
    <link rel="stylesheet" href="_assets/Css/empresas/projectCard.css">
    <link rel="stylesheet" href="_assets/Css/freelancer/footer.css">
+   <link rel="stylesheet" href="_assets/Css/empresas/detalheVaga.css">
   
    
    <title>Resolute - Vagas de empresas</title>
@@ -91,323 +92,348 @@
     <!--Conteudo principal-->
     <main>
 
-        <!--Conteudo topo-->
+      <!-- Projetos disponíveis-->
+      <div class="container_projetos">
+            <!--Conteudo topo-->
         <section class="cont_topo">
-           <div class="cont_items">
-                <div class="topo_info">
+            <div class="cont_items">
+                 <div class="topo_info">
+ 
+                     <div class="diretorio">
+                         <ul>
+                             <li><a href="index.html">Resolute ></a></li>
+                             <li><a href="#cont_header" class="pageActive">Vagas de Emprego</a></li>
+                         </ul>
+                     </div>
+ 
+ 
+                     <div class="infos">
+                         <h2>Tenha mais chances de ser contratado</h2>
+                         <p>Assine os nossos planos profissionais para que aumente sua chance de ser contratado
+                             pelas empresas e saia na frente de seus concorrentes!
+                         </p>
+                         <input type="submit" class="btn_criar" value="Visualizar os planos profissionais">
+                     </div>
+                 </div>
+ 
+                 <div class="topo_img">
+                     <img src="_assets/img/astronauta.png" alt="Vetor Astronauta">
+                 </div>
+            </div>
+         </section>
+         <!-- //Conteudo topo-->
+ 
+         <!--Conteudo topo-->
+         <section class="cont_projeto">
+                 <div class="project_items">
+                     <div class="img">
+                         <img src="_assets/img/vetorAstronauta.png">
+                     </div>
+     
+                     <div class="project_text">
+                         <h3>Publique seu projeto na resolute</h3>
+                         <p>Obtenha a oportunidade de receber as melhores ofertas profissionais do mercado</p>
+                         <a href="cadastroProjeto.html"><input type="submit" value="Criar projeto na Resolute"></a>
+                     </div>
+                 </div>
+                 <div class="border_project"></div>
+         </section>
+ 
+ 
+         <!--Vagas-->
+         <section class="cont_buscar">
+             <div class="profissionais_items">
+ 
+                 <div class="filtro">
+                     <h2>Projetos de empresas</h2>
+ 
+                     <!--Profissinal PCD-->
+                     <h3>Categorias</h3>
+                     <div class="categorias">
+ 
+                         <div class="opcaoCateg">
+                             <div class="inputCateg"></div>
+                             <p>Programação e TI</p>
+                         </div>
+ 
+                         <div class="opcaoCateg">
+                             <div class="inputCateg"></div>
+                             <p>Design</p>
+                         </div>
+ 
+                         <div class="opcaoCateg">
+                             <div class="inputCateg"></div>
+                             <p>Infraestrutura</p>
+                         </div>
+ 
+                         <div class="opcaoCateg">
+                             <div class="inputCateg"></div>
+                             <p>Marketing e Vendas</p>
+                         </div>
+ 
+                         <div class="opcaoCateg">
+                             <div class="inputCateg"></div>
+                             <p>Comunicação</p>
+                         </div>
+                     </div>
+ 
+ 
+                      <!--Especialização exigidas-->
+                      <h3>Especializações exigidas</h3>
+                      <div class="containerSelect">
+                          <select name="selectEspec" class="select">
+                              <option>Todas as especializações</option>
+                          </select>
+                      </div>
+ 
+ 
+                       <!--Tipo de vaga-->
+                     <h3>Tipo de vaga</h3>
+                     <div class="classes_btn">
+                         <div class="btn_classe classeActive">Todas</div>
+                         <div class="btn_classe">Equipe</div>
+                         <div class="btn_classe">Freelancers</div>
+                     </div>
+ 
+ 
+                     <!--Profissinal PCD-->
+                     <h3>Preferências de vagas PCD</h3>
+                     <div class="containerSelect">
+                         <select name="selectPCD" class="select">
+                             <option>Exclusiva para PCD</option>
+                         </select>
+                     </div>
+ 
+                     <!--Deficiencia especifica-->
+                     <h3>Deficiência específica </h3>
+                     <div class="deficienias">
+                         <div class="btn_deficiencias">Deficiência Visual</div>
+                         <div class="btn_deficiencias">Deficiência Auditiva</div>
+                         <div class="btn_deficiencias">Deficiência Física</div>
+                         <div class="btn_deficiencias">Deficiência Mental</div>
+                     </div>
+ 
+                      <!--Ambiente de trabalho adaptado-->
+                     <h3>Ambiente de trabalho adaptado</h3>
+                     <div class="containerSelect">
+                         <select name="selectAmbiente" class="select">
+                             <option>Adaptado e acessível</option>
+                         </select>
+                     </div>
+ 
+                     
+                      <!--Lozalicação empresa-->
+                     <h3>Localização da Empresa</h3>
+                     <div class="containerSelect paddingExtra">
+                         <select name="selectLoc" class="select">
+                             <option>Selecionae o país da empresa</option>
+                         </select>
+                     </div>
+ 
+                     <div class="containerSelect">
+                         <select name="selectLoc" class="select">
+                             <option>Selecione a região da empresa</option>
+                         </select>
+                     </div>
+ 
+ 
+                      <!--Idioma do profissional-->
+                     <h3>Idioma</h3>
+                     <div class="containerSelect paddingExtra">
+                         <select name="selectIdioma" class="select">
+                             <option>Seleciona o idioma</option>
+                         </select>
+                     </div>
+                     <div class="containerSelect">
+                         <select name="selectNivel" class="select">
+                             <option>Nível do idioma</option>
+                         </select>
+                     </div>
+ 
+                      <!--Avaliações-->
+                      <h3>Avaliações</h3>
+                      <div class="avaliacoes">
+                         <div class="five">
+                             <div class="inputRadio border">
+                                 <div class="inputInterno internoActive"></div>
+                             </div>
+             
+                             <p class="starText starActiveText">
+                                 5
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                             </p>
+                         </div>
+ 
+                         <div class="for">
+                             <div class="inputRadio">
+                                 <div class="inputInterno"></div>
+                             </div>
+                             <p class="starText">4+
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+ 
+                             </p>
+                         </div>
+ 
+                         <div class="tree">
+                             <div class="inputRadio">
+                                 <div class="inputInterno"></div>
+                             </div>
+                             <p class="starText">3+
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                                 <i class="fa-solid fa-star"></i>
+                             </p>
+                         </div>
+                     </div>
+ 
+                     <!--Data de publicação-->
+                     <h3>Data da publicação</h3>
+                     <div class="containerSelect">
+                         <select name="selectData" class="select">
+                             <option>Qualquer momento</option>
+                         </select>
+ 
+                     </div>
+ 
+                     <!--Tipo de trabalho-->
+                     <h3>Ambiente de trabalho</h3>
+                     <div class="ambiente">
+                         <div class="btn_ambiente ambActive">Todos</div>
+                         <div class="btn_ambiente">Híbrido</div>
+                         <div class="btn_ambiente">Home Office</div>
+                         <div class="btn_ambiente">Presencial</div>
+                     </div>
+ 
+ 
+                     <!--Projetos-->
+                     <h3>Projetos finalizados</h3>
+                     <div class="projetos">
+                         <div class="btn_qtdProjetos btnProjetosActive">Todos</div>
+                         <div class="btn_qtdProjetos">1 - 10</div>
+                         <div class="btn_qtdProjetos">+10</div>
+                     </div>
+ 
+                    
+ 
+ 
+ 
+ 
+ 
+                 </div>
+ 
+                 <div class="profissionais">
+                     <div class="search">
+                         <input type="text" placeholder="Buscar profissional">
+                         <button class="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                     </div>
+ 
+                     <div class="filtrosAplicados">
+                         <p>Filtros aplicados</p>
+                     </div>
+ 
+                     <div class="container_vagas"></div>
+                    
+                 </div>
 
+             </div>
+ 
+         </section>
+      </div>
+
+      <!-- Visualização do projeto em detalhes-->
+      <div class="container_detalhes">
+         <section class="detalheProject">
+            <div class="projectItem">
+
+                <div class="projectInfo">
+
+                    <!-- Navegação por link -->
                     <div class="diretorio">
                         <ul>
                             <li><a href="index.html">Resolute ></a></li>
-                            <li><a href="#cont_header" class="pageActive">Vagas de Emprego</a></li>
+                            <li><a href="empresas.html">Vagas de Emprego > </a></li>
+                            <li><a href="detalheVaga.html" class="pageActive">Visualização de vaga</a></li>
                         </ul>
                     </div>
 
+                    <!-- Mini perfil da empresa -->
+                    <div class="cont_org">
+                        <span class="avatar"><img src="_assets/img/user.png"></span>
+                        <div class="org_text">
+                            <h1>Instituto Pedro Formiga</h1>
+                            <p>Empresa de Tecnologia - Startup</p>
+                        </div>
 
-                    <div class="infos">
-                        <h2>Tenha mais chances de ser contratado</h2>
-                        <p>Assine os nossos planos profissionais para que aumente sua chance de ser contratado
-                            pelas empresas e saia na frente de seus concorrentes!
-                        </p>
-                        <input type="submit" class="btn_criar" value="Visualizar os planos profissionais">
+                        <div class="aval">
+                            <i class="fa-solid fa-star valid"></i>
+                            <i class="fa-solid fa-star valid"></i>
+                            <i class="fa-solid fa-star valid"></i>
+                            <i class="fa-solid fa-star valid"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <!-- Oferta detalhada-->
+                    <div class="cont_oferta">
+
+                        <div class="titulo_oferta">
+                            <h2 id="teste">Título da oferta</h2>
+                            <span class="circle"></span>
+                            <p><span>Data da publicação:</span> 12/05/2022</p>
+                            <p><span>N°de proposta:</span> nenhuma</p>
+                        </div>
+
+                        <div class="desc_oferta">
+                            <h3>Descrição do projeto</h3>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud Exercitation veniam consequat sunt nostrud </p>
+                        </div>
+
+                        <div class="atividade_oferta">
+                            <h3>Atividade do projeto</h3>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud Exercitation veniam consequat sunt nostrud Exercitation veniam consequat sunt nostrud</p>
+                        </div>
+
+                        <div class="habilidade">
+                            <h3>habilidades exigidas</h3>
+                            <div class="btnHabilidade">
+                                <div class="habItem habItemPcd"><p>Vaga exclusiva PCD</p></div>
+                                <div class="habItem"><p>PHP (3 Anos)</p></div>
+                                <div class="habItem"><p>Calouro (10 dias)</p></div>
+                                <div class="habItem"><p>Veteranas</p></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="topo_img">
-                    <img src="_assets/img/astronauta.png" alt="Vetor Astronauta">
-                </div>
-           </div>
-        </section>
-        <!-- //Conteudo topo-->
-
-        <!--Conteudo topo-->
-        <section class="cont_projeto">
-                <div class="project_items">
-                    <div class="img">
-                        <img src="_assets/img/vetorAstronauta.png">
-                    </div>
-    
-                    <div class="project_text">
-                        <h3>Publique seu projeto na resolute</h3>
-                        <p>Obtenha a oportunidade de receber as melhores ofertas profissionais do mercado</p>
-                        <a href="cadastroProjeto.html"><input type="submit" value="Criar projeto na Resolute"></a>
-                    </div>
-                </div>
-                <div class="border_project"></div>
-        </section>
-
-
-        <!--Vagas-->
-        <section class="cont_buscar">
-            <div class="profissionais_items">
-
-                <div class="filtro">
-                    <h2>Projetos de empresas</h2>
-
-                    <!--Profissinal PCD-->
-                    <h3>Categorias</h3>
-                    <div class="categorias">
-
-                        <div class="opcaoCateg">
-                            <div class="inputCateg"></div>
-                            <p>Programação e TI</p>
-                        </div>
-
-                        <div class="opcaoCateg">
-                            <div class="inputCateg"></div>
-                            <p>Design</p>
-                        </div>
-
-                        <div class="opcaoCateg">
-                            <div class="inputCateg"></div>
-                            <p>Infraestrutura</p>
-                        </div>
-
-                        <div class="opcaoCateg">
-                            <div class="inputCateg"></div>
-                            <p>Marketing e Vendas</p>
-                        </div>
-
-                        <div class="opcaoCateg">
-                            <div class="inputCateg"></div>
-                            <p>Comunicação</p>
-                        </div>
+                <div class="cont_preco">
+                    <div class="naveIcon">
+                        <img src="_assets/img/nave.png">
                     </div>
 
-
-                     <!--Especialização exigidas-->
-                     <h3>Especializações exigidas</h3>
-                     <div class="containerSelect">
-                         <select name="selectEspec" class="select">
-                             <option>Todas as especializações</option>
-                         </select>
-                     </div>
-
-
-                      <!--Tipo de vaga-->
-                    <h3>Tipo de vaga</h3>
-                    <div class="classes_btn">
-                        <div class="btn_classe classeActive">Todas</div>
-                        <div class="btn_classe">Equipe</div>
-                        <div class="btn_classe">Freelancers</div>
-                    </div>
-
-
-                    <!--Profissinal PCD-->
-                    <h3>Preferências de vagas PCD</h3>
-                    <div class="containerSelect">
-                        <select name="selectPCD" class="select">
-                            <option>Exclusiva para PCD</option>
-                        </select>
-                    </div>
-
-                    <!--Deficiencia especifica-->
-                    <h3>Deficiência específica </h3>
-                    <div class="deficienias">
-                        <div class="btn_deficiencias">Deficiência Visual</div>
-                        <div class="btn_deficiencias">Deficiência Auditiva</div>
-                        <div class="btn_deficiencias">Deficiência Física</div>
-                        <div class="btn_deficiencias">Deficiência Mental</div>
-                    </div>
-
-                     <!--Ambiente de trabalho adaptado-->
-                    <h3>Ambiente de trabalho adaptado</h3>
-                    <div class="containerSelect">
-                        <select name="selectAmbiente" class="select">
-                            <option>Adaptado e acessível</option>
-                        </select>
-                    </div>
-
-                    
-                     <!--Lozalicação empresa-->
-                    <h3>Localização da Empresa</h3>
-                    <div class="containerSelect paddingExtra">
-                        <select name="selectLoc" class="select">
-                            <option>Selecionae o país da empresa</option>
-                        </select>
-                    </div>
-
-                    <div class="containerSelect">
-                        <select name="selectLoc" class="select">
-                            <option>Selecione a região da empresa</option>
-                        </select>
-                    </div>
-
-
-                     <!--Idioma do profissional-->
-                    <h3>Idioma</h3>
-                    <div class="containerSelect paddingExtra">
-                        <select name="selectIdioma" class="select">
-                            <option>Seleciona o idioma</option>
-                        </select>
-                    </div>
-                    <div class="containerSelect">
-                        <select name="selectNivel" class="select">
-                            <option>Nível do idioma</option>
-                        </select>
-                    </div>
-
-                     <!--Avaliações-->
-                     <h3>Avaliações</h3>
-                     <div class="avaliacoes">
-                        <div class="five">
-                            <div class="inputRadio border">
-                                <div class="inputInterno internoActive"></div>
-                            </div>
-            
-                            <p class="starText starActiveText">
-                                5
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </p>
-                        </div>
-
-                        <div class="for">
-                            <div class="inputRadio">
-                                <div class="inputInterno"></div>
-                            </div>
-                            <p class="starText">4+
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-
-                            </p>
-                        </div>
-
-                        <div class="tree">
-                            <div class="inputRadio">
-                                <div class="inputInterno"></div>
-                            </div>
-                            <p class="starText">3+
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!--Data de publicação-->
-                    <h3>Data da publicação</h3>
-                    <div class="containerSelect">
-                        <select name="selectData" class="select">
-                            <option>Qualquer momento</option>
-                        </select>
-
-                    </div>
-
-                    <!--Tipo de trabalho-->
-                    <h3>Ambiente de trabalho</h3>
-                    <div class="ambiente">
-                        <div class="btn_ambiente ambActive">Todos</div>
-                        <div class="btn_ambiente">Híbrido</div>
-                        <div class="btn_ambiente">Home Office</div>
-                        <div class="btn_ambiente">Presencial</div>
-                    </div>
-
-
-                    <!--Projetos-->
-                    <h3>Projetos finalizados</h3>
-                    <div class="projetos">
-                        <div class="btn_qtdProjetos btnProjetosActive">Todos</div>
-                        <div class="btn_qtdProjetos">1 - 10</div>
-                        <div class="btn_qtdProjetos">+10</div>
-                    </div>
-
-                   
-
-
-
-
-
-                </div>
-
-                <div class="profissionais">
-                    <div class="search">
-                        <input type="text" placeholder="Buscar profissional">
-                        <button class="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </div>
-
-                    <div class="filtrosAplicados">
-                        <p>Filtros aplicados</p>
-                    </div>
-
-                    <div class="container_vagas">
-
-                        <div class="vaga">
-                            <div class="vaga_items">
-
-                                <div class="vaga_info">
-
-                                    <div class="empresa">
-                                        <span class="avatar">
-                                            <img src="_assets/img/user.png">
-                                        </span>
-                                        <div class="empresa_text">
-                                            <h2>Instituto Pedro Formiga</h2>
-                                            <p>Empresa de tecnologia - Startup</p>
-                                            <span class="avaliacao">
-                                                    <i class="fa-solid fa-star valid"></i>
-                                                    <i class="fa-solid fa-star valid"></i>
-                                                    <i class="fa-solid fa-star valid"></i>
-                                                    <i class="fa-solid fa-star valid"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div class="preco">
-                                        <h2>Preco por hora</h2>
-                                        <p>R$ 250,00</p>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="descricao_vaga">
-                                    <h3>Descrição da vaga</h3>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam deserunt doloribus in, rerum enim commodi quam corrupti! Incidunt dignissimos minus placeat, dolor commodi dicta, quae explicabo.
-                                        
-                                    </p>
-                                </div>
-
-                                <div class="req">
-                                    <div class="reqItem"><p>PHP (3 Anos)</p></div>
-                                    <div class="reqItem"><p>Veteranas</p></div>
-                                    <div class="reqItem"><p>Calouro (10 Dias) </p></div>
-                                  
-                                </div>
-
-                                <div class="cont_btns">
-                                    <button type="button" class="btn_enviarProposta">Enviar uma proposta</button>
-                                    <button type="button" class="btn_detalhesVaga">Detalhes da vaga</button>
-                                </div>
-                            </div>
-
-                           
-                        </div>
-
-                       
-
-                       
-
+                    <div class="box_preco">
+                        <h4>Preco por hora</h4>
+                        <p>R$ 250.00</p>
+                        <button type="button" class="btn_proposta">Enviar uma proposta</button>
+                        <div class="perg">
+                            <a href="#">Enviar perguntas</a>
+                            <span class="iconPerg"></span>
                         
-                        
-                       
-
-                       
-
+                        </div>
                     </div>
-                    
                 </div>
-
 
             </div>
-
         </section>
+      </div>
+
+      
 
 
     </main>
@@ -497,7 +523,8 @@
     <script src="_assets/js/index/marking.js"></script>
     <script src="_assets/js/index/mobileMenu.js"></script>
     <script src="_assets/js/empresas/forms.js"></script>
-    <script src="_assets/js/empresas/newProject.js"></script>
+    <script type="module" src="_assets/js/empresas/newProject.js"></script>
+    
     
     
 </body>
