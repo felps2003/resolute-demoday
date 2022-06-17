@@ -65,3 +65,45 @@
     position: absolute;
     z-index: -1;
 }
+
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media screen and (max-width: 575.98px) {
+    .project_items, .border_project {
+        display: none;
+    }
+}
+
+/* Small devices (tablet, 576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .project_items, .border_project {
+        display: none;
+    }
+
+   
+}
+
+/* Small devices (tablet modo paisagem) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .project_items {
+        width: 600px;
+        padding-right: 20px;
+    }
+
+    .border_project {
+        width: 603px;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .project_items {
+        width: 650px;
+        padding-right: 20px;
+    }
+
+    .border_project {
+        width: 653px;
+    }
+}

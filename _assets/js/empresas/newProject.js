@@ -4,21 +4,76 @@ async function projects(){
         let API = await fetch("http://localhost:5000/vagas");
         let response = await API.json();
         let data = await response;
-        iniciandoProjetos(data)
+        data.reverse();
+        createNavgation(data, data.length, data.length - 5);
+        iniciandoProjetos(data, data.length, data.length - 5);
     }
     catch {
-        console.error("error");
+        
+    }
+
+}
+
+function iniciandoProjetos(data, inital, final){
+    let contInitial = inital;
+    let contFinal = final;
+
+
+    let filterProject = data.filter(item => {
+        if(item.id < contInitial && item.id >= contFinal) {
+            return item
+        }
+
+    });
+
+    filterProject.forEach(item => {
+        dinamicProjectRender(item)
+    })
+    
+   
+
+}
+
+const createNavgation = (data, inital, final) => {
+    let initalValue = inital;
+    let finalValue = final;
+
+    let pageNum = 0;
+
+    for(let i = 0; i <= data.length; i+=5) {
+       pageNum += 1
+       if(i != 0) {
+        initalValue -= 5;
+        finalValue -= 5;
+       } 
+
+       createNewButton(pageNum, initalValue, finalValue, data);
+
     }
 }
 
-
-function iniciandoProjetos(data){
-    let projetos = data;
-    projetos.forEach(item => {
-        dinamicProjectRender(item)
-    });
-  
+const containerButtons = document.querySelector(".btnNextVagas");
+const createNewButton = (pageNum, inital, final, data) => {
+   let button = document.createElement("button");
+   button.type = "submit";
+   button.className = "btnNext"
+   button.innerHTML = pageNum
+   button.addEventListener("click", () => {
+        handleClearProject();
+        iniciandoProjetos(data, inital, final);
+   });
+   
+   containerButtons.appendChild(button);
 }
+
+
+/*Removendo projetos de acordo com a navegação */
+
+const handleClearProject = () => {
+    let projectsClear = document.querySelector(".container_vagas");
+    projectsClear.innerHTML = "";
+}
+
 
 /* --- criando os projetos dinamicamente --- */
 const container = document.querySelector('.container_vagas');
@@ -133,11 +188,13 @@ function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco,
     let btnDetalhes = document.createElement("button");
     btnDetalhes.className = "btn_detalhesVaga";
     btnDetalhes.innerHTML = "Detalhes da vaga";
+    
 
     
     btnDetalhes.addEventListener("click", () => {
         let attId = new AlterandoID(id);
-        idReserv(attId)
+        idReserv(attId);
+
         direcionando();
     });
 
@@ -158,9 +215,9 @@ function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco,
 
     //Passando a div container para o HTML
     container.appendChild(divProject); 
-
-   
 }
+
+
 
 class AlterandoID{
     constructor(newId) {
@@ -183,10 +240,13 @@ async function idReserv(id){
 
 function direcionando(){
     window.location.href = "http://127.0.0.1:5500/detalheVaga.html";
-}
+} 
+
+window.addEventListener("load", projects);
 
 
-window.addEventListener("load", projects) 
+
+
 
 
 

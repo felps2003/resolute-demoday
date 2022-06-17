@@ -229,6 +229,7 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
+    position: relative;
 }
 
 /* search  */
@@ -269,7 +270,6 @@
     display: flex;
     width: 700px;
     height: 40px;
-    border: 1px solid red;
 }
 
 .filtrosAplicados p {
@@ -280,10 +280,13 @@
 .container_vagas {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    width: 90%;
+    width: 100%;
     height: 100%;
     margin-top: 20px;
+    overflow: hidden;
+
 }
 
 .vaga {
@@ -366,6 +369,7 @@
 .preco {
     display: flex;
     flex-direction: column;
+    align-items: center;
     
 }
 
@@ -487,5 +491,277 @@
 
 .container_projetos {
     display: block;
+}
+
+
+/* --- Botoes para mais vagas ---*/
+.btnNextVagas {
+    display: flex;
+    justify-content: center;
+    width: 720px;
+    margin: 0;
+}
+
+.btnNext {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #261F33;
+    cursor: pointer;
+    border: none;
+    color: var(--lilas-placeholder);
+    transition: all ease .3s;
+    margin: 0 6px;
+    font-size: 1rem;
+    
+}
+
+.btnNext:hover {
+    border: 1px solid var(--lilas-secundario);
+    color: var(--lilas-secundario);
+}
+
+.btnActive {
+    border: 1px solid var(--lilas-secundario);
+    color: var(--lilas-secundario);
+}
+
+
+
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media screen and (max-width: 575.98px) {
+    .profissionais_items {
+        width: 350px;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .btnNextVagas {
+        width: 350px;
+    }
+
+    .classes_btn {
+        height: 90px;
+    }
+
+    .deficienias {
+        height: 170px;
+    }
+    .btn_deficiencias {
+        width: 190px;
+    }
+
+    .filtrosAplicados, .search {
+        width: 350px;
+    }
+
+    /* Filtro mobile */
+   .filtro {
+    
+   }
+
+
+
+
+
+
+
+
+
+    /* vagas */
+    .vaga {
+        width: 350px;
+        height: 450px;
+        
+    }
+
+     /* empresa */
+   
+
+    .vaga_info {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+
+    .empresa {
+        justify-content: space-between;
+    }
+
+    .avatar, .avatar img  {
+        width: 50px;
+        height: 50px;
+    }
+
+    .empresa_text h2{
+        font-size: 15px;
+    }
+
+    .avaliacao i {
+        font-size: 10px;
+    }
+
+    .preco {
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .preco h2 {
+        display: none;
+        font-size: 15px;
+    }
+
+    .preco p {
+        font-size: 15px;
+    }
+
+    .preco p::before {
+        content: "Preco hora: ";
+        padding-right: 10px;
+    }
+
+    /* descricao */
+    .descricao_vaga {
+        width: 100%;
+    }
+
+    /* --- Requisitos vagas ---*/ 
+    .req {
+        width: 100%;
+    }
+
+    /* --- Botoes vagas ---*/
+    .cont_btns {
+        width: 100%;
+    }
+
+    
+
+}
+
+/* Small devices (tablet, 576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .profissionais_items {
+        width: 576px;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .btnNextVagas {
+        width: 550px;
+    }
+
+    .classes_btn {
+        height: 90px;
+    }
+
+    .deficienias {
+        height: 170px;
+    }
+    .btn_deficiencias {
+        width: 190px;
+    }
+
+    .filtrosAplicados, .search {
+        width: 550px;
+    }
+
+    .vaga {
+        width: 550px;
+    }
+}
+
+/* Small devices (tablet modo paisagem) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .profissionais_items {
+        width: 768px;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .classes_btn {
+        height: 90px;
+    }
+
+    .deficienias {
+        height: 170px;
+    }
+    .btn_deficiencias {
+        width: 190px;
+    }
+
+    .filtrosAplicados, .search {
+        width: 600px;
+    }
+
+    .vaga {
+        width: 600px;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .profissionais_items {
+        width: 992px;
+        grid-template-columns: 1.2fr 1.8fr;
+        gap: 3rem;
+    }
+
+    .classes_btn {
+        height: 90px;
+    }
+
+    .deficienias {
+        height: 170px;
+    }
+    .btn_deficiencias {
+        width: 190px;
+    }
+
+    .filtrosAplicados, .search {
+        width: 600px;
+    }
+
+    .vaga {
+        width: 600px;
+    }
+
+    .btnNextVagas {
+        width: 600px;
+    }
+
+    .filtro {
+        height: 1750px;
+        max-height: 1750px;
+    }
+
+    .ambiente {
+        height: 150px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media screen and (min-width: 1200px) and (max-width: 1399px)  {
+    .profissionais_items {
+        width: 1200px;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .classes_btn {
+        height: 90px;
+    }
+
+    .deficienias {
+        height: 170px;
+    }
+    .btn_deficiencias {
+        width: 190px;
+    }
+    
+    
+  
 }
 

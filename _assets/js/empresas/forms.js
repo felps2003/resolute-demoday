@@ -14,7 +14,7 @@ inputCateg.forEach(item => {
 opcaoCateg.forEach(item => {
     item.addEventListener("click", () => {
         for(let i = 0; i <= opcaoCateg.length; i++) {
-            if(opcaoCateg[i] === item) {
+            if(opcaoCateg[i] ===  item) {
                return activeItems(inputCateg[i], 'cateActive');
             } 
         }
