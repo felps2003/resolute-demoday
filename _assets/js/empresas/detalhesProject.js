@@ -23,7 +23,7 @@ async function acessandoId(){
 const containerProject = document.querySelector(".topo_info");
 const containerPrincipal = document.querySelector(".cont_items");
 
-function createProjectDetails({titulo, ramo, desc, atividade, habilidade, preco}){
+function createProjectDetails({titulo, ramo, desc, atividade, habilidade, preco, pcd}){
 
  
     // ------------------- Informações da empresa: ------------------- //
@@ -128,8 +128,27 @@ function createProjectDetails({titulo, ramo, desc, atividade, habilidade, preco}
     let habilidadeH3 = document.createElement("h3");
     habilidadeH3.innerHTML = "Habilidades exigidas";
 
+  
+
     let btnHab = document.createElement("div");
     btnHab.className = "btnHabilidade";
+
+
+    if(pcd === true) {
+        let btnPCD = document.createElement("div");
+        btnPCD.className = "habItem";
+        btnPCD.style.background = "#FF8080"
+        
+        let btnPcdP = document.createElement("p");
+        btnPcdP.innerHTML = "Vaga Exclusiva PCD";
+        btnPcdP.style.color = "#151219";
+        btnPcdP.style.fontWeight = "600"
+
+        btnPCD.appendChild(btnPcdP);
+
+        btnHab.appendChild(btnPCD)
+    }
+
 
     let habItem = document.createElement("div");
     habItem.className = "habItem";

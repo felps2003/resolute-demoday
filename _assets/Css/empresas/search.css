@@ -312,6 +312,17 @@ html {
     margin-bottom: 30px;
 }
 
+.vagaPCD {
+    border-left: 4px solid #FF8080;
+    display: flex;
+    background-color: var(--bg-secundario);
+    width: 700px;
+    height: 325px;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
 .vaga_items {
     display: flex;
     flex-direction: column;
@@ -457,13 +468,32 @@ html {
     padding: 0 30px;
     height: 34px;
     border-radius: 50px;
-    background-color: var(--bg-primario);
+    background-color: var(--cor-primaria);
+    background-color: var(--bg-primario); 
     margin-right: 15px;
 }
 
 .reqItem p {
     font-family: var(--font-secundaria);
-    color: var(--lilas-secundario);
+    color: var(--lilas-secundario); 
+    font-size: 14px;
+}
+
+.reqItemPCD {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    height: 34px;
+    border-radius: 50px;
+    background-color: var(--cor-primaria);
+    margin-right: 15px;
+}
+
+.reqItemPCD p {
+    font-family: var(--font-secundaria);
+    color: var(--bg-primario);
+    font-weight: 600;
     font-size: 14px;
 }
 
@@ -656,10 +686,14 @@ html {
   } 
 
     /* vagas */
-    .vaga {
+    .vaga, .vagaPCD {
         width: 350px;
         height: 450px;
         
+    }
+
+    .reqItemPCD p {
+        font-size: 12px;
     }
 
      /* empresa */
@@ -716,6 +750,7 @@ html {
     /* --- Requisitos vagas ---*/ 
     .req {
         width: 100%;
+        
     }
 
     /* --- Botoes vagas ---*/
@@ -867,7 +902,7 @@ html {
     .profissionais_items {
         width: 992px;
         grid-template-columns: 1.2fr 1.8fr;
-        gap: 3rem;
+        gap: 2rem;
     }
 
     .classes_btn {
@@ -885,9 +920,10 @@ html {
         width: 600px;
     }
 
-    .vaga {
+    .vaga, .vagaPCD {
         width: 600px;
     }
+
 
     .btnNextVagas {
         width: 600px;

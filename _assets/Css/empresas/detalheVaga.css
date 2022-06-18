@@ -243,14 +243,9 @@
     font-size: 14px;
 }
 
-.habItemPcd {
-    background-color: var(--cor-primaria);
-}
 
-.habItemPcd p {
-    color: var(--bg-primario);
-    font-weight: 600;
-}
+
+
 
 
 

@@ -177,15 +177,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid yellow;
     height: 1600px;
 }
 
 .search {
     display: flex;
-    width: 550px;
+    width: 700px;
     height: 40px;
-    margin: 20px;
+    margin: 0 20px;
     border-radius: 4px 0px 0px 4px;
     background-color: var(--bg-secundario);
 }
@@ -211,4 +210,633 @@
 
 .btn_search:hover {
     background-color: var(--cor-primaria);
+}
+
+.filtrosAplicados {
+    display: flex;
+    width: 700px;
+    height: 40px;
+}
+
+
+/*Perfil usuarios */
+.container_freelas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.miniPerfil {
+    display: flex;
+    background-color: var(--bg-secundario);
+    width: 700px;
+    height: 325px;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.miniPerfilPCD {
+    border-left: 4px solid #FF8080;
+    display: flex;
+    background-color: var(--bg-secundario);
+    width: 700px;
+    height: 325px;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.perfil_items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Informações pessoais ---*/
+.perfil_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.freelancer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.avatar img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.freela_text {
+    margin-left: 15px;
+}
+
+.freela_text h2 {
+    font-family: var(--font-secundaria);
+    font-size: 22px;
+    color: var(--texto-primario);
+    font-weight: 500;
+}
+
+.freela_text h2 span{
+    width: 70px;
+    height: 25px;
+    padding: 7px 20px;
+    border-radius: 38px;
+    background-color: var(--bg-primario);
+    margin-left: 20px;
+    font-size: 12px;
+    color: var(--cor-primaria);
+
+}
+
+.freela_text p {
+    font-family: var(--font-secundaria);
+    font-size: 12px;
+    color: var(--placeholder-color);
+    margin: 5px 0;
+}
+
+.avaliacao i {
+    font-size: 12px;
+    color: var(--placeholder-color);
+}
+
+.avaliacao i.valid {
+    color: var(--lilas-secundario);
+}
+
+/* preco cobrado por hora */
+.preco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.preco h2 {
+    font-family: var(--font-principal);
+    color: var(--cor-primaria);
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.preco P {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-secundaria);
+    color: var(--cor-primaria);
+    width: 100%;
+    height: 40px;
+    background-color: var(--bg-primario);
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+
+/* --- Descricao do freelancer ---*/
+.descricao_freela {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 15px;
+}
+
+.descricao_freela p {
+    font-family: var(--font-secundaria);
+    font-size: .9rem;
+    color: var(--texto-primario);
+    font-weight: 300;
+}
+
+.descricao_freela a {
+    font-family: var(--font-secundaria);
+    font-size: .9rem;
+    color: var(--lilas-secundario);
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+
+/* --- competencias ---*/
+.competencia {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.compItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    height: 34px;
+    border-radius: 50px;
+    background-color: var(--cor-primaria);
+    background-color: var(--bg-primario); 
+    margin-right: 15px;
+}
+
+.compItem p {
+    font-family: var(--font-secundaria);
+    color: var(--lilas-secundario); 
+    font-size: 14px;
+}
+
+
+/* --- Botoes contratar ---*/
+.cont_btns {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.btn_enviarProposta, .btn_convidarEquipe {
+    background-color: var(--bg-primario);
+    width: 210px;
+    height: 43px;
+    margin-right: 20px;
+    font-family: var(--font-secundaria);
+    font-size: 14px;
+    color: var(--placeholder-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* --- Botoes para mais vagas ---*/
+.btnNextVagas {
+    display: flex;
+    justify-content: center;
+    width: 720px;
+    margin: 0;
+}
+
+.btnNext {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #261F33;
+    cursor: pointer;
+    border: none;
+    color: var(--lilas-placeholder);
+    transition: all ease .3s;
+    margin: 0 6px;
+    font-size: 1rem;
+    
+}
+
+.btnNext:hover {
+    border: 1px solid var(--lilas-secundario);
+    color: var(--lilas-secundario);
+}
+
+.btnActive {
+    border: 1px solid var(--lilas-secundario);
+    color: var(--lilas-secundario);
+}
+
+.filtroMobileButton {
+    display: none;
+}
+
+.filtroMobile {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-secundario);
+    padding: 40px;
+    border-radius: 4px;
+    height: 700px;
+    max-height: 650px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.filtroMobile h3 {
+    color: #fff;
+    font-family: var(--font-secundaria);
+    margin-bottom: 20px;
+}
+
+.filtroMobile h4 {
+    color: #fff;
+    font-family: var(--font-secundaria);
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.btnFiltroMobile {
+    background-color: transparent;
+    font-size: 1rem;
+    color: var(--texto-primario);
+}
+
+.btnFiltroMobile i{
+    margin-right: 10px;
+    color: #FF3370;
+}
+
+.exitFiltroMobile {
+    border-radius: 4px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(91.21deg, #FF3370 -4.21%, #FF8080 97.92%);
+}
+
+
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media screen and (max-width: 575.98px) {
+    .profissionais_items {
+        width: 350px;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .btnNextVagas {
+        width: 320px;
+    }
+
+    .classes_btn {
+        height: 90px;
+    }
+
+   
+    .filtrosAplicados, .search {
+        width: 350px;
+        margin: 0;
+    }
+
+    .profissionais_items {
+        overflow: hidden;
+    }
+
+    .filtro {
+        display: none;
+    }
+
+    /* Filtro mobile */
+
+    .filtroMobileButton {
+        display: flex;
+    }
+
+    .filtroMobile {
+    display: flex;
+    background-color: var(--bg-secundario);
+    height: 700px !important; 
+    width: 90%;
+    text-align: left;
+    position: fixed;
+    top: 90px;
+    right: 100%;
+    margin: 0 20px;
+    height: 250px;
+    border-radius: 5px;
+    transition: all ease .4s;
+    z-index: 10;
+    
+    }
+
+    .filtroMobile.filtroActive {
+    right: 0%;
+    } 
+
+    /* perfil */
+    .miniPerfil, .miniPerfilPCD {
+        width: 350px;
+        height: 450px;
+        
+    }
+
+     /* perfil */
+   
+
+    .perfil_info {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+
+    .freelancer {
+        justify-content: space-between;
+    }
+
+    .avatar, .avatar img  {
+        width: 50px;
+        height: 50px;
+    }
+
+    .freela_text h2{
+        font-size: 15px;
+    }
+
+    .avaliacao i {
+        font-size: 10px;
+    }
+
+    .preco {
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .preco h2 {
+        display: none;
+        font-size: 15px;
+    }
+
+    .preco p {
+        font-size: 15px;
+    }
+
+    .preco p::before {
+        content: "Preco hora: ";
+        padding-right: 10px;
+    }
+
+    /* descricao */
+    .descricao_freela {
+        width: 100%;
+    }
+
+    /* --- competencias freela ---*/ 
+    .competencia {
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+
+    .compItem {
+        margin-bottom: 4px;
+    }
+
+    /* --- Botoes freela ---*/
+    .cont_btns {
+        width: 100%;
+    }
+
+    .btn_enviarProposta, .btn_convidarEquipe {
+        font-size: .7rem;
+        padding: 0 5px;
+    }
+
+
+}
+
+/* Small devices (tablet, 576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .profissionais_items {
+        width: 576px;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .empresa_text h2{
+        font-size: 15px;
+    }
+
+    .avaliacao i {
+        font-size: 10px;
+    }
+
+    .btnNextVagas {
+        width: 550px;
+    }
+
+    .classes_btn {
+        height: 90px;
+    }
+
+    .deficienias {
+        height: 170px;
+    }
+    .btn_deficiencias {
+        width: 190px;
+    }
+
+    .filtrosAplicados, .search {
+        width: 550px;
+    }
+
+    .miniPerfil, .miniPerfilPCD {
+        width: 550px;
+    }
+
+    .filtro {
+        display: none;
+    }
+
+    .filtroMobileButton {
+        display: flex;
+        padding-left: 15px;
+    }
+        
+    .filtroMobile {
+        display: flex;
+        background-color: var(--bg-secundario);
+        height: 700px !important; 
+        width: 90%;
+        text-align: left;
+        position: fixed;
+        top: 90px;
+        right: 100%;
+        margin: 0 20px;
+        height: 250px;
+        border-radius: 5px;
+        transition: all ease .4s;
+        z-index: 10;
+        
+    }
+    
+      .filtroMobile.filtroActive {
+        right: 0%;
+      } 
+}
+
+/* Small devices (tablet modo paisagem) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .profissionais_items {
+        width: 768px;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .classes_btn {
+        height: 90px;
+    }
+
+    .deficienias {
+        height: 170px;
+    }
+    .btn_deficiencias {
+        width: 190px;
+    }
+
+    .filtrosAplicados, .search {
+        width: 700px;
+    }
+
+    /* Filtro mobile */
+
+    .filtro {
+        display: none;
+       
+    }
+
+    .filtroMobileButton {
+        display: flex;
+        justify-content: flex-start;
+        width: 78%;
+        margin: 0 auto;
+        
+    }
+        
+    .filtroMobile {
+        display: flex;
+        background-color: var(--bg-secundario);
+        height: 700px !important; 
+        width: 90%;
+        text-align: left;
+        position: fixed;
+        top: 90px;
+        right: 100%;
+        margin: 0 20px;
+        height: 250px;
+        border-radius: 5px;
+        transition: all ease .4s;
+        z-index: 10;
+        
+    }
+    
+      .filtroMobile.filtroActive {
+        right: 0%;
+      } 
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .profissionais_items {
+        width: 992px;
+        grid-template-columns: 1.2fr 1.8fr;
+        gap: 2rem;
+    }
+
+    .classes_btn {
+        height: 90px;
+    }
+
+    .classes_btn{
+        height: 130px;
+    }
+   
+
+    .filtrosAplicados, .search {
+        width: 600px;
+    }
+
+    .miniPerfil, .miniPerfilPCD {
+        width: 600px;
+    }
+
+    .btnNextVagas {
+        width: 600px;
+    }
+
+    .filtro {
+        height: 1350px;
+        max-height: 1350px;
+    }
+
+    .ambiente {
+        height: 150px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media screen and (min-width: 1200px) and (max-width: 1399px)  {
+    .profissionais_items {
+        width: 1200px;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .classes_btn{
+        height: 120px;
+    }
+    
+  
 }

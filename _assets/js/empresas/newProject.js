@@ -105,12 +105,17 @@ const handleClearProject = () => {
 
 /* --- criando os projetos dinamicamente --- */
 const container = document.querySelector('.container_vagas');
-function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco, id}){
+function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco, pcd, id}){
     
     //Cria a div container dos projetos
     let divProject = document.createElement("div");
-    divProject.className = "vaga";
-
+    if(pcd == true) {
+        divProject.className = "vagaPCD";
+       
+    }else {
+        divProject.className = "vaga";
+    }
+    
 
     //Cria a div interna que recebe as informações 
     let divProjectItems = document.createElement("div");
@@ -147,7 +152,7 @@ function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco,
     avaliacao.innerHTML = `<i class="fa-solid fa-star valid"></i>
                            <i class="fa-solid fa-star valid"></i>
                            <i class="fa-solid fa-star valid"></i>
-                           <i class="fa-solid fa-star"></i>
+                           <i class="fa-solid fa-star valid"></i>
                            <i class="fa-solid fa-star"></i>`;
 
     emprestext.appendChild(h2);
@@ -195,6 +200,16 @@ function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco,
     let requisitos = document.createElement("div");
     requisitos.className = "req";
 
+    if(pcd === true){
+            let reqPCD = document.createElement("div");
+            reqPCD.className = "reqItemPCD";
+            let reqPcdP = document.createElement("p");
+            reqPcdP.innerHTML = "Vaga exclusiva PCD";
+
+            reqPCD.appendChild(reqPcdP);
+            requisitos.appendChild(reqPCD);
+    }
+    
     let reqItem = document.createElement("div");
     reqItem.className = "reqItem";
     let reqP = document.createElement("p");
