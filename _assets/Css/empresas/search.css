@@ -1,10 +1,23 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+
+.container_projetos {
+    display: flex !important;
+    flex-direction: column;
+}
+
+
 .cont_buscar {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100%;
     margin-bottom: 50px;
+    position: relative;
 }
+
 
 .profissionais_items {
     display: grid;
@@ -526,6 +539,56 @@
     color: var(--lilas-secundario);
 }
 
+.filtroMobileButton {
+    display: none;
+}
+
+.filtroMobile {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-secundario);
+    padding: 40px;
+    border-radius: 4px;
+    height: 700px;
+    max-height: 650px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.filtroMobile h3 {
+    color: #fff;
+    font-family: var(--font-secundaria);
+    margin-bottom: 20px;
+}
+
+.filtroMobile h4 {
+    color: #fff;
+    font-family: var(--font-secundaria);
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.btnFiltroMobile {
+    background-color: transparent;
+    font-size: 1rem;
+    color: var(--texto-primario);
+}
+
+.btnFiltroMobile i{
+    margin-right: 10px;
+    color: #FF3370;
+}
+
+.exitFiltroMobile {
+    border-radius: 4px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(91.21deg, #FF3370 -4.21%, #FF8080 97.92%);
+}
+
 
 
 
@@ -556,18 +619,41 @@
         width: 350px;
     }
 
+    .profissionais_items {
+        overflow: hidden;
+    }
+
+    .filtro {
+        display: none;
+    }
+
+
     /* Filtro mobile */
-   .filtro {
+
+    .filtroMobileButton {
+        display: flex;
+    }
+
+  .filtroMobile {
+    display: flex;
+    background-color: var(--bg-secundario);
+    height: 700px !important; 
+    width: 90%;
+    text-align: left;
+    position: fixed;
+    top: 90px;
+    right: 100%;
+    margin: 0 20px;
+    height: 250px;
+    border-radius: 5px;
+    transition: all ease .4s;
+    z-index: 10;
     
-   }
+  }
 
-
-
-
-
-
-
-
+  .filtroMobile.filtroActive {
+    right: 0%;
+  } 
 
     /* vagas */
     .vaga {
@@ -649,6 +735,14 @@
         gap: 1rem;
     }
 
+    .empresa_text h2{
+        font-size: 15px;
+    }
+
+    .avaliacao i {
+        font-size: 10px;
+    }
+
     .btnNextVagas {
         width: 550px;
     }
@@ -671,6 +765,36 @@
     .vaga {
         width: 550px;
     }
+
+    .filtro {
+        display: none;
+    }
+
+    .filtroMobileButton {
+        display: flex;
+        padding-left: 15px;
+    }
+        
+    .filtroMobile {
+        display: flex;
+        background-color: var(--bg-secundario);
+        height: 700px !important; 
+        width: 90%;
+        text-align: left;
+        position: fixed;
+        top: 90px;
+        right: 100%;
+        margin: 0 20px;
+        height: 250px;
+        border-radius: 5px;
+        transition: all ease .4s;
+        z-index: 10;
+        
+    }
+    
+      .filtroMobile.filtroActive {
+        right: 0%;
+      } 
 }
 
 /* Small devices (tablet modo paisagem) */
@@ -699,6 +823,42 @@
     .vaga {
         width: 600px;
     }
+
+    /* Filtro mobile */
+
+    .filtro {
+        display: none;
+       
+    }
+
+    .filtroMobileButton {
+        display: flex;
+        justify-content: flex-start;
+        width: 78%;
+        margin: 0 auto;
+        
+    }
+        
+    .filtroMobile {
+        display: flex;
+        background-color: var(--bg-secundario);
+        height: 700px !important; 
+        width: 90%;
+        text-align: left;
+        position: fixed;
+        top: 90px;
+        right: 100%;
+        margin: 0 20px;
+        height: 250px;
+        border-radius: 5px;
+        transition: all ease .4s;
+        z-index: 10;
+        
+    }
+    
+      .filtroMobile.filtroActive {
+        right: 0%;
+      } 
 
 }
 

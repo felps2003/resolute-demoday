@@ -146,8 +146,79 @@
          <section class="cont_buscar">
              <div class="profissionais_items">
  
+                
+                <div class="filtroMobileButton">
+                    <button class="btnFiltroMobile">
+                        <i class="fa-solid fa-bars"></i> 
+                        Aplicar filtros
+                    </button>
+                </div>
+
                 <div class="filtroMobile">
-                    a
+                    <h3>Aplicar filtros</h3>
+                    <div class="categorias">
+ 
+                        <div class="opcaoCateg">
+                            <div class="inputCateg"></div>
+                            <p>Programação e TI</p>
+                        </div>
+
+                        <div class="opcaoCateg">
+                            <div class="inputCateg"></div>
+                            <p>Design</p>
+                        </div>
+
+                        <div class="opcaoCateg">
+                            <div class="inputCateg"></div>
+                            <p>Infraestrutura</p>
+                        </div>
+
+                        <div class="opcaoCateg">
+                            <div class="inputCateg"></div>
+                            <p>Marketing e Vendas</p>
+                        </div>
+
+                        <div class="opcaoCateg">
+                            <div class="inputCateg"></div>
+                            <p>Comunicação</p>
+                        </div>
+                    </div>
+
+                     <!--Especialização exigidas-->
+                     <h4>Especializações exigidas</h4>
+                     <div class="containerSelect">
+                         <select name="selectEspec" class="select">
+                             <option>Todas as especializações</option>
+                         </select>
+                     </div>
+
+                     <!--Especialização exigidas-->
+                     <h4>Tipo de projeto</h4>
+                     <div class="containerSelect">
+                         <select name="selectEspec" class="select">
+                             <option>Todos</option>
+                             <option>Equipe</option>
+                             <option>Freelancer</option>
+                         </select>
+                     </div>
+
+                     <h4>Preferências de vagas PCD</h4>
+                     <div class="containerSelect">
+                         <select name="selectEspec" class="select">
+                             <option>Exclusiva para PCD</option>
+                             <option>Não PCD</option>
+                         </select>
+                     </div>
+
+                     <h4>Data da publicação</h4>
+                     <div class="containerSelect">
+                         <select name="selectData" class="select">
+                             <option>Qualquer momento</option>
+                         </select>
+ 
+                     </div>
+
+                     <button class="exitFiltroMobile">Filtrar</button>
                 </div>
 
                  <div class="filtro">
@@ -334,17 +405,17 @@
  
                  </div>
  
-                 <div class="profissionais">
+                 <div class="profissionais" id="profissionais">
                      <div class="search">
                          <input type="text" placeholder="Buscar profissional">
                          <button class="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button>
                      </div>
  
                      <div class="filtrosAplicados">
-                         <p>Filtros aplicados</p>
+                        
                      </div>
  
-                     <div class="container_vagas"></div>
+                     <div class="container_vagas" id="container_vagas"></div>
                      <div class="btnNextVagas"></div>
                     
                  </div>
@@ -353,12 +424,6 @@
  
          </section>
       </div>
-
-     
-      
-
-      
-
 
     </main>
     <!--Final principal-->
@@ -447,6 +512,7 @@
     <script src="_assets/js/index/marking.js"></script>
     <script src="_assets/js/index/mobileMenu.js"></script>
     <script src="_assets/js/empresas/forms.js"></script>
+    <script src="_assets/js/empresas/filtroMobile.js"></script>
     <script type="module" src="_assets/js/empresas/newProject.js"></script>
     
     

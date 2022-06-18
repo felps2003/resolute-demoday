@@ -55,20 +55,48 @@ const createNavgation = (data, inital, final) => {
 const containerButtons = document.querySelector(".btnNextVagas");
 const createNewButton = (pageNum, inital, final, data) => {
    let button = document.createElement("button");
+   let hrefBtn = document.createElement("a");
+   hrefBtn.href = "#profissionais";
+
    button.type = "submit";
    button.className = "btnNext"
+   button.id = ""
    button.innerHTML = pageNum
    button.addEventListener("click", () => {
         handleClearProject();
         iniciandoProjetos(data, inital, final);
+        scrollAnimation();
    });
+
+  
    
-   containerButtons.appendChild(button);
+   hrefBtn.appendChild(button);
+   containerButtons.appendChild(hrefBtn);
+}
+
+/*Scroll to top projects container */
+const scrollToProjectTop = (e) => {
+    e.preventDefault();
+    const to = scrollPosition(e.target) + 70;
+    scrollAnimation(to)
+}
+
+const scrollPosition = (element) => {
+    const id = element.getAttribute('href');
+    return document.querySelector(id).offsetTop;
+}
+
+const scrollAnimation = (to) => {
+    window.scroll ({
+        top: to,
+        behavior: 'smooth',
+    })
 }
 
 
-/*Removendo projetos de acordo com a navegação */
 
+
+/*Removendo projetos de acordo com a navegação */
 const handleClearProject = () => {
     let projectsClear = document.querySelector(".container_vagas");
     projectsClear.innerHTML = "";
