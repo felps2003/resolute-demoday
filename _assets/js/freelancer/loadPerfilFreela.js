@@ -50,7 +50,7 @@ const newButton = (pageNum, inital, final, data) => {
     })
 
     hrefNext.appendChild(btnNext)
-    btnNextPerfis.appendChild(btnNext)
+    btnNextPerfis.appendChild(hrefNext)
 }
 
 /* Limpando os perfils para imprimir novos */
@@ -58,9 +58,6 @@ const clearPerfis = () => {
     let containerFreelas = document.querySelector(".container_freelas");
     containerFreelas.innerHTML = " ";
 }
-
-
-
 
 
 /* Redenrizando o perfil no HTML */
@@ -167,7 +164,7 @@ function renderPerfisHTML({nome, pcd, cargo, desc, competencia, preco, id}) {
     descText.innerHTML = desc;
 
     let verPerfil = document.createElement("a");
-    verPerfil.href = "#";
+    verPerfil.setAttribute("href", `/perfilFreelancer.html?id=${id}`);
     verPerfil.innerHTML = "Ver perfil completo"
 
     descricao.appendChild(descText);
@@ -217,7 +214,6 @@ function renderPerfisHTML({nome, pcd, cargo, desc, competencia, preco, id}) {
     miniPerfil.appendChild(perfilItems);
     containerPerfis.appendChild(miniPerfil);
 }
-
 
 
 window.addEventListener("load", perfis)

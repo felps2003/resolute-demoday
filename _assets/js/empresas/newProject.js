@@ -228,22 +228,18 @@ function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco,
     btnEnviar.className = "btn_enviarProposta";
     btnEnviar.innerHTML = "Enviar uma proposta";
 
+    let hrefDetalhes = document.createElement("a");
+    hrefDetalhes.setAttribute("href", `/detalheVaga.html?id=${id}`);
+
     let btnDetalhes = document.createElement("button");
     btnDetalhes.className = "btn_detalhesVaga";
     btnDetalhes.innerHTML = "Detalhes da vaga";
     
-
-    
-    btnDetalhes.addEventListener("click", () => {
-        let attId = new AlterandoID(id);
-        idReserv(attId);
-
-        direcionando();
-    });
+    hrefDetalhes.appendChild(btnDetalhes)
 
 
     botoes.appendChild(btnEnviar);
-    botoes.appendChild(btnDetalhes);
+    botoes.appendChild(hrefDetalhes);
 
 
     //Passando os elementos interno para a div que recebe eles internamente.
@@ -262,28 +258,6 @@ function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco,
 
 
 
-class AlterandoID{
-    constructor(newId) {
-        this.id = newId;
-    }
-}
-
-async function idReserv(id){
-    fetch("http://localhost:5000/cont", {
-        method: "PUT",
-        headers: {
-            "Content-type": "application/json"
-        },
-        body: JSON.stringify(id)
-    })
-    .then(resp => resp.json())
-    .catch(error => console.error(error))
-    
-}
-
-function direcionando(){
-    window.location.href = "http://127.0.0.1:5500/detalheVaga.html";
-} 
 
 window.addEventListener("load", projects);
 

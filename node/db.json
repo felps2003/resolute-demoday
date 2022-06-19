@@ -1,7 +1,4 @@
 {
-  "cont": {
-    "id": 9
-  },
   "vagas": [
     {
       "titulo": "Desenvolvimento website",
@@ -121,10 +118,21 @@
       "habilidade": "Ruby",
       "preco": "20",
       "pcd": true,
+      "dataPublic": "18/06/2022",
       "id": 12
+    },
+    {
+      "titulo": "Testando data",
+      "ramo": "teste",
+      "desc": "teste",
+      "atividade": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "habilidade": "Java",
+      "preco": "200",
+      "pcd": false,
+      "dataPublic": "19/05/2022",
+      "id": 13
     }
   ],
-
   "perfil": [
     {
       "nome": "Pedro Formiga",

@@ -1,3 +1,7 @@
+const urlSearchParams = new URLSearchParams(window.location.search);
+const vagaId = urlSearchParams.get("id");
+
+
 function acessandoDados(id) {
     fetch("http://localhost:5000/vagas")
     .then(resp => resp.json())
@@ -6,24 +10,11 @@ function acessandoDados(id) {
     });
 };
 
-async function acessandoId(){
-    try {
-        let API = await fetch("http://localhost:5000/cont");
-        let resp =  await API.json();
-        let id = await resp;
-        acessandoDados(id.id);
-    }
-    catch {
-        console.error(id)
-    }
-
-}
-
 
 const containerProject = document.querySelector(".topo_info");
 const containerPrincipal = document.querySelector(".cont_items");
 
-function createProjectDetails({titulo, ramo, desc, atividade, habilidade, preco, pcd}){
+function createProjectDetails({titulo, ramo, desc, atividade, habilidade, preco, pcd, dataPublic}){
 
  
     // ------------------- Informações da empresa: ------------------- //
@@ -82,7 +73,7 @@ function createProjectDetails({titulo, ramo, desc, atividade, habilidade, preco,
     circle.className = "circle";
 
     let data = document.createElement("p");
-    data.innerHTML = `<span>Data da publicação:</span> 06/06/2022`;
+    data.innerHTML = `<span>Data da publicação:</span> ${dataPublic}`;
 
     let proposta = document.createElement("p");
     proposta.innerHTML = `<span>N°de proposta:</span> nenhuma`;
@@ -218,7 +209,7 @@ function createProjectDetails({titulo, ramo, desc, atividade, habilidade, preco,
 } 
 
 
-window.addEventListener("load", acessandoId);
+window.addEventListener("load", () => acessandoDados(vagaId));
 
 
 
