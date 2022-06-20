@@ -1,0 +1,105 @@
+@import '../global.css';
+
+/*--- Inicio categoria profissional ---*/
+
+.categ_profissional {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-secundaria);
+    justify-content: center;
+    margin-top: 128px;
+    position: relative;
+}
+
+.categ_profissional h3 {
+    font-family: var(--font-principal);
+    font-size: 2.3rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.3rem;
+    font-weight: 400;
+    background: linear-gradient(91.21deg, #FF3370 -4.21%, #FF8080 97.92%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tipo_profissional {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1170px;
+    gap: 16px;
+    padding-left: 64px;
+    padding-top: 64px;
+    align-content: flex-start;
+} 
+
+.profissao {
+    color: var(--cor-primaria);
+    background-color: #261313;
+    border-radius: 5px;
+    display: flex;
+    padding: 1rem 1rem;
+    max-height: 50px;
+    cursor: pointer;
+}
+
+.profissao:hover {
+    color: #261313;
+    font-weight: 500;
+    background-color: var(--cor-primaria);
+    box-shadow: 0px 0px 6px var(--cor-primaria);
+} 
+
+.linha-vertical {
+    position: absolute;
+    margin-left: 32px;
+    height: 120px;
+    width: 5px;
+    bottom: 0;
+    background: linear-gradient(91.21deg, #FF3370 -4.21%, #FF8080 97.92%);
+}
+
+
+
+/* --- Responsive progressBar --- */
+/* Extra small devices (portrait phones, less than 576px)*/
+@media screen and (max-width: 575.98px) {
+
+    .categ_profissional h3{
+        margin-left: 3rem;
+    }
+
+    .linha-vertical {
+        height: 450px;
+    }
+
+}
+
+/* Small devices (tablet, 576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+
+    .linha-vertical {
+        height: 200px;
+    }
+
+}
+
+/* Small devices (tablet modo paisagem) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+
+    .linha-vertical {
+        height: 170px;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+
+    .linha-vertical {
+        height: 130px;
+    }
+
+}

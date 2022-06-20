@@ -1,0 +1,332 @@
+@import '../global.css';
+
+html{
+    font-family: 'inter', sans-serif;
+    color: var(--texto-primario);
+}
+
+.container-cadastro-conta {
+    display: block;
+}
+
+.etapa1, .etapa2, .etapa3, .etapa4{
+    display: none;
+}
+
+.etapa1.ativo, .etapa2.ativo, .etapa3.ativo, .etapa4.ativo{
+    display: flex;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.container-cadastro-conta.ativo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+} 
+
+.container-cadastro-conta section.ativo {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.container-cadastro-conta section h1 {
+    font-size: 1.8rem;
+    color: var(--texto-primario);
+}
+
+.progressbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.circle1, .circle2, .circle3, .circle4 {
+    width: 2rem; height: 2rem;
+    background-color: var(--bg-secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lilas-secundario);
+    border-radius: 100%;
+    z-index: 10;
+} 
+
+.circle1.etapa, .circle2.etapa, .circle3.etapa, .circle4.etapa {
+    border: 1px solid var(--lilas-secundario);
+    box-shadow: 0px 0px 16px hsl(262, 100%, 85%, 0.18);
+    position: relative;
+    z-index: 0;
+}
+
+.circle1.etapa::after,.circle2.etapa::after ,.circle3.etapa::after {
+    content: '';
+    width: calc(2rem + 1.5rem);
+    position: absolute;
+    height: 1px;
+    background-color: var(--lilas-placeholder);
+    right: -3.5rem;
+    z-index: -10;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/*  COMEÇO DE CONTAINER DO TIPO DE CONTA PROFISSIONAL / EMRPESA */
+
+.container-tipo-conta {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.container-astronauta, .container-empresa {
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;  
+    border: 2px solid transparent;
+}
+
+.container-astronauta:focus, .container-empresa:focus{
+    border: 2px solid var(--lilas-secundario);
+    box-shadow: 0px 0px 32px hsl(263, 26%, 59%, 0.18);
+}
+
+.box-imagem-profissional, .box-imagem-empresa {
+    overflow: hidden;
+    border-radius: 16px; 
+}
+
+.box-imagem-profissional .imagem-profissional,.box-imagem-empresa .imagem-empresa{
+    height: 310px;
+    width: 240px;
+    filter: grayscale(100%);
+}
+
+.box-imagem-profissional .imagem-profissional:hover, .box-imagem-empresa .imagem-empresa:hover{
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
+
+.box-escolha {
+    width: 128px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(278, 17%, 13%, 0.48);
+    border-radius: 8px;
+    padding: 16px;
+    bottom: -10%;
+    left: 25%;
+    backdrop-filter: blur(22px);
+    gap: 0.6rem;
+    z-index: 1000 !important;
+}
+
+.box-escolha h3 {
+    font-size: 1rem;
+}
+
+.box-escolha span {
+    font-size: 0.8rem;
+}
+
+.emoji-astronauta, .emoji-foguete {
+    width: 2rem !important;
+}
+
+.container-button {
+    margin-top: 3rem;
+}
+
+/*  FIM DE CONTAINER DO TIPO DE CONTA PROFISSIONAL / EMRPESA */
+
+.container-astronauta[data-selecionado="selecionado"], .container-empresa[data-selecionado="selecionado"]{
+    transition: 450ms;
+    border: 2px solid var(--lilas-secundario);
+}
+
+.box-categoria-profissional[data-selecionado="selecionado"] {
+    background-color: var(--cor-primaria);
+    color: var(--bg-primario);
+}
+
+/* Começo forms de cadastro de informações após escolha do tipo de conta */
+
+.forms-cadastro { margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.forms-cadastro label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: var(--texto-primario);
+    gap: 0.8rem;
+}
+
+.forms-cadastro label input {
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--texto-primario);
+    background-color: var(--bg-secundario);
+    border: 1px solid var(--bg-secundario);
+    border-radius: 4px;
+    width: 420px; 
+}
+
+.forms-cadastro label input:focus {
+    border: 1px solid var(--lilas-secundario);
+    color: var(--lilas-secundario);
+}
+
+.forms-cadastro .estrutura-select {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.2rem;
+}
+
+.forms-cadastro .estrutura-select input {
+    width: 280px;
+}
+
+.forms-cadastro select {
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--placeholder-color);
+    background-color: var(--bg-secundario);
+    border: 1px solid var(--bg-secundario);
+    border-radius: 4px;
+    height: 52.2px;
+}
+
+.input-nome-social {
+    display: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--texto-primario);
+    background-color: var(--bg-secundario);
+    border: 1px solid var(--bg-secundario);
+    border-radius: 4px;
+    width: 420px; 
+}
+
+.input-nome-social.ativo {
+    display: block;
+}
+
+.input-nome-social:focus{
+    border: 1px solid var(--lilas-secundario);
+}
+
+/* Fim forms de cadastro de informações após escolha do tipo de conta */
+
+/* Começo etapa de seleção de categoria profissional */
+.container-categoria-profissional{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.box-categoria-profissional {
+    color: var(--texto-primario);
+    background-color: #17161F;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 192px;
+    height: 168px; 
+    cursor: pointer;
+    border: 1px solid #17161F;
+}
+
+.box-categoria-profissional i {
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+} 
+
+.box-categoria-profissional:hover, .box-categoria-profissional:focus {
+    border: 1px solid var(--cor-primaria);
+}
+
+.container-detalhe-profissional {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #17161F;
+    width: 480px;
+}
+
+.container-detalhe-profissional label select{
+    background-color: var(--bg-primario);
+}
+
+
+.container-detalhe-profissional p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--placeholder-color);
+}
+
+/* Fim  etapa de seleção de categoria profissional */
+
+.container-checked-modalide-trabalho {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.container-checked{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.container-checked div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.container-checked.ativo{
+    display: flex;
+}
+
+.container-funcao-especializacao{
+    display: flex;
+    gap: 1rem;
+}
+
+.select-tempo-experiencia{
+  padding: 1rem;
+  width: 128px;
+  background-color: var(--bg-secundario);
+  color: var(--texto-primario);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+
+.select-tempo-experiencia:focus {
+    border: 2px solid var(--lilas-secundario);
+  }
