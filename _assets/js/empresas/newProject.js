@@ -135,7 +135,7 @@ function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco,
     avatar.className = "avatar";
     
     let imgUser = document.createElement("img");
-    imgUser.src = "_assets/img/user.png";
+    imgUser.src = "../_assets/img/user.png";
 
     avatar.appendChild(imgUser);
 
@@ -229,7 +229,7 @@ function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco,
     btnEnviar.innerHTML = "Enviar uma proposta";
 
     let hrefDetalhes = document.createElement("a");
-    hrefDetalhes.setAttribute("href", `/detalheVaga.html?id=${id}`);
+    hrefDetalhes.setAttribute("href", `/html_Pages/detalheVaga.html?id=${id}`);
 
     let btnDetalhes = document.createElement("button");
     btnDetalhes.className = "btn_detalhesVaga";

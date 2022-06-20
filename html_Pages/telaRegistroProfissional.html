@@ -13,7 +13,7 @@
    <script src="https://kit.fontawesome.com/2bf2ec62ee.js" crossorigin="anonymous"></script>
 
    <!-- Styles -->
-   <link rel="stylesheet" href="_assets/Css/login/telaCadastro.css">
+   <link rel="stylesheet" href="../_assets/Css/login/telaCadastro.css">
    
 
 
@@ -24,8 +24,11 @@
 <section id="cadatrar-conta" class="container-cadastro-conta ativo">
 <main>
 <form id="infos-cadastro-usuario" action="">
+
+    <!-- COMEÇO ETAPA 1 -->
+
     <section id="cadastro-etapa2" class="etapa2 ativo">
-        <h1> Cadastro de Empresa na Resolute</h1>
+        <h1> Criar uma conta </h1>
         <div class="progressbar">
             <div class="circle1 etapa"> 1 </div>
             <div class="circle2"> 2 </div>
@@ -33,52 +36,56 @@
         </div>
 
         <div action="" class="forms-cadastro" id="teste-form-sumiu">
-            <label for="nome-completo-empresa">
-                Digite o nome da sua empresa
-                <input name="nome-completo-empresa" type="text" placeholder="Digite o nome da sua empresa completo"> 
+            <label for="">
+                Digite seu nome completo
+                <input type="text" placeholder="Digite seu nome completo"> 
             </label>
 
-            <label for="nome-completo-empresa">
-                Digite o CNPJ da empresa
-                <input name="nome-completo-empresa" type="number" placeholder="Ex:. 11.444.777/0001-61"> 
-            </label>
-
-            <h3> Selecione a categoria da sua empresa </h3>
             <div class="container-radio">
-                <label for="categoria-empresa"> Startup </label>
-                <input type="radio" id="categoria-empresa-startup" name="categoria-empresa" value="categoria-empresa-startup" class="radio-padrao" tabindex="0"/>
-            
-                <label for="categoria-empresa"> Fintech </label>
-                <input type="radio" id="categoria-empresa-Fintech" name="categoria-empresa" value="categoria-empresa-Fintech" class="radio-padrao" tabindex="0"/>
-            
-                <label for="categoria-empresa"> MEI </label>
-                <input type="radio" id="categoria-empresa-Mei" name="categoria-empresa" value="categoria-empresa-Mei" class="radio-padrao" tabindex="0"/>
-                
-                <label for="categoria-empresa"> EPP </label>
-                <input type="radio" id="categoria-empresa-Epp" name="categoria-empresa" value="categoria-empresa-Epp" class="radio-padrao" tabindex="0"/>
+                <label for="nome-social"> Quero usar meu nome social </label>
+                <input type="radio" id="nome-social" name="nome-social" value="nome-social" class="radio-padrao" tabindex="0"/>
+                <label for="sem-nome-social"> Não tenho nome social </label>
+                <input type="radio" id="sem-nome-social" name="nome-social" value="sem-nome-social" class="radio-padrao" tabindex="0"/>
             </div>
 
             <input id="entrada-nome-social" type="text" placeholder="Digite seu nome social" class="input-nome-social" tabindex="0">
 
-            <label for="numero-funcionarios-empresa">
-                Digite o número de funcionarios da empresa
-                <input name="numero-funcionarios-empresa" type="number" placeholder="Digite o número de funcionarios"> 
+            <label for="">
+                Digite E-mail
+                <input type="email" placeholder="Digite o seu melhor e-mail"> 
             </label>
 
-            <label for="numero-contato-empresa">
-                Digite o número de contato da empresa
-                <input name="numero-funcionarios-empresa" type="number" placeholder="Ex.: (12) 34567-8910"> 
+            <label for="">
+                Digite seu telefone
+                <input type="tel" placeholder="Digite o seu telefone completo"> 
             </label>
 
+            <div class="estrutura-select">
+                <label for="genero"> Selecione seu gênero
+                    <select name="genero" id="select-genero" class="select-padrao" tabindex="0">
+                        <option value="0" selected>selecione seu genero</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="nao-binario">Não Binário</option>
+                        <option value="outro">Outro</option>
+                        <option value="desejo-nao-informar">Desejo não informar</option>
+                    </select>
+                </label>
+                <label for="">
+                    Digite o seu CPF
+                    <input type="number" placeholder="Digite o seu CPF"> 
+                </label>
+            </div>
+        </div>
         <div class="container-button">
             <button id="btn-continuar-etapa2" class="btn-conversao"><a href="index.html"></a> Continuar </button>
             <button id="btn-voltar-etapa1" class="btn-secundario"> <a href="telaEscolhaDeRegistro.html"> Voltar para a tela de seleção de conta </a> </button>
         </div>    
     </section>
+    <!-- FIM DA ETAPA 1 -->
 
-    <!-- ETAPA 1 DE REGISTRO  -->
+    <!-- COMEÇO ETAPA 2 -->
 
-    
     <section  id="cadastro-etapa3" class="etapa3">
         <h1> Criar uma conta </h1>
         <div class="progressbar">
@@ -237,14 +244,18 @@
         </div> 
     </section>
 
+    <!-- FIM ETAPA 3 -->
+
 </form>
 </main>
 
 </section>
+    
 </body>
 
-<script src="_assets/js/index/cadastro/escolhaTipoDeConta.js"> </script>
-<script src="_assets/js/index/login/continuarVoltarCadastro.js"> </script>
+ <!--Scripts-->
+<script src="../_assets/js/index/login/continuarVoltarCadastro.js"></script>
+<script src="../_assets/js/index/cadastro/telaCadastro.js"></script>
 
 
 </html>

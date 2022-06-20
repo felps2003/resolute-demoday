@@ -104,7 +104,7 @@ function renderPerfisHTML({nome, pcd, cargo, desc, competencia, preco, id}) {
     let avatar = document.createElement("span");
     avatar.className = "avatar";
     let imgAvatar = document.createElement("img");
-    imgAvatar.src = "./_assets/img/user.png";
+    imgAvatar.src = "../_assets/img/user.png";
     avatar.appendChild(imgAvatar);
     
     //Informações text
@@ -164,7 +164,7 @@ function renderPerfisHTML({nome, pcd, cargo, desc, competencia, preco, id}) {
     descText.innerHTML = desc;
 
     let verPerfil = document.createElement("a");
-    verPerfil.setAttribute("href", `/perfilFreelancer.html?id=${id}`);
+    verPerfil.setAttribute("href", `/html_Pages/perfilFreelancer.html?id=${id}`);
     verPerfil.innerHTML = "Ver perfil completo"
 
     descricao.appendChild(descText);
