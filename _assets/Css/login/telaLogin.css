@@ -1,5 +1,5 @@
 @import '../global.css';
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
 * {
     transition: all 0.2s;
 }
@@ -9,88 +9,109 @@ body {
     font-family: 'Inter', sans-serif;    
 }
 
-.container-login {
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--bg-primario);
-    /* border: 1px solid red;  */
-    display: none;
-    flex-direction: row;
-    justify-content: space-between;
-} 
 
-.container-login.ativo{
+/* ---- estilização geral ---- */
+.cont_login {
     display: flex;
+    width: 100%;
+    height: 100vh;
 }
 
-.container-login h1 {
+
+
+
+/* ---- estilização select model ---- */
+.select_model{
+    display: flex;
+    align-items: center;
+    background-color: #1D1B26;
+    width: 350px;
+    height: 70px;
+    border-radius: 12px;
+    position: relative;
+    padding: 12px;
+    margin: 1rem 0;
+}
+
+.buttonModel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 47px;
+    border-radius: 12px;
+    background-color: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    color: var(--lilas-placeholder);
+    font-weight: 600;
+    cursor: pointer; 
+}
+
+.buttonModel.selected {
+    background-color: var(--cor-primaria);
+    color: var(--bg-primario);
+}
+
+.iconFreela {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 50%;
+    margin: 0px 0px 5px 5px;
+    background-image: url(../../img/emojiAstro.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.iconEmpresa {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 50%;
+    margin: 0px 0px 5px 5px;
+    background-image: url(../../img/nave.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+
+/* ---- estilização form ---- */
+.cont_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 100vh;
+}
+
+.form_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 700px;
+}
+
+.form_items h1 {
     font-size: 2rem;
     color: var(--texto-primario);
 }
 
-.forms-login {
+.divForm form{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
-    margin: 0 auto; 
 }
 
-/* começo RADIO de escolha do login do usuário*/ 
-.radio-login {
-    display: flex;
-    align-items: center;
-    background-color: #1D1B26;
-    border-radius: 12px;
-    gap: 2rem;
-    position: relative;
-    padding: 12px;
-}
-
-.radio-login-profissional, .radio-login-empresa {
-    padding: 12px;
+.divForm label {
     color: var(--texto-primario);
-    border-radius: 12px;
+    margin: .6rem 0;
 }
 
-.radio-login-profissional.selecionado, .radio-login-empresa.selecionado{
-    background-color: var(--cor-primaria);
-    color: var(--bg-primario);
-    font-weight: bold;
-}
-
-.img-empresa-radio, .img-profissional-radio { 
-    width: 28px;
-    z-index: 3; 
-    fill: var(--bg-primario);
-    opacity: 0.36;
-} 
-
-.radio-login-empresa{
-    color: var(--texto-primario);
-    border-radius: 12px;
-    text-align: center;
-}
-
-/* fim RADIO de escolha do login do usuário*/ 
-
-
-.login-dados-entrada{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.login-dados-entrada label {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem;
-    color: var(--texto-primario);
-}
-
-.login-dados-entrada label input {
+.input {
     min-width: 25rem;
     padding: 1rem;
     border-radius: 4px;
@@ -98,103 +119,138 @@ body {
     color: var(--texto-primario);
     font-size: 1rem;
     border: 1px solid transparent;
+    margin-bottom: .6rem;
 }
 
-.login-dados-entrada label input:hover{
+.input:hover {
     border: 1px solid var(--cor-primaria);
 }
 
-.login-dados-entrada label input:focus {
+.input:focus{
     border: 1px solid var(--cor-primaria);
 }
 
-.esqueceu-senha-login {
+.btnRecuperar, .btnCriar {
     color: var(--placeholder-color);
     font-size: 0.9rem;
+    margin: .4rem 0;
 }
 
-.esqueceu-senha-login:hover {
+.btnCriar span {
     color: var(--cor-primaria);
 }
 
-.esqueceu-senha-login:focus {
-    font-weight: bold;
-    color: var(--cor-primaria);
-}
 
-.btn-confirmar-login {
+.btnConfirmar {
     padding: 16px 0px;
-    background: var(--cor-primaria); 
+    background: var(--cor-primaria);
     font-weight: 600;
     font-size: 0.9rem;
     border-radius: 4px;
     cursor: pointer;
     transition: 0.2s;
     width: 100%;
+    margin: .6rem 0;
 }
 
-.btn-confirmar-login:focus{
-    background-color: hsl(330, 100%, 30%);
+.btnConfirmar::before{
+    content: "teste";
 }
 
-.criar-conta {
-    font-size: 0.9rem;
-    color: var(--placeholder-color);
+.formDisable {
+    display: none;
 }
 
-.criar-conta a {
-    color: var(--cor-primaria);
-    font-weight: medium;
-}
-
-.criar-conta a:hover{
-    font-weight: bold;
-}
-
-.criar-conta:focus a{
-    font-weight: bold;
-}
-
-/* ILUSTRAÇÃO DO LADO DA TELA DE LOGIN */
-
-.imagem-lado {
+/* ---- estilização img ---- */
+.cont_background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
     height: 100vh;
-    width: 45vw;
-    background-color: aliceblue;
-    border-radius: 18px 0px 0px 18px ;
-    background-image: url(/resolute-main/_assets/img/login/ImagemDeNaveEspacial.jpg);
-    background-position: center; background-size: cover; background-repeat: no-repeat;
+    border-radius: 18px 0px 0px 18px;
+    background-image: url(../../img/login/ImagemDeNaveEspacial.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.descricao-imagem {
+.balaoMensagem {
     background-color: hsl(0, 0%, 100%, 0.20);
     padding: 1.2rem;
     color: var(--texto-primario);
     width: 80%;
-    margin: 0 auto;
-    margin-top: 50%;
     border-radius: 4px;
     backdrop-filter: blur(58px);
 }
 
-/* FIM DA ILUSTRAÇÃO DO LADO DA TELA DE LOGIN */
 
-/* COMEÇO DA TELA RESPONSIVA */
+/* ---- Responsive ---- */
 
-/* Small devices (tablet modo paisagem) */
-@media screen and (min-width: 280px) and (max-width: 991.98px) {
-    .container-login{
-        flex-direction: column;
-        justify-content: center;
+/* Extra small devices (portrait phones, less than 576px)*/
+@media screen and (max-width: 575.98px) {
+    .cont_background {
+        display: none;
     }
 
-    .imagem-lado {
+    .cont_form {
+        width: 100%;
+    }
+
+    .select_model{
+        width: 320px;
+    }
+
+    .buttonModel {
+        font-size: 1rem;
+    }
+
+    .divForm form{
+        width: 340px;
+    }
+
+    .form_items {
+        width: 400px;
+        height: 700px;
+    }
+
+    .form_items h1 {
+        font-size: 1.8rem;
+    }
+
+    .input {
+        min-width: 0rem;
+    }
+}
+
+/* Small devices (tablet, 576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .cont_background {
         display: none;
+    }
+
+    .cont_form {
+        width: 100%;
+    }
+}
+
+/* Small devices (tablet modo paisagem) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .cont_background {
+        display: none;
+    }
+
+    .cont_form {
+        width: 100%;
     }
 }
 
 /* Large devices (desktops, 992px and up)*/
-/* @media screen and (min-width: 992px) and (max-width: 1199.98px) {
-} */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  
+}
 
-/* FIM DA TELA RESPONSIVA */
+/* Extra large devices (large desktops, 1200px and up)*/
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+
+}

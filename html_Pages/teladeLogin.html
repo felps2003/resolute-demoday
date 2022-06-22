@@ -21,59 +21,91 @@
 </head>
 <body>
 
-<section id="container-login" class="container-login ativo">
+    <main>
+        <section class="cont_login">
 
-    <form class="forms-login">    
-        <h1> Entrar na sua conta </h1>
+            <div class="cont_form">
+                <div class="form_items">
+                    <h1>Entrar na sua conta</h1>
 
-        <div class="radio-login">
-            <div id="radio-login-profissional" class="radio-login-profissional selecionado"> 
-                <label for="radio-profissional-login">  
-                    <img class="img-profissional-radio" src="_assets/img/login/user-astronaut-solid.svg" alt="">  
-                    Profissional 
-                </label>
+                    <div class="select_model">
+                        <button type="button" class="buttonModel selected" id="btnProfissional">
+                            Profissional
+                            <span class="iconFreela"></span>
+                        </button>
+                        <button type="button" class="buttonModel" id="btnCompany">
+                            Empresa
+                            <span class="iconEmpresa"></span>
+                        </button>
+                    </div>
 
-                <input id="btn-profissional-login" type="radio" class="btn-profissional" name="selecao-login" CHECKED>
+                    <div class="divForm formDisable" id="form_freela">
+                        <form method="post" action="">
+                            <label for="loginFreela">E-mail</label>
+                            <input type="email" id="loginFreela" name="loginFreela" class="input" placeholder="Digite o seu e-mail" tabindex="0">
+
+                            <label for="senhaFreela">Senha</label>
+                            <input type="password" id="senhaFreela" name="senhaFreela" class="input" placeholder="Digite a sua senha" tabindex="1">
+                        
+                            <a href="#" class="btnRecuperar">Esqueceu a senha?</a>
+
+                            <input id="submitFreela" type="submit" value="Confirmar" class="btnConfirmar" tabindex="2">
+                        
+                            <a href="#" class="btnCriar">
+                                Não tem uma conta ? <span>criar uma conta</span>
+                            </a>
+                        
+                        </form>
+                    </div>
+
+                    <div class="divForm " id="form_Company">
+                        <form method="post" action="">
+                            <label for="loginCompany">E-mail</label>
+                            <input type="email" id="loginCompany" name="loginCompany" class="input" placeholder="Digite o seu e-mail" >
+
+                            <label for="senhaCompany">Senha</label>
+                            <input type="password" id="senhaCompany" name="senhaCompany" class="input" placeholder="Digite a sua senha" >
+                        
+                            <a href="#" class="btnRecuperar">Esqueceu a senha?</a>
+
+                            <input id="submitCompany" type="submit" value="Confirmar" class="btnConfirmar">
+                        
+                            <a href="telaEscolhaDeRegistro.html" class="btnCriar" target="_blank">
+                                Não tem uma conta ? <span>criar uma conta</span>
+                            </a>
+                        
+                        </form>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+
             </div>
 
-            <div id="radio-login-empresa" class="radio-login-empresa"> 
-                <label for="radio-empresa-login">
-                    <img class="img-empresa-radio" src="_assets/img/login/shuttle-space-solid.svg" alt="">
-                    Empresa
-                </label>
-                
-                <input id="btn-empresa-login" type="radio" class="btn-empresa" name="selecao-login"z>
-            </div> 
-        </div>
+            <div class="cont_background">
+                <div class="balaoMensagem">
+                    <p>
+                        Venha se tornar parte do nosso marketplace de prestadores de serviço, 
+                        aqui a sua empresa hospeda os seus projetos e tem eles construídos rapidamente
+                        pelos melhores profissionais da galáxia.
+                    </p>
+                </div>
+            </div>
 
-        <section class="login-dados-entrada">
-            <label for=""> E-mail
-                <input class="" type="text" id="" value="" placeholder="Digite o seu e-mail">
-            </label>
-
-            <label> Senha
-                <input class="" type="text" id="" value="" placeholder="Digite a sua senha">
-            </label>
-
-            <a class="esqueceu-senha-login" href="#"> Esqueceu a senha? </a>
-
-            <a href="index.html"> <button id="btn-confirmar-login" class="btn-confirmar-login"> Confirmar  <i class="fa-solid fa-arrow-right-to-bracket"></i> </button></a>
-            <p class="criar-conta" tabindex="0"> Não tem uma conta ? <a id="link-criar-conta" href="telaEscolhaDeRegistro.html"> criar uma conta </a> </p>
         </section>
-    </form>    
+    </main>
 
-    <section class="imagem-lado">
-        <div class="descricao-imagem">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas exercitationem modi,
-            illo et voluptates dolore aspernatur recusandae architecto enim saepe nemo, nesciunt optio nihil deserunt aperiam aut, excepturi vero iure?
-        </div>
-    </section>
-    
-</section>
-    
+
+
+    <!--Scripts-->
+    <script src="../_assets/js/login/telaLogin.js"></script>
 </body>
 
- <!--Scripts-->
-<script src="../_assets/js/index/login/telaLogin.js"></script>
 
 </html>
