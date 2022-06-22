@@ -25,6 +25,16 @@ class UsuarioEmpresa {
     }
 } */
 
+import {nomeProf, nomeSocial, emailProf, telefoneProf, genero, cpf, categorias, hardSkill, 
+    tempoExperiencia, formaPagamento, modalidade, opcaoPCD, tipoPCD} from './inputValues.js';
+
+nomeProf.addEventListener("change", () => {
+    console.log(nomeProf.value);
+})
+
+
+
+
 class Teste { 
     constructor(name, email, phone) {
         this.name = name;
@@ -164,7 +174,6 @@ function recuperandoOValueDeArrey(arrayDeDados){
         newArrey.push(e.value);
     })
 
-    console.log(newArrey);
     return newArrey;
 }
  
