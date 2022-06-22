@@ -1,5 +1,6 @@
 @import url("http://fonts.cdnfonts.com/css/abraham");
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
 
 html {
   overflow-x: hidden;
@@ -54,6 +55,8 @@ body {
 /* Design básico de um botão principal */
 
 .btn-conversao {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   padding: 16px 64px;
   border-radius: 4px;
   background-color: var(--cor-primaria);
@@ -69,6 +72,8 @@ body {
 /* Design básico de um botão principal */
 
 .btn-secundario {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   padding: 16px 32px;
   border-radius: 4px;
   border: 1px solid var(--lilas-placeholder);

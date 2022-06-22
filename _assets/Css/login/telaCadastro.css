@@ -1,5 +1,10 @@
 @import '../global.css';
 
+
+* {
+    transition: all ease .2s;
+}
+
 html{
     font-family: 'inter', sans-serif;
     color: var(--texto-primario);

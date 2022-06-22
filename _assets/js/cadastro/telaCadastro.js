@@ -1,4 +1,4 @@
-class UsuarioFreelancer {
+/*class UsuarioFreelancer {
     constructor(nomeCompleto, nomeSocial=false, email, telefone, genero, cpf, formasPagamento){
         this.tipoUsuario = 0; 
         this.nomeCompleto = nomeCompleto;
@@ -23,19 +23,43 @@ class UsuarioEmpresa {
     constructor(){
         this.tipoUsuario = 1; 
     }
+} */
+
+class Teste { 
+    constructor(name, email, phone) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
 }
+
+const nomeUser = document.querySelector("#nome");
+const emailUser = document.querySelector("#email");
+const phoneUser = document.querySelector("#phone");
 
 
 document.querySelector('#btn-continuar-etapa3').addEventListener('click', (e)=> {
     e.preventDefault();
     
-    const tipoUsuario = tipoUsuarioSelecao();   
-    const categoriaProf = escolhaCategoriaProf();  
-    const dadosDeCadastro = capturandoOsDadosEDividindoEmArrey()
+    //const tipoUsuario = tipoUsuarioSelecao();   
+    //const categoriaProf = escolhaCategoriaProf();  
+    //const dadosDeCadastro = capturandoOsDadosEDividindoEmArrey()
 
-    let UsuarioTeste = new CategoriaProfissional(...dadosDeCadastro[0],categoriaProf);
-    console.log(UsuarioTeste);
-}) 
+    //let UsuarioTeste = new CategoriaProfissional(...dadosDeCadastro[0],categoriaProf);
+    let usuarioTeste = new Teste(
+        nomeUser.value,
+        emailUser.value,
+        phoneUser.value
+    );
+
+    fetch("http://localhost:8080/contacts", {
+        method: "POST",
+        headers: {"Content-type": "application/json"},
+        body: JSON.stringify(UsuarioTeste)
+    });
+   console.log(usuarioTeste);
+
+}); 
 
 const nomeSocialSelected = document.querySelector('#nome-social').addEventListener('click', ()=> {    
    const input = document.querySelector('#entrada-nome-social');

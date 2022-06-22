@@ -186,7 +186,11 @@ function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco,
     descricao.className = "descricao_vaga";
 
     let h3Desc = document.createElement("h3");
-    h3Desc.innerHTML = "Descrição da vaga";
+    if(pcd === true){
+        h3Desc.innerHTML = "Descrição da vaga";
+    }else {
+        h3Desc.innerHTML = "Descrição do projeto";
+    }
     let PDesc = document.createElement("p");
     PDesc.innerHTML = desc;
 
@@ -233,7 +237,11 @@ function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco,
 
     let btnDetalhes = document.createElement("button");
     btnDetalhes.className = "btn_detalhesVaga";
-    btnDetalhes.innerHTML = "Detalhes da vaga";
+    if(pcd === true){
+        btnDetalhes.innerHTML = "Detalhes da vaga";
+    }else {
+        btnDetalhes.innerHTML = "Detalhes do projeto";
+    }
     
     hrefDetalhes.appendChild(btnDetalhes)
 

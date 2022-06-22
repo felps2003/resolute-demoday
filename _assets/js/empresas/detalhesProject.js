@@ -34,7 +34,7 @@ function createProjectDetails({titulo, ramo, desc, atividade, habilidade, preco,
     orgText.className = "org_text";
 
     let orgH1 = document.createElement("h1");
-    orgH1.innerHTML = "Instituto Pedro Formiga";
+    orgH1.innerHTML = "Instituto myAra";
 
     let orgP = document.createElement("p");
     orgP.innerHTML = ramo;
@@ -89,7 +89,11 @@ function createProjectDetails({titulo, ramo, desc, atividade, habilidade, preco,
     divDesc.className = "desc_oferta";
 
     let descH3 = document.createElement("h3");
-    descH3.innerHTML = "Descrição do projeto";
+    if(pcd === true){
+        descH3.innerHTML = "Descrição da vaga";
+    }else {
+        descH3.innerHTML = "Descrição do projeto";
+    }
 
     let descricao = document.createElement("p");
     descricao.innerHTML = desc;
@@ -103,7 +107,11 @@ function createProjectDetails({titulo, ramo, desc, atividade, habilidade, preco,
     divAtividade.className = "atividade_oferta";
 
     let atividadeH3 = document.createElement("h3");
-    atividadeH3.innerHTML = "Atividades do projeto";
+    if(pcd === true){
+        atividadeH3.innerHTML = "Atividades da vaga"
+    }else {
+        atividadeH3.innerHTML = "Atividades do projeto"
+    }
 
     let atividadeText = document.createElement("p");
     atividadeText.innerHTML = atividade;
