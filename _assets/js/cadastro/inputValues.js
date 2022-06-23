@@ -9,7 +9,7 @@ const nomeSocial = document.querySelector('#entrada-nome-social');
 const emailProf = document.querySelector('#email');
 const telefoneProf = document.querySelector('#tel');
 const genero = document.querySelector('#select-genero');
-const cpf = document.querySelector('#cpf');
+const cpf = document.querySelector('#cpfProf');
 
 const categorias = [];
 

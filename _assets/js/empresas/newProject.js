@@ -135,7 +135,7 @@ function dinamicProjectRender({titulo, ramo, desc, atividade, habilidade, preco,
     avatar.className = "avatar";
     
     let imgUser = document.createElement("img");
-    imgUser.src = "../_assets/img/user.png";
+    imgUser.src = "../_assets/img/logoMyAra.png";
 
     avatar.appendChild(imgUser);
 

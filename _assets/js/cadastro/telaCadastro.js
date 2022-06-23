@@ -1,75 +1,75 @@
-/*class UsuarioFreelancer {
-    constructor(nomeCompleto, nomeSocial=false, email, telefone, genero, cpf, formasPagamento){
-        this.tipoUsuario = 0; 
-        this.nomeCompleto = nomeCompleto;
-        this.nomeSocial = nomeSocial; 
-        this.email = email; 
-        this.telefone = telefone;
-        this.genero = genero;
-        this.cpf = cpf; 
-        this.formasPagamento = formasPagamento 
-        
-    }
-}
-
-class CategoriaProfissional extends UsuarioFreelancer {
-    constructor(nomeCompleto, nomeSocial=false, email, telefone, genero, cpf, formasPagamento, categoriaProfissional){
-        super(nomeCompleto, nomeSocial=false, email, telefone, genero, cpf, formasPagamento);
-        this.categoriaDeAtuação = categoriaProfissional; 
-    }
-}
-
-class UsuarioEmpresa {
-    constructor(){
-        this.tipoUsuario = 1; 
-    }
-} */
-
 import {nomeProf, nomeSocial, emailProf, telefoneProf, genero, cpf, categorias, hardSkill, 
     tempoExperiencia, formaPagamento, modalidade, opcaoPCD, tipoPCD} from './inputValues.js';
 
-nomeProf.addEventListener("change", () => {
-    console.log(nomeProf.value);
-})
 
-
-
-
-class Teste { 
-    constructor(name, email, phone) {
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
+class Profissional {
+    constructor(nomeCompleto, nomeSocial = null, email, telefone, genero, cpf, categoria, hardSkill, tempoExperiencia, formaPagamento, modalidade, pcd) {
+        this.nomeProf = nomeCompleto;
+        this.nomeSocial = nomeSocial;
+        this.emailProf = email;
+        this.telefoneProf = telefone;
+        this.genero = genero;
+        this.cpf = cpf;
+        this.categoria = categoria;
+        this.hardskill = hardSkill;
+        this.tempoExperiencia = tempoExperiencia;
+        this.formaPagamento = formaPagamento;
+        this.modalidade = modalidade;
+        this.tipoPCD = pcd;
     }
 }
 
-const nomeUser = document.querySelector("#nome");
-const emailUser = document.querySelector("#email");
-const phoneUser = document.querySelector("#phone");
+const enviarForm = document.querySelector("#btn-continuar-etapa3");
 
-
-document.querySelector('#btn-continuar-etapa3').addEventListener('click', (e)=> {
+enviarForm.addEventListener("click", (e) => {
     e.preventDefault();
-    
-    //const tipoUsuario = tipoUsuarioSelecao();   
-    //const categoriaProf = escolhaCategoriaProf();  
-    //const dadosDeCadastro = capturandoOsDadosEDividindoEmArrey()
 
-    //let UsuarioTeste = new CategoriaProfissional(...dadosDeCadastro[0],categoriaProf);
-    let usuarioTeste = new Teste(
-        nomeUser.value,
-        emailUser.value,
-        phoneUser.value
+    const categoriaProf = escolhaCategoriaProf();  
+    const modalidadeEscolhida = modalidade.filter(item => {
+        if(item.checked === true) {
+            return item
+        }
+    });
+    const modalidadeCerto = modalidadeEscolhida.map(item => item.value);
+
+    const pcdFilter = tipoPCD.filter(item => {
+        if(item.checked === true) {
+            return item
+        }
+    });
+    const pcdMap = pcdFilter.map(item => item.value);
+
+    let contaProfissional = new Profissional(
+        nomeProf.value,
+        nomeSocial.value,
+        emailProf.value,
+        telefoneProf.value,
+        genero.value,
+        cpf.value,
+        categoriaProf,
+        hardSkill.value,
+        tempoExperiencia.value,
+        formaPagamento.value,
+        modalidadeCerto,
+        pcdMap
+
     );
 
     fetch("http://localhost:8080/contacts", {
         method: "POST",
         headers: {"Content-type": "application/json"},
-        body: JSON.stringify(UsuarioTeste)
+        body: JSON.stringify(contaProfissional)
     });
-   console.log(usuarioTeste);
 
-}); 
+    redirecionamento();
+});
+
+const redirecionamento = () => {
+    window.location.href = "http://127.0.0.1:5500/html_Pages/teladeLogin.html";
+}
+
+
+
 
 const nomeSocialSelected = document.querySelector('#nome-social').addEventListener('click', ()=> {    
    const input = document.querySelector('#entrada-nome-social');
@@ -90,11 +90,6 @@ const pcdNotChecked = document.querySelector("#radio-prof-sem-deficiente").addEv
 })
 
 
-// 1.1 - Selecionando as Divs de categoria e atribuindo a uma const, formando um Arrey
-//      1.2 - usando um forEach para aplicar o evento de click em qualquer uma das divs
-//      1.3 quando clicando, recebe o data-selecionado
-// 2.1 - Usando outro ForEach para remover qualquer data-selecionado de outras divs
-// 2.2 - Assim não teremos mais de uma categoria selecionada!  
 
 const arreyEscolhaCategoriaProfissional = document.querySelectorAll('.box-categoria-profissional');  
 
@@ -111,11 +106,11 @@ arreyEscolhaCategoriaProfissional.forEach(elemento => {
     })
 })
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
 // Função responsável por recuperar o valor de seleção do tipo de conta
 // e devolver isso no momento do click de finalizaçãodo forms
 
-function escolhaCategoriaProf() {
+const escolhaCategoriaProf = () =>{
     let nameDaCategoria; 
 
     arreyEscolhaCategoriaProfissional.forEach(categoria =>{
@@ -123,22 +118,22 @@ function escolhaCategoriaProf() {
         
             switch (categoria.getAttribute('name')) {
                 case "categoria_1":
-                    nameDaCategoria = 1; 
+                    nameDaCategoria = 'Programação e TI'; 
                     break;
 
                 case "categoria_2" :
-                    nameDaCategoria = 2;
+                    nameDaCategoria = 'Design e UI/UX';
                     break;
 
                 case "categoria_3" :
-                    nameDaCategoria = 3;
+                    nameDaCategoria = 'Infraestrutura';
                     break;
 
                 case "categoria_4" :
-                    nameDaCategoria = 4;
+                    nameDaCategoria = 'Marketing e Vendas';
                     break;
                 case "categoria_5" :
-                    nameDaCategoria = 5;
+                    nameDaCategoria = 'Administrativo';
                 break;
 
                 default:
@@ -152,23 +147,7 @@ function escolhaCategoriaProf() {
 }
 
 
-function capturandoOsDadosEDividindoEmArrey() {
-    const arrayDadosCadastro = document.querySelector('#infos-cadastro-usuario');
-
-    const conjuntoDeInputs = Array(arrayDadosCadastro[2], arrayDadosCadastro[5], arrayDadosCadastro[6], arrayDadosCadastro[7], arrayDadosCadastro[8],
-        arrayDadosCadastro[9], arrayDadosCadastro[12])
-
-    const conjuntoCheckeds = Array(arrayDadosCadastro[13],arrayDadosCadastro[14],arrayDadosCadastro[15],arrayDadosCadastro[16],arrayDadosCadastro[19],arrayDadosCadastro[20], 
-    arrayDadosCadastro[21],arrayDadosCadastro[22]);
-
-    const conjuntoOptions = Array(arrayDadosCadastro[3],arrayDadosCadastro[4],arrayDadosCadastro[17],arrayDadosCadastro[18]); 
-     
-    let arrayDeInfosUsuario = Array(recuperandoOValueDeArrey(conjuntoDeInputs));
-    console.log(arrayDeInfosUsuario); 
-    return arrayDeInfosUsuario; 
-}
-
-function recuperandoOValueDeArrey(arrayDeDados){
+const recuperandoOValueDeArrey = (arrayDeDados) =>{
     let newArrey = Array(); 
     arrayDeDados.forEach(e =>{
         newArrey.push(e.value);
@@ -176,4 +155,4 @@ function recuperandoOValueDeArrey(arrayDeDados){
 
     return newArrey;
 }
- 
+  

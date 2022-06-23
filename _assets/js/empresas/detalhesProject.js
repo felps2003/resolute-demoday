@@ -26,7 +26,7 @@ function createProjectDetails({titulo, ramo, desc, atividade, habilidade, preco,
     avatar.className = "avatar";
 
     let imgAvatar = document.createElement("img");
-    imgAvatar.src = "../_assets/img/user.png";
+    imgAvatar.src = "../_assets/img/logoMyAra.png";
     avatar.appendChild(imgAvatar);
 
     //Text

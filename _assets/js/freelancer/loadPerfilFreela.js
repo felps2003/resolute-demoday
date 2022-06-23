@@ -104,7 +104,7 @@ function renderPerfisHTML({nome, pcd, cargo, desc, competencia, preco, id}) {
     let avatar = document.createElement("span");
     avatar.className = "avatar";
     let imgAvatar = document.createElement("img");
-    imgAvatar.src = "../_assets/img/user.png";
+    imgAvatar.src = "../_assets/img/freelaAvatar.png";
     avatar.appendChild(imgAvatar);
     
     //Informações text

@@ -8,6 +8,7 @@
       "habilidade": "JavaScript",
       "preco": "100",
       "pcd": true,
+      "dataPublic": "20/06/2022",
       "id": 0
     },
     {
@@ -107,6 +108,7 @@
       "habilidade": "JavaScript ",
       "preco": "100",
       "pcd": true,
+      "dataPublic": "20/06/2022",
       "id": 10
     }
   ],
