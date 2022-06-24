@@ -175,14 +175,17 @@ function renderPerfisHTML({nome, pcd, cargo, desc, competencia, preco, id}) {
     let competencias = document.createElement("div");
     competencias.className = "competencia";
 
-    let comItem = document.createElement("div");
-    comItem.className = "compItem";
-
-    let compText = document.createElement("p");
-    compText.innerHTML = competencia
-
-    comItem.appendChild(compText);
-    competencias.appendChild(comItem);
+    competencia.forEach(item => {
+        let comItem = document.createElement("div");
+        comItem.className = "compItem";
+    
+        let compText = document.createElement("p");
+        compText.innerHTML = item
+    
+        comItem.appendChild(compText);
+        competencias.appendChild(comItem);
+    })
+  
 
 
 

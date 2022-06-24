@@ -385,6 +385,7 @@
     overflow: hidden;
     height: 200px;
     margin: 0px 0px 0px 380px;
+     
 }
 
 .slideComments {
@@ -485,6 +486,477 @@
     
 }
 
+
+
+
+/* Responsividade */
+@media screen and (max-width: 575.98px) {
+    /* -- Topo perfil -- */
+  .avatar img{
+    width: 100px;
+    height: 100px;
+    }
+
+    .perfil_info {
+        height: 300px;
+    }
+
+    .capa {
+        background-position: top;
+    }
+
+    .emoji img{
+        width: 30px;
+    }
+
+    .identificacao h1 {
+        font-size: 1.3rem;
+    }
+
+    .cargo p{
+        font-size: .7rem;
+    }
+
+    .cargo .pcd {
+        padding: 2px 4px;
+        font-size: .6rem;
+        
+    }
+
+    .avaliacao i {
+        font-size: 12px;
+    }
+
+    .info_freela {
+        top: 100px;
+    }
+
+    .offButton {
+        display: none;
+    }
+
+
+    /* -- items perfil -- */
+    .row {
+        width: 90%;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 10px;
+        height: 100%;
+    }
+
+    .cont_feedback {
+        display: none;
+    }
+
+    .btnsHab span {
+        font-size: .8rem;
+    }
+
+    .tituloSection {
+        font-size: 1.2rem;
+    }
+
+    .habilidades, .certificados {
+        width: 100%;
+        height: 800%;
+        margin-bottom: 20px;
+    }
+
+    .descricao, .historico  {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .descText p, .historico p{
+        font-size: .9rem;
+    }
+
+    .pcdButton {
+        width: 100%;
+    }
+
+    .projetosDev, .projetosDestaque  {
+        width: 100%;
+    }
+
+    .tituloProject {
+        font-size: .8rem;
+    }
+
+    .avatarEmpresa img{
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .subRow {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+
+    .desactiveCertify {
+        display: none;
+    }
+
+
+}
+
+/* Small devices (tablet, 576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  /* -- Topo perfil -- */
+  .avatar img{
+    width: 100px;
+    height: 100px;
+    }
+
+    .perfil_info {
+        height: 300px;
+    }
+
+    .capa {
+        background-position: top;
+    }
+
+    .emoji img{
+        width: 30px;
+    }
+
+    .identificacao h1 {
+        font-size: 1.3rem;
+    }
+
+    .cargo p{
+        font-size: .7rem;
+    }
+
+    .cargo .pcd {
+        padding: 2px 4px;
+        font-size: .6rem;
+    }
+
+    .avaliacao i {
+        font-size: 12px;
+    }
+
+    .info_freela {
+        top: 100px;
+    }
+
+    .offButton {
+        display: none;
+    }
+
+
+    /* -- items perfil -- */
+    .row {
+        width: 90%;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 10px;
+        height: 100%;
+    }
+
+    .cont_feedback {
+        display: none;
+    }
+
+    .btnsHab span {
+        font-size: .8rem;
+    }
+
+    .tituloSection {
+        font-size: 1.2rem;
+    }
+
+    .habilidades, .certificados {
+        width: 100%;
+        height: 800%;
+        margin-bottom: 20px;
+    }
+
+    .descricao, .historico  {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .descText p, .historico p{
+        font-size: .9rem;
+    }
+
+    .pcdButton {
+        width: 100%;
+    }
+
+    .projetosDev, .projetosDestaque  {
+        width: 100%;
+    }
+
+    .tituloProject {
+        font-size: .8rem;
+    }
+
+    .avatarEmpresa img{
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .subRow {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+   
+
+    
+    .desactiveCertify {
+        display: none;
+    }
+
+    
+}
+
+/* Small devices (tablet modo paisagem) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    /* -- Topo perfil -- */
+    .avatar img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .perfil_info {
+        height: 400px;
+    }
+
+    .capa {
+        background-position: top;
+    }
+
+    .emoji img{
+        width: 30px;
+    }
+
+    .identificacao h1 {
+        font-size: 1.5rem;
+    }
+
+    .cargo p{
+        font-size: .7rem;
+    }
+
+    .cargo .pcd {
+        padding: 2px 4px;
+        font-size: .6rem;
+    }
+
+    .avaliacao i {
+        font-size: 14px;
+    }
+
+    .info_freela {
+        top: 180px;
+    }
+
+    .offButton {
+        display: none;
+    }
+
+
+    /* -- items perfil -- */
+    .row {
+        width: 90%;
+    }
+
+    .cont_feedback {
+        display: none;
+    }
+
+    .btnsHab span {
+        font-size: .8rem;
+    }
+
+    .tituloSection {
+        font-size: 1.2rem;
+    }
+
+    .habilidades, .certificados {
+        width: 25%;
+    }
+
+    .descricao, .historico  {
+        width: 40%;
+    }
+
+    .descText p, .historico p{
+        font-size: .8rem;
+    }
+
+    .pcdButton {
+        width: 100%;
+    }
+
+    .projetosDev, .projetosDestaque  {
+        width: 30%;
+    }
+
+    .tituloProject {
+        font-size: .7rem;
+    }
+
+    .avatarEmpresa img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .ramoEmpresa {
+        display: none;
+    }
+    
+    .subRow {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .certificados {
+        width: 100%;
+        height: 200px;
+    }
+
+    .certificadoItem {
+        width: 350px;
+        margin-right: 20px;
+    }
+    .certificadosItems {
+        display: flex;
+        width: 100%;
+    }
+
+    .desactiveCertify {
+        display: none;
+    }
+
+   
+
+   
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .row {
+        width:  90%;
+    }
+
+    .capa { 
+        background-position: top;
+    }
+
+    .info_freela {
+        top: 220px;
+    }
+
+    .habilidades, .certificados {
+        width: 260px;
+        margin-right: 10px;
+    }
+
+    .btnsHab span {
+        font-size: .8rem;
+    }
+
+    .tituloSection {
+        font-size: 1.5rem;
+    }
+
+    .descricao, .historico {
+        width: 380px;
+    }
+
+    .descText p, .historico p {
+        font-size: .9rem;
+    }
+
+    .projetosDev, .projetosDestaque  {
+        width: 400px;
+    }
+
+    .certificados {
+        width: 100%;
+        height: 200px;
+    }
+
+    .certificadoItem {
+        width: 350px;
+        margin-right: 20px;
+    }
+    .certificadosItems {
+        display: flex;
+        width: 100%;
+    }
+
+    .tituloProject {
+        font-size: .8rem;
+    }
+
+    .desactiveCertify {
+        display: none;
+    }
+ 
+    .subRow {
+        display: flex;
+        width:  90%;
+        flex-wrap: wrap;
+       
+    }
+
+    .feedback, .btnControlComments {
+        display: none;
+        width: 700px;
+    }
+
+   
+    
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media screen and (min-width: 1200px) and (max-width: 1399px)  {
+
+    .row {
+        width: 1200px;
+    }
+
+    .habilidades, .certificados {
+        width: 320px;
+    }
+
+    .descricao, .historico {
+        width: 420px;
+    }
+
+    .projetosDev, .projetosDestaque  {
+        width: 410px;
+    }
+
+    .feedback {
+        width: 700px;
+    }
+
+    .comment {
+        width: 340px;
+    }
+
+    .btnControlComments {
+        width: 740px;
+    }
+ 
+   
+    
+  
+}
 
 
 

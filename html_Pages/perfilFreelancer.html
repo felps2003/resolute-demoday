@@ -102,14 +102,14 @@
                         </span>
                         
                         <div class="identificacao">
-                            <h1>Pedro Formiga</h1>
+                            <h1 id="nomeFreela"></h1>
                             <span class="lang">
                                 <img src="../_assets/img/emojiBrasil.png">
                             </span>
                         </div>
 
                         <div class="cargo">
-                            <p>Desenvolvedor Front-End</p>
+                            <p id="cargo"></p>
                             <span class="pcd">PCD</span>
                         </div>
 
@@ -123,7 +123,7 @@
                         
                     </div>
 
-                    <div class="redesLinks">
+                    <div class="redesLinks offButton">
                         <a href="#linkdin"><i class="fa-brands fa-linkedin-in"></i></a>
                         <a href="#linkdin"><i class="fa-brands fa-github-alt"></i></a>
                     </div>
@@ -135,13 +135,7 @@
                 <div class="row">
                     <div class="habilidades">
                         <h2 class="tituloSection ">Habilidades</h2>
-                        <div class="btnsHab">
-                            <span>JavaScript (3 Anos)</span>
-                            <span>Inglês intermediario</span>
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>ReactJs</span>
-                        </div>
+                        <div class="btnsHab"></div>
                     </div>
 
                     <div class="descricao">
@@ -188,64 +182,66 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row subRow">
                     <div class="certificados">
                         <h2 class="tituloSection">Certificados</h2>
-
-                        <div class="certificadoItem">
-                            <span class="avatarInstituicao">
-                                <img src="../_assets/img/proaLogo.png">
-                            </span>
-                            <div class="projetoText">
-                                <p class="tituloProject">Desenvolvimento web Java</p>
-                                <p class="nomeEmpresa">Instituto PROA</p>
-                                <p class="ramoEmpresa">Emitido em 20/06/2022</p>
+                        <div class="certificadosItems">
+                            <div class="certificadoItem">
+                                <span class="avatarInstituicao">
+                                    <img src="../_assets/img/proaLogo.png">
+                                </span>
+                                <div class="projetoText">
+                                    <p class="tituloProject">Desenvolvimento web Java</p>
+                                    <p class="nomeEmpresa">Instituto PROA</p>
+                                    <p class="ramoEmpresa">Emitido em 20/06/2022</p>
+                                </div>
+                            </div>
+    
+                            <div class="certificadoItem">
+                                <span class="avatarInstituicao">
+                                    <img src="../_assets/img/dioLogo.png">
+                                </span>
+                                <div class="projetoText">
+                                    <p class="tituloProject">JavaScript ES6 avançado</p>
+                                    <p class="nomeEmpresa">Digital Innovation One</p>
+                                    <p class="ramoEmpresa"> em 20/04/2022</p>
+                                </div>
+                            </div>
+    
+                            <div class="certificadoItem">
+                                <span class="avatarInstituicao">
+                                    <img src="../_assets/img/dioLogo.png">
+                                </span>
+                                <div class="projetoText">
+                                    <p class="tituloProject">JavaScript ES6 Essencial</p>
+                                    <p class="nomeEmpresa">Digital Innovation One</p>
+                                    <p class="ramoEmpresa">Emitido em 10/04/2022</p>
+                                </div>
+                            </div>
+    
+                            <div class="certificadoItem desactiveCertify">
+                                <span class="avatarInstituicao">
+                                    <img src="../_assets/img/dioLogo.png">
+                                </span>
+                                <div class="projetoText">
+                                    <p class="tituloProject">HTML e CSS</p>
+                                    <p class="nomeEmpresa">Digital Innovation One</p>
+                                    <p class="ramoEmpresa">Emitido em 01/01/2022</p>
+                                </div>
+                            </div>
+    
+                            <div class="certificadoItem desactiveCertify">
+                                <span class="avatarInstituicao">
+                                    <img src="../_assets/img/udemyLogo.png">
+                                </span>
+                                <div class="projetoText">
+                                    <p class="tituloProject">Lógica de Programação</p>
+                                    <p class="nomeEmpresa">Udemy</p>
+                                    <p class="ramoEmpresa">Emitido em 10/02/2022</p>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="certificadoItem">
-                            <span class="avatarInstituicao">
-                                <img src="../_assets/img/dioLogo.png">
-                            </span>
-                            <div class="projetoText">
-                                <p class="tituloProject">JavaScript ES6 avançado</p>
-                                <p class="nomeEmpresa">Digital Innovation One</p>
-                                <p class="ramoEmpresa"> em 20/04/2022</p>
-                            </div>
-                        </div>
-
-                        <div class="certificadoItem">
-                            <span class="avatarInstituicao">
-                                <img src="../_assets/img/dioLogo.png">
-                            </span>
-                            <div class="projetoText">
-                                <p class="tituloProject">JavaScript ES6 Essencial</p>
-                                <p class="nomeEmpresa">Digital Innovation One</p>
-                                <p class="ramoEmpresa">Emitido em 10/04/2022</p>
-                            </div>
-                        </div>
-
-                        <div class="certificadoItem">
-                            <span class="avatarInstituicao">
-                                <img src="../_assets/img/dioLogo.png">
-                            </span>
-                            <div class="projetoText">
-                                <p class="tituloProject">HTML e CSS</p>
-                                <p class="nomeEmpresa">Digital Innovation One</p>
-                                <p class="ramoEmpresa">Emitido em 01/01/2022</p>
-                            </div>
-                        </div>
-
-                        <div class="certificadoItem">
-                            <span class="avatarInstituicao">
-                                <img src="../_assets/img/udemyLogo.png">
-                            </span>
-                            <div class="projetoText">
-                                <p class="tituloProject">Lógica de Programação</p>
-                                <p class="nomeEmpresa">Udemy</p>
-                                <p class="ramoEmpresa">Emitido em 10/02/2022</p>
-                            </div>
-                        </div>
+                       
                     </div>
 
                     <div class="historico">
@@ -284,9 +280,9 @@
 
                             <div class="perfilComment">
                                 <span class="avatarComment">
-                                    <img src="../_assets/img/user.png">
+                                    <img src="../_assets/img/comments/eudes.jfif">
                                 </span>
-                                <p>Matheus Pacco1</p>
+                                <p>Eudes Benevides</p>
                             </div>
 
                             <div class="commentText">
@@ -310,9 +306,9 @@
 
                             <div class="perfilComment">
                                 <span class="avatarComment">
-                                    <img src="../_assets/img/user.png">
+                                    <img src="../_assets/img/comments/gi.jfif">
                                 </span>
-                                <p>Matheus Pacco2</p>
+                                <p>Giovana Gomes</p>
                             </div>
 
                             <div class="commentText">
@@ -336,9 +332,9 @@
 
                             <div class="perfilComment">
                                 <span class="avatarComment">
-                                    <img src="../_assets/img/user.png">
+                                    <img src="../_assets/img/comments/matheus.jfif">
                                 </span>
-                                <p>Matheus Pacco3</p>
+                                <p>Matheus Pacco</p>
                             </div>
 
                             <div class="commentText">
@@ -362,9 +358,9 @@
 
                             <div class="perfilComment">
                                 <span class="avatarComment">
-                                    <img src="../_assets/img/user.png">
+                                    <img src="../_assets/img/comments/Pedro.jfif">
                                 </span>
-                                <p>Matheus Pacco4</p>
+                                <p>Pedro Henrique</p>
                             </div>
 
                             <div class="commentText">
@@ -383,6 +379,8 @@
                             </div>
 
                         </div>
+
+                        
 
                       </div>
                     </div>
@@ -403,6 +401,7 @@
     
 
     <script src="../_assets/js/freelancer/perfilFreelancer.js"></script>
+    <script src="../_assets/js/index/mobileMenu.js"></script>
     
 </body>
 </html>
