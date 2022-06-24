@@ -31,6 +31,23 @@ body {
     position: relative;
     padding: 12px;
     margin: 1rem 0;
+    position: relative;
+}
+
+.select_model::before {
+    content: "";
+    background-color: var(--cor-primaria);
+    color: var(--bg-primario);
+    border-radius: 12px;
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    z-index: 0;
+    transition: all ease .3s;
+}
+
+.select_model.teste::before {
+    margin-left: 44%;
 }
 
 .buttonModel {
@@ -46,12 +63,12 @@ body {
     color: var(--lilas-placeholder);
     font-weight: 600;
     cursor: pointer; 
+    z-index: 2;
 }
 
 .buttonModel.selected {
-    background-color: var(--cor-primaria);
     color: var(--bg-primario);
-}
+} 
 
 .iconFreela {
     display: flex;

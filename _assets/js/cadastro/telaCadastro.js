@@ -3,7 +3,10 @@ import {nomeProf, nomeSocial, emailProf, telefoneProf, genero, cpf, categorias, 
 
 
 class Profissional {
-    constructor(nomeCompleto, nomeSocial = null, email, telefone, genero, cpf, categoria, hardSkill, tempoExperiencia, formaPagamento, modalidade, profissaPCD ,pcd) {
+    constructor(freelancer = 1,nomeCompleto, nomeSocial = null, email, 
+        telefone, genero, cpf, categoria, hardSkill, tempoExperiencia, 
+        formaPagamento, presencial, homeOffice, hibrido, flexivel, profissaPCD ,fisica, mental, auditiva, visual) {
+        this.freelancer = freelancer;
         this.nomeProf = nomeCompleto;
         this.nomeSocial = nomeSocial;
         this.emailProf = email;
@@ -14,9 +17,15 @@ class Profissional {
         this.hardskill = hardSkill;
         this.tempoExperiencia = tempoExperiencia;
         this.formaPagamento = formaPagamento;
-        this.modalidade = modalidade;
+        this.presencial = presencial;
+        this.homeOffice = homeOffice;
+        this.hibrido = hibrido;
+        this.flexivel = flexivel;
         this.profissaPCD = profissaPCD;
-        this.tipoPCD = pcd;
+        this.fisica = fisica;
+        this.mental = mental;
+        this.auditiva = auditiva;
+        this.visual = visual;
     }
 }
 
@@ -31,25 +40,30 @@ enviarForm.addEventListener("click", (e) => {
             return item
         }
     });
-    const modalidadeCerto = modalidadeEscolhida.map(item => item.value);
 
-    const pcdFilter = tipoPCD.filter(item => {
-        if(item.checked === true) {
-            return item
-        }
-    });
-    const pcdMap = pcdFilter.map(item => item.value);
+    //const modalidadeCerto = modalidadeEscolhida.map(item => item.value);
+    let fisica = resgatandoTipoPCD(0);
+    let mental = resgatandoTipoPCD(1);
+    let auditiva = resgatandoTipoPCD(2);
+    let visual = resgatandoTipoPCD(3);
 
+    let presencial = resgatandoModalidade(0);
+    let homeOffice = resgatandoModalidade(1);
+    let hibrido = resgatandoModalidade(2);
+    let flexivel = resgatandoModalidade(3);
+
+    
     const opcaoPCDChecked = opcaoPCD.filter(item => {
         if(item.checked === true){
             return item
         }
     });
 
-    const opcaoPCDMap = opcaoPCDChecked.map(item => item.value);
-
+    const valPcd = opcaoPCDChecked[0].value; 
+    
     
     let contaProfissional = new Profissional(
+        1,
         nomeProf.value,
         nomeSocial.value,
         emailProf.value,
@@ -60,9 +74,15 @@ enviarForm.addEventListener("click", (e) => {
         hardSkill.value,
         tempoExperiencia.value,
         formaPagamento.value,
-        modalidadeCerto,
-        opcaoPCDMap[0],
-        pcdMap
+        presencial,
+        homeOffice,
+        hibrido,
+        flexivel,
+        valPcd,
+        fisica, 
+        mental,
+        auditiva,
+        visual
 
     );
 
@@ -73,12 +93,31 @@ enviarForm.addEventListener("click", (e) => {
         body: JSON.stringify(contaProfissional)
     });
 
-    redirecionamento();
+    console.log(contaProfissional);
+    //redirecionamento();
 });
 
 const redirecionamento = () => {
     window.location.href = "http://127.0.0.1:5500/html_Pages/teladeLogin.html";
 }
+
+const resgatandoTipoPCD = (i) =>{
+    if(tipoPCD[i].checked === true){
+        return 1;
+    }else {
+        return 0;
+    }
+}
+
+const resgatandoModalidade = (i) => {
+    if(modalidade[i].checked === true){
+        return 1;
+    }else {
+        return 0;
+    }
+}
+
+
 
 
 

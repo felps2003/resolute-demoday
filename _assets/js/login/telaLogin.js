@@ -33,17 +33,29 @@ const formCompany = document.querySelector('#form_Company');
 const btnProfissional = document.querySelector('#btnProfissional');
 const btnCompany = document.querySelector('#btnCompany');
 
-btnProfissional.addEventListener("click", () => handleFormSelect(btnProfissional, btnCompany, formFreela, formCompany));
-btnCompany.addEventListener("click", () => handleFormSelect(btnCompany, btnProfissional, formCompany, formFreela));
+/*btnProfissional.addEventListener("click", () => handleFormSelect(btnProfissional, btnCompany, formFreela, formCompany));
+btnCompany.addEventListener("click", () => handleFormSelect(btnCompany, btnProfissional, formCompany, formFreela)); */
+
+const handleButtonClass = document.querySelector('.select_model');
+
+btnProfissional.addEventListener("click", () => handleFormSelect(false, formFreela, formCompany, btnProfissional, btnCompany));
+btnCompany.addEventListener("click", () => handleFormSelect(true, formCompany, formFreela, btnCompany, btnProfissional));
 
 
 
-function handleFormSelect(btnOpen, btnClosed, formOpen, formClosed){
-    btnOpen.classList.add('selected');
-    btnClosed.classList.remove('selected');
+
+function handleFormSelect(btnOpen, formOpen, formClosed, btnActive, btnClosed){
+    if(btnOpen === true) {
+        handleButtonClass.classList.add('teste');
+    }else {
+        handleButtonClass.classList.remove('teste');
+    }
+
+    btnActive.classList.add('selected');
+    btnClosed.classList.remove('selected'); 
 
     formOpen.classList.remove('formDisable');
-    formClosed.classList.add('formDisable');
+    formClosed.classList.add('formDisable'); 
 }
 
 

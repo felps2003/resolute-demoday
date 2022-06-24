@@ -380,7 +380,7 @@
 .feedback {
     display: flex;
     justify-content: center;
-    width: 820px;
+    width: 800px;
     position: relative;
     overflow: hidden;
     height: 200px;
@@ -389,6 +389,7 @@
 
 .slideComments {
     display: flex;
+    transition: all ease .3s;
 }
 
 /* -- Comment --*/
@@ -405,6 +406,7 @@
     width: 370px;
     border-radius: 8px;
     margin: 0 10px;
+
 }
 
 .perfilComment {
