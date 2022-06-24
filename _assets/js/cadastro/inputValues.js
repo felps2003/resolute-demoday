@@ -1,4 +1,4 @@
-/* --- Profissional --- */
+/* --------------- Profissional --------------- */
 const nomeProf = document.querySelector('#nome');
 
 const opcaoNomeSocial = [];
@@ -47,4 +47,13 @@ export  {
     modalidade,
     opcaoPCD,
     tipoPCD
-}
+};
+
+/* --------------- Empresa --------------- */
+const nomeEmpresa = document.querySelector('#nomeEmpresa');
+const cnpj = document.querySelector('#cnpj');
+
+
+
+
+

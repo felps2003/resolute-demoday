@@ -3,7 +3,7 @@ import {nomeProf, nomeSocial, emailProf, telefoneProf, genero, cpf, categorias, 
 
 
 class Profissional {
-    constructor(nomeCompleto, nomeSocial = null, email, telefone, genero, cpf, categoria, hardSkill, tempoExperiencia, formaPagamento, modalidade, pcd) {
+    constructor(nomeCompleto, nomeSocial = null, email, telefone, genero, cpf, categoria, hardSkill, tempoExperiencia, formaPagamento, modalidade, profissaPCD ,pcd) {
         this.nomeProf = nomeCompleto;
         this.nomeSocial = nomeSocial;
         this.emailProf = email;
@@ -15,6 +15,7 @@ class Profissional {
         this.tempoExperiencia = tempoExperiencia;
         this.formaPagamento = formaPagamento;
         this.modalidade = modalidade;
+        this.profissaPCD = profissaPCD;
         this.tipoPCD = pcd;
     }
 }
@@ -39,6 +40,15 @@ enviarForm.addEventListener("click", (e) => {
     });
     const pcdMap = pcdFilter.map(item => item.value);
 
+    const opcaoPCDChecked = opcaoPCD.filter(item => {
+        if(item.checked === true){
+            return item
+        }
+    });
+
+    const opcaoPCDMap = opcaoPCDChecked.map(item => item.value);
+
+    
     let contaProfissional = new Profissional(
         nomeProf.value,
         nomeSocial.value,
@@ -51,10 +61,12 @@ enviarForm.addEventListener("click", (e) => {
         tempoExperiencia.value,
         formaPagamento.value,
         modalidadeCerto,
+        opcaoPCDMap[0],
         pcdMap
 
     );
 
+   
     fetch("http://localhost:8080/contacts", {
         method: "POST",
         headers: {"Content-type": "application/json"},

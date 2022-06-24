@@ -29,18 +29,17 @@
         <div class="progressbar">
             <div class="circle1 etapa"> 1 </div>
             <div class="circle2"> 2 </div>
-            <div class="circle3"> 3 </div>
         </div>
 
         <div action="" class="forms-cadastro" id="teste-form-sumiu">
             <label for="nome-completo-empresa">
                 Digite o nome da sua empresa
-                <input name="nome-completo-empresa" type="text" placeholder="Digite o nome da sua empresa completo"> 
+                <input id="nomeEmpresa" name="nome-completo-empresa" type="text" placeholder="Digite o nome da sua empresa completo"> 
             </label>
 
             <label for="nome-completo-empresa">
                 Digite o CNPJ da empresa
-                <input name="nome-completo-empresa" type="number" placeholder="Ex:. 11.444.777/0001-61"> 
+                <input id="cnpj" name="nome-completo-empresa" type="number" placeholder="Ex:. 11.444.777/0001-61"> 
             </label>
 
             <h3> Selecione a categoria da sua empresa </h3>
@@ -78,158 +77,10 @@
 
     <!-- ETAPA 1 DE REGISTRO  -->
 
-    
     <section  id="cadastro-etapa3" class="etapa3">
-        <h1> Criar uma conta </h1>
-        <div class="progressbar">
-            <div class="circle1 etapa"> 1 </div>
-            <div class="circle2 etapa"> 2 </div>
-            <div class="circle3"> 3 </div>
-        </div>  
-        <div class="container-categoria-profissional">
-            <div class="box-categoria-profissional" tabindex="0" data-selecionado="selecionado" name="categoria_1"> 
-                <div class="box-icon-categoria">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-                Programação e TI 
-            </div>
-            <div class="box-categoria-profissional" tabindex="0" name="categoria_2"> 
-                <div class="box-icon-categoria">
-                    <i class="fa-solid fa-bezier-curve"></i>
-                </div>
-                Design e UI/UX 
-            </div>
-            <div class="box-categoria-profissional" tabindex="0" name="categoria_3"> 
-                <div class="box-icon-categoria">
-                    <i class="fa-solid fa-cubes"></i>
-                </div>
-                Infraestrutura 
-            </div>
-            <div class="box-categoria-profissional" tabindex="0" name="categoria_4"> 
-                <div class="box-icon-categoria">
-                    <i class="fa-solid fa-bullseye"></i>
-                </div>
-                Marketing e Vendas 
-            </div>
-            <div class="box-categoria-profissional" tabindex="0" name="categoria_5"> 
-                <div class="box-icon-categoria">
-                    <i class="fa-solid fa-clipboard-list"></i>
-                </div>
-                Administrativo 
-            </div>
-        </div>
-
-        <hr class="separa-secao">
-
-        <div class="container-funcao-especializacao" data-selecionado="selecionado">
-            <div>
-                <label for="subscategoria-atuacao" class="label-padrao"> Escolha a sua função na área
-                    <select name="subscategoria-atuacao" class="select-padrao" id="">
-                        <option value="0" selected> Selecione sua Hard Skill </option>
-                        <option value="1"> Java </option>
-                        <option value="2" > JavaScript </option>
-                        <option value="3"> React </option>
-                        <option value="4"> Angular </option>
-                        <option value="5"> NEXT </option>
-                        <option value="6"> MySQL </option>
-                        <option value="7"> Cloud </option>
-                        <option value="8"> Pacote Office </option>
-                    </select>
-                </label>
-            </div>
-            <label for="nivel-especializacao" class="label-padrao"> Tempo de experiência 
-                <select name="nivel-especializacao" class="select-tempo-experiencia" id="">
-                    <option value="0" selected> 0 </option>
-                    <option value="1"> 1 Ano </option>
-                    <option value="2"> 2 Anos</option>
-                    <option value="3"> 3 Anos</option>
-                    <option value="4"> 4 Anos</option>
-                    <option value="5"> 5 Anos</option>
-                    <option value="6"> 6 Anos</option>
-                    <option value="7"> 7 Anos</option>
-                    <option value="8"> 8 Anos</option>
-                </select>
-            </label>
-        </div>
-
-        <div class="container-detalhe-profissional">
-            <label for="selecionar-forma-pagamento" class="label-padrao"> Forma de pagamento
-                <select name="selecionar-forma-pagamento" id="cadastro-forma-pagamento" class="input-padrao"> 
-                    <option value="0" selected> Selecione a forma de pagamento</option>
-                    <option value="pagamento-hora"> Pagamento por hora </option>
-                    <option value="pagamento-dia"> Pagamento por dia </option>
-                    <option value="pagamento-mensal"> Pagamento mensal </option>
-                    <option value="pagamento-valor-fixo"> Valor fixo </option>
-                    <option value="pagamento-auxilio-bosla"> Auxilio Bolsa</option>
-                </select>
-            </label>
-
-            <p> Selecione a modalide de trabalho </p>
-            <div id="form-teste-checked" class="container-checked-modalide-trabalho">
-                <div class="box-checked">
-                    <label for="presencial"> Presencial </label>
-                    <input type="checkbox" name="modalidade-trabalho" class="checkbox-padrao">
-                </div>
-                
-                <div class="box-checked">
-                    <label for="home-office"> Home Office  </label>
-                    <input type="checkbox" name="modalidade-trabalho" class="checkbox-padrao">
-                </div>
-
-                <div class="box-checked">
-                    <label for="hibrido"> Híbrido  </label>
-                    <input type="checkbox" name="modalidade-trabalho" class="checkbox-padrao">
-                </div>
-
-                <div class="box-checked">
-                    <label for="flexivel"> Flexível </label>
-                    <input type="checkbox" name="modalidade-trabalho" class="checkbox-padrao">
-                </div>
-            </div>
-        </div>
-
-        <hr class="separa-secao">
-
-        <div class="container-radio">
-            <div class="box-radio">
-                <label for="profissional-deficiente"> Profissional com deficiência </label>
-                <input id="radio-prof-deficiente" type="radio" name="prof-deficiente" value="nome-social" class="radio-padrao"/> 
-            </div> 
-
-            <div class="box-radio">
-                <label for="profissional-nao-deficiente"> Profissional não deficiente </label>
-                <input id="radio-prof-sem-deficiente" type="radio" name="prof-deficiente" value="profissional_nao_deficiente" class="radio-padrao"/> 
-            </div>
-        </div>
 
 
-        <!-- A estilização do CHECKED está no CSS global  -->
-        <div id="checked-tipo-deficiencia" class="container-checked">
-            <div>
-                <h3> Qual seu tipo de deficiência </h3>
-            </div>
-            <div>
-                <div class="box-checked">
-                    <label for="deficiencia-fisica"> Deficiência Física </label>
-                    <input type="checkbox" name="deficiencia-fisica" class="checkbox-padrao"> 
-                </div>
 
-                <div class="box-checked">
-                    <label for="deficiencia-mental"> Deficiência Mental </label> 
-                    <input type="checkbox" name="deficiencia-mental" class="checkbox-padrao">
-                </div>
-
-                <div class="box-checked">
-                    <label for="deficiencia-auditiva"> Deficiência Auditiva </label> 
-                    <input type="checkbox" name="deficiencia-auditiva" class="checkbox-padrao">
-                </div>
-
-                <div class="box-checked">
-                    <label for="deficiencia-visual"> Deficiência Visual </label> 
-                    <input type="checkbox" name="deficiencia-visual" class="checkbox-padrao">
-                </div>
-            </div>
-        </div>
 
         <div class="container-button">
             <button id="btn-continuar-etapa3" class="btn-conversao"> Continuar </button>
@@ -243,8 +94,8 @@
 </section>
 </body>
 
-<script src="../_assets/js/index/cadastro/escolhaTipoDeConta.js"> </script>
-<script src="../_assets/js/index/login/continuarVoltarCadastro.js"> </script>
+<script src="../_assets/js/cadastro/escolhaTipoDeConta.js"> </script>
+<script src="../_assets/js/login/continuarVoltarCadastro.js"> </script>
 
 
 </html>
