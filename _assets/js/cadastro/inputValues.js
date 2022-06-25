@@ -7,6 +7,7 @@ opcaoNomeSocial[1] = document.querySelector('#sem-nome-social');
 
 const nomeSocial = document.querySelector('#entrada-nome-social');
 const emailProf = document.querySelector('#email');
+const senhaProf = document.querySelector('#senha');
 const telefoneProf = document.querySelector('#tel');
 const genero = document.querySelector('#select-genero');
 const cpf = document.querySelector('#cpfProf');
@@ -46,12 +47,11 @@ export  {
     formaPagamento,
     modalidade,
     opcaoPCD,
-    tipoPCD
+    tipoPCD,
+    senhaProf
 };
 
-/* --------------- Empresa --------------- */
-const nomeEmpresa = document.querySelector('#nomeEmpresa');
-const cnpj = document.querySelector('#cnpj');
+
 
 
 

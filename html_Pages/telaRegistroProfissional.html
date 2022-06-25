@@ -42,17 +42,26 @@
             </label>
 
             <div class="container-radio">
-                <label for="nome-social"> Quero usar meu nome social </label>
+                <div class="subdiv-radio">
+                    <label for="nome-social"> Quero usar meu nome social </label>
                 <input type="radio" id="nome-social" name="nome-social" value="nome-social" class="radio-padrao" tabindex="0"/>
-                <label for="sem-nome-social"> Não tenho nome social </label>
+                </div>
+                <div class="subdiv-radio">
+                    <label for="sem-nome-social"> Não tenho nome social </label>
                 <input type="radio" id="sem-nome-social" name="nome-social" value="sem-nome-social" class="radio-padrao" tabindex="0"/>
+                </div>
             </div>
 
             <input id="entrada-nome-social" type="text" placeholder="Digite seu nome social" class="input-nome-social" tabindex="0">
 
-            <label for="">
-                Digite E-mail
+            <label for="email">
+                Digite seu e-mail
                 <input type="email" placeholder="Digite o seu melhor e-mail" id="email"> 
+            </label>
+
+            <label for="senhaProfissional">
+                Crie sua senha
+                <input type="password" placeholder="Digite a sua senha" id="senha"> 
             </label>
 
             <label for="">
@@ -243,7 +252,26 @@
             <button id="btn-voltar-etapa2" class="btn-secundario"> Voltar para a etapa 1 </button>
         </div> 
     </section>
+    <!-- FIM DA ETAPA 2 -->
 
+    <!-- COMEÇO ETAPA 3 -->
+    <section id="finalizando-cadastro" class="finalizando">
+
+        <div class="backgroundBlur"></div>
+
+        <div class="finalizandoItems">
+            <h3>Conta cadastrada com sucesso!</h3>
+            <div class="finalizandoBox">
+                <h4>Obrigado por se cadastrar em nossa plataforma!</h4>
+                <a href="index.html">Entrar no site</a>
+        
+            </div>
+            <span class="imgFoguete">
+                <img src="../_assets/img/Foguete_Agradece.png">
+            </span>
+        </div>
+
+    </section>
     <!-- FIM ETAPA 3 -->
 
 </form>

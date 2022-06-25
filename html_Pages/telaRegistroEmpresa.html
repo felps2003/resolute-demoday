@@ -37,9 +37,19 @@
                 <input id="nomeEmpresa" name="nome-completo-empresa" type="text" placeholder="Digite o nome da sua empresa completo"> 
             </label>
 
-            <label for="nome-completo-empresa">
+            <label for="cnpj">
                 Digite o CNPJ da empresa
-                <input id="cnpj" name="nome-completo-empresa" type="number" placeholder="Ex:. 11.444.777/0001-61"> 
+                <input id="cnpj" name="cnpj" type="number" placeholder="Ex:. 11.444.777/0001-61"> 
+            </label>
+
+            <label for="emailEmpresa">
+                Cadastre seu email
+                <input id="emailEmpresa" name="emailEmpresa" type="email" placeholder="Ex: empresa@email.com"> 
+            </label>
+
+            <label for="senhaEmpresa">
+                Cadastre sua senha
+                <input id="senhaEmpresa" name="senhaEmpresa" type="password" placeholder="Crie sua senha..."> 
             </label>
 
             <h3> Selecione a categoria da sua empresa </h3>
@@ -59,14 +69,11 @@
 
             <input id="entrada-nome-social" type="text" placeholder="Digite seu nome social" class="input-nome-social" tabindex="0">
 
-            <label for="numero-funcionarios-empresa">
-                Digite o número de funcionarios da empresa
-                <input name="numero-funcionarios-empresa" type="number" placeholder="Digite o número de funcionarios"> 
-            </label>
+        
 
             <label for="numero-contato-empresa">
                 Digite o número de contato da empresa
-                <input name="numero-funcionarios-empresa" type="number" placeholder="Ex.: (12) 34567-8910"> 
+                <input name="numero-funcionarios-empresa" type="number" placeholder="Ex.: (12) 34567-8910" id="telEmpresa"> 
             </label>
 
         <div class="container-button">
@@ -76,16 +83,19 @@
     </section>
 
     <!-- ETAPA 1 DE REGISTRO  -->
-
-    <section  id="cadastro-etapa3" class="etapa3">
-
-
-
-
-        <div class="container-button">
-            <button id="btn-continuar-etapa3" class="btn-conversao"> Continuar </button>
-            <button id="btn-voltar-etapa2" class="btn-secundario"> Voltar para a etapa1 </button>
-        </div> 
+    <section id="cadastro-etapa3" class="finalizando">
+        <div class="backgroundBlur"></div>
+        <div class="finalizandoItems">
+            <h3>Conta cadastrada com sucesso!</h3>
+            <div class="finalizandoBox">
+                <h4>Obrigado por se cadastrar em nossa plataforma!</h4>
+                <a href="index.html">Entrar no site</a>
+            
+            </div>
+            <span class="imgFoguete">
+                <img src="../_assets/img/Foguete_Agradece.png">
+            </span>
+        </div>
     </section>
 
 </form>
@@ -96,6 +106,7 @@
 
 <script src="../_assets/js/cadastro/escolhaTipoDeConta.js"> </script>
 <script src="../_assets/js/login/continuarVoltarCadastro.js"> </script>
+<script src="../_assets/js/cadastro/cadastroEmpresa.js"></script>
 
 
 </html>

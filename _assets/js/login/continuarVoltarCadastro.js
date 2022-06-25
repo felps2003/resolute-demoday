@@ -20,12 +20,17 @@
 const btnContinuarEtapa2 = document.querySelector('#btn-continuar-etapa2').addEventListener('click', (e) => {
     e.preventDefault();
     recuperandoContainer('cadastro-etapa2', 'cadastro-etapa3'); 
-})
+});
 
 const btnVoltarEtapa2 =  document.querySelector('#btn-voltar-etapa2').addEventListener('click', (e) => {
     e.preventDefault();
     recuperandoContainer('cadastro-etapa3', 'cadastro-etapa2'); 
-})
+});
+
+const btnFinalizarCadastro = document.querySelector('#btn-continuar-etapa3').addEventListener('click', (e) => {
+    e.preventDefault();
+    recuperandoContainer('cadastro-etapa3', 'finalizando-cadastro');
+});
 
 function recuperandoContainer (seCaoUm, seCaoDois) {
     const secaoAtual = document.querySelector(`#${seCaoUm}`)

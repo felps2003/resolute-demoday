@@ -1,11 +1,11 @@
 import {nomeProf, nomeSocial, emailProf, telefoneProf, genero, cpf, categorias, hardSkill, 
-    tempoExperiencia, formaPagamento, modalidade, opcaoPCD, tipoPCD} from './inputValues.js';
+    tempoExperiencia, formaPagamento, modalidade, opcaoPCD, tipoPCD, senhaProf} from './inputValues.js';
 
 
 class Profissional {
     constructor(freelancer = 1,nomeCompleto, nomeSocial = null, email, 
         telefone, genero, cpf, categoria, hardSkill, tempoExperiencia, 
-        formaPagamento, presencial, homeOffice, hibrido, flexivel, profissaPCD ,fisica, mental, auditiva, visual) {
+        formaPagamento, presencial, homeOffice, hibrido, flexivel, profissaPCD ,fisica, mental, auditiva, visual, senhaProf) {
         this.freelancer = freelancer;
         this.nomeProf = nomeCompleto;
         this.nomeSocial = nomeSocial;
@@ -26,6 +26,7 @@ class Profissional {
         this.mental = mental;
         this.auditiva = auditiva;
         this.visual = visual;
+        this.senhaProf = senhaProf;
     }
 }
 
@@ -82,7 +83,8 @@ enviarForm.addEventListener("click", (e) => {
         fisica, 
         mental,
         auditiva,
-        visual
+        visual,
+        senhaProf.value
 
     );
 
@@ -94,12 +96,8 @@ enviarForm.addEventListener("click", (e) => {
     });
 
     console.log(contaProfissional);
-    //redirecionamento();
 });
 
-const redirecionamento = () => {
-    window.location.href = "http://127.0.0.1:5500/html_Pages/teladeLogin.html";
-}
 
 const resgatandoTipoPCD = (i) =>{
     if(tipoPCD[i].checked === true){
