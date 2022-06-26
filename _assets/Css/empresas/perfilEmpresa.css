@@ -1,0 +1,744 @@
+.cont_header {
+    position: relative;
+}
+
+main {
+    height: 1500px;
+}
+
+/* -- Formatações perfil --*/
+.perfil {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.perfil_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 500px;
+}
+
+/* -- capa perfil --*/
+.capa {
+    width: 100%;
+    height: 250px;
+    background-image: url(../../img/capaPerfil.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    position: relative;
+}
+
+/* -- Informações pessoais do freelancer --*/
+.info_freela {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 28%;
+   
+}
+
+.infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.infos .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 142px;
+    height: 142px; 
+}
+
+
+.avatar img {
+    width: 142px;
+    height: 142px;
+    border-radius: 50%;
+    border: 3px solid var(--cor-primaria);
+}
+
+.emoji {
+    display: flex;
+    justify-content: center;
+    width: 142px;
+    position: absolute;
+    top: 115px;
+}
+
+.emoji img {
+    width: 40px;
+}
+
+/* -- Identificação (Nome nacionalidade) --*/
+.identificacao {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.identificacao h1 {
+    font-family: var(--font-secundaria);
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: .5px;
+}
+
+.lang {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.lang img {
+    width: 25px;
+    margin-top: 2px;
+}
+
+/* -- Cargo (Pcd ou não) --*/
+.cargo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    
+}
+
+.cargo p {
+    font-family: var(--font-secundaria);
+    font-size: .8rem;
+    color: var(--placeholder-color);
+}
+
+.cargo .pcd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    font-family: var(--font-secundaria);
+    color: var(--cor-primaria);
+    font-size: .75rem;
+    background-color: #261313;
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-primaria);
+}
+
+/* -- Avaliações --*/
+.avaliacao {
+    margin-top: 8px;
+}
+
+.avaliacao i {
+    font-size: 1rem;
+    color: var(--placeholder-color);
+}
+
+.avaliacao i.valid {
+    color: var(--cor-primaria);
+}
+
+/* -- Redes sociais --*/
+.redesLinks {
+    display: flex;
+    justify-content: center;
+    position: absolute; 
+    top: 45px;
+    margin-left: 350px;
+}
+
+.redesLinks a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #1D1B26;
+    margin: 0 5px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    transition: all ease .2s;
+}
+
+.redesLinks a i {
+    color: #fff;
+    transition: all ease .2s;
+}
+
+.redesLinks a:hover > i {
+    color: var(--cor-primaria);
+}
+
+
+/* -- Informações extras empresa --*/
+.extra_empresa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 1270px;
+    height: 240px;
+    margin-bottom: 40px;
+}
+
+.tituloSection {
+    font-family: var(--font-principal);
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* -- Habilidades--*/
+.habilidades, .projetosDev {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #1D1B26;
+    width: 40%;
+    height: 180px;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.habilidades h2, .descricao h2 {
+    color: var(--cor-primaria);
+}
+
+.btnsHab {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.btnsHab span {
+    background-color: #151219;
+    padding: 10px;
+    margin: 5px 10px 5px 0;
+    border-radius: 3px;
+    font-family: var(--font-secundaria);
+    font-size: 14px;
+    color: var(--texto-primario);
+}
+
+/* -- Descricao--*/
+.descricao, .historico {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #1D1B26;
+    width: 58%;
+    height: 180px;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.descText {
+    margin-top: 10px;
+    height: 50%;
+    max-height: 50%;
+}
+
+.descText p {
+    font-family: var(--font-secundaria);
+    font-size: 1rem;
+    color: var(--texto-primario);
+    max-height: inherit;
+}
+
+/* -- Projetos--*/
+.projetosDev {
+    background-color: transparent;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.projetosDev h2, .historico h2 {
+    color: var(--lilas-secundario);
+    margin-bottom: 20px;
+}
+
+.projetoAtual, .projetoAnterior {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+    border: 1px solid #312E40;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.projetoText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px;
+}
+
+.tituloProject {
+    font-family: var(--font-secundaria);
+    color: var(--texto-primario);
+}
+
+.ramoEmpresa, .nomeEmpresa {
+    font-family: var(--font-secundaria);
+    color: var(--placeholder-color);
+    font-size: .8rem;
+    margin: 2px;
+}
+
+.historico .projetoAnterior {
+    background-color: var(--bg-primario);
+    border: none;
+    width: 70%;
+    margin-top: 5px;
+}
+
+.historico {
+    height: 308px;
+}
+
+
+/* -- feedback --*/
+.cont_feedback{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 270px;
+    margin: 150px 0;
+
+}
+
+.feedback {
+    display: flex;
+    justify-content: center;
+    width: 1190px;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+     
+}
+
+.slideComments {
+    display: flex;
+    transition: all ease .3s;
+}
+
+/* -- Comment --*/
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #1D1B26;
+    position: relative;
+    width: 370px;
+    border-radius: 8px;
+    margin: 0 10px;
+}
+
+.perfilComment {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.avatarComment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: 2px solid var(--cor-primaria);
+    margin-right: 10px;
+   
+}
+
+.avatarComment img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+}
+
+.perfilComment p {
+    font-family: var(--font-secundaria);
+    font-size: 1rem;
+    color: var(--texto-primario);
+    margin-left: 10px;
+}
+
+.commentText p {
+    font-family: var(--font-secundaria);
+    font-size: .8rem;
+    color: var(--texto-primario);
+    text-align: center;
+}
+
+.avaliacaoComment i {
+    font-size: .9rem;
+    color: var(--placeholder-color);
+}
+
+.avaliacaoComment i.valid {
+    color: var(--cor-primaria);
+}
+
+
+/* -- Comment --*/
+
+.btnControlComments{
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
+    position: absolute;
+}
+
+.btnControlComments button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btnControlComments i{
+    color: #fff;
+    font-size: 2rem;
+    transition: all ease .2s;
+}
+
+.btnControlComments i:hover{
+    color: var(--cor-primaria);
+    
+}
+
+
+
+/* Responsividade */
+@media screen and (max-width: 575.98px) {
+    .row, .cont_equipe, .feedback {
+        width:  90%;
+        flex-wrap: wrap;
+    }
+    
+
+    .cont_feedback {
+        display: none;
+    }
+
+    .infos{
+        margin: 10px;
+    }
+
+    .projetoAtual {
+        width: 103%;
+    }
+   
+    .row {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .row:nth-child(2){
+        margin-bottom: 200px;
+    }
+
+   
+    .habilidades, .projetosDev, .descricao, .historico {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    
+    .btnControlComments {
+        width: 95%;
+    }
+
+    .btnsHab span {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .descText p {
+        font-size: .9rem;
+    }
+
+    .perfil_info  {
+        height: 300px;
+    }
+
+    .info_freela {
+        top: 0px;
+        margin-top: 22%;
+    }
+
+    .avatar img  {
+        width: 70px;
+        height: 70px;
+    }
+
+    .emoji img {
+        width: 15px;
+        margin-top: -10px;
+    }
+
+    .identificacao {
+        justify-content: center;
+        margin-top: -15px;
+    }
+
+
+    .identificacao h1 {
+        font-size: .8rem;
+    }
+
+    .cargo p {
+        font-size: .7rem;
+        width: 100px;
+        height: 20px;
+        border-radius: 4px;
+    }
+
+    .historico .projetoAnterior {
+        width: 100%;
+    }
+
+    .tituloProject {
+        font-size: .8rem;
+    }
+
+    .projetosDev {
+        margin-bottom: 120px;
+    }
+    
+
+    .redesLinks {
+        margin-top: 15px;
+        margin-left: 220px;
+    }
+
+    #cargo, #nomeEmpresa {
+        text-align: center;
+    }
+
+    .lang {
+        display: none;
+    }
+
+    
+
+
+}
+
+/* Small devices (tablet, 576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .row, .cont_equipe, .feedback {
+        width:  90%;
+        flex-wrap: wrap;
+    }
+
+    .infos{
+        margin: 10px;
+    }
+
+    .projetoAtual {
+        width: 103%;
+    }
+   
+    .row {
+        flex-direction: column;
+        height: 100%;
+    }
+
+   
+
+    .habilidades, .projetosDev, .descricao, .historico {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    
+    .btnControlComments {
+        width: 95%;
+    }
+
+    .btnsHab span {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .descText p {
+        font-size: .9rem;
+    }
+
+    .perfil_info  {
+        height: 400px;
+    }
+
+    .info_freela {
+        top: 0px;
+        margin-top: 22%;
+    }
+
+    .avatar img  {
+        width: 110px;
+        height: 110px;
+    }
+
+    .identificacao h1 {
+        font-size: 1rem;
+    }
+
+    .historico {
+        margin-top: 150px;
+    }
+    
+}
+
+/* Small devices (tablet modo paisagem) */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .row, .cont_equipe, .feedback {
+        width:  90%;
+    }
+
+    .row {
+        flex-direction: column;
+        height: 600px;
+    }
+
+    .habilidades, .projetosDev, .descricao, .historico {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .projetoAtual {
+        width: 102%;
+    }
+   
+    
+    .btnControlComments {
+        width: 95%;
+    }
+
+    .btnsHab span {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .descText p {
+        font-size: .9rem;
+    }
+
+    .perfil_info  {
+        height: 400px;
+    }
+
+    .info_freela {
+        top: 0px;
+        margin-top: 22%;
+    }
+
+    .avatar img  {
+        width: 110px;
+        height: 110px;
+    }
+
+    .identificacao h1 {
+        font-size: 1rem;
+    }
+
+    .historico {
+        margin-top: 150px;
+    }
+
+   
+
+   
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .row, .cont_equipe, .feedback {
+        width:  90%;
+    }
+
+    .btnControlComments {
+        width: 95%;
+    }
+
+    .btnsHab span {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .descText p {
+        font-size: .9rem;
+    }
+
+    .info_freela {
+        top: 0px;
+        margin-top: 22%;
+    }
+ 
+    
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media screen and (min-width: 1200px) and (max-width: 1399px)  {
+    .row, .cont_equipe, .feedback {
+        width:  90%;
+    }
+
+    .btnControlComments {
+        width: 95%;
+    }
+
+    .info_freela {
+        top: 0px;
+        margin-top: 22%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
