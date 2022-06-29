@@ -1,0 +1,292 @@
+{
+  "intents": [
+    {
+      "tag": "agradecimentos",
+      "patterns": [
+        "ola",
+        "oi",
+        "opa",
+        "como você esta?",
+        "tem alguem aqui?",
+        "iae",
+        "bom dia",
+        "boa tarde",
+        "boa noite",
+        "fala ae",
+        "suave",
+        "aoba",
+        "salve",
+        "eae",
+        "ei",
+        "tudo bem ?",
+        "tudo bem ? espero que sim",
+        "salve cachorro",
+        "alo",
+        "aoba",
+        "bao",
+        "baum ?",
+        "astroja",
+        "buenos dias",
+        "man",
+        "fala man",
+        "oie",
+        "slv",
+        "eai meu querido",
+        "yo"
+
+      ],
+      "responses": [
+        "Oii :-) Obrigado pela visita, como posso te ajudar ?",
+        "Olá, Obrigado pela visita, Como posso te ajudar ?",
+        "Tudo certo? O que eu posso fazer por você?",
+        "Iae, está precisando de ajuda? Só me diga o que precisa"
+      ]
+    },
+    {
+      "tag": "indo embora",
+      "patterns": [
+        "Tchau", 
+        "te vejo depois", 
+        "adeus",
+        "xau",
+        "falou",
+        "era so isso mesmo", 
+        "e nois",
+        "tchauzinho",
+        "firmeza",
+        "ate logo",
+        "adios",
+        "ate mais tarde",
+        "beijos",
+        "estou indo",
+        "vou indo",
+        "depois nos falamos",
+        "ate mais",
+        "bjooo",
+        "fique com deus",
+        "se cuida",
+        "flw meu querido",
+        "xau maninho"
+      ],
+      "responses": [
+        "Te vejo depois então, Muito obrigado pela visita",
+        "Tenha um ótimo dia",
+        "Tchau! Espero que volte logo"
+      ]
+    },
+    {
+      "tag": "agradecendo",
+      "patterns": [
+        "obrigado", 
+        "muito obrigado", 
+        "você me ajudou bastante", 
+        "valeu pela ajuda",
+        "obrigada",
+        "valeu",
+        "vlw",
+        "obg",
+        "e nois",
+        "pdp",
+        "obrigadx",
+        "brigadao",
+        "oh meu nobre, obrigado",
+        "thanks",
+        "oh meu rei, vlw",
+        "grato",
+        "gratidao",
+        "obrigada"
+      ],
+      "responses": [
+        "Estou feliz por ajudar", 
+        "Não precisa agradecer!", 
+        "Eu que agradeço pela visita"
+      ]
+    },
+    {
+      "tag": "empresa",
+      "patterns": [
+        "sobre o que é esse site ?",
+        "que tipo de negocios posso fazer aqui ?",
+        "esse site serve para o que ?",
+        "esse site faz o que ?",
+        "como funciona a plataforma ?",
+        "nao utilizo essa plataforma",
+        "pode me explicar as funções de seu site ?"
+      ],
+      "responses": [
+        "A Resolute é um Site tanto para empresa quanto para freelancers, aqui a sua empresa pode colocar diversos projetos que você deseja que seja realizado, e os freelancers vão se inscrever tanto sozinhos quanto em equipes para realizar esses projetos. Além disso a nossa espacionave também pode hospedar vagas de emprego para funcionários PCDs. Eai, e so criar a sua conta agora, bora embarcar nessa jornada ? Caso precise de ajuda escreva (me ajuda)"
+      ]
+    },
+    {
+      "tag": "astroja",
+      "patterns": [
+        "quem e voce ?",
+        "com que eu estou falando ?",
+        "voce e um robo ?",
+        "qual a sua historia ?",
+        "quem e astroja",
+        "qual seu nome ?",
+        "quem e seu vulgo ?",
+        "quem e voce na fila do pao ?",
+        "quem e tu ?",
+        "se e quem ?"
+
+      ],
+      "responses": [
+        "Que falta de educação a minha não me apresentar. Meu nome e Astrojá e eu sou comandante principal dessa tripulação que e a Resolute, fui designado para cuidar dos novos tripulantes da Resolute. Eu sou um Chatbot criado com inteligência Artificial e utilizo de linguagem natural para poder te auxiliar melhor. Agora que me apresentei, você precisa da minha ajuda ? Então digite (ajuda)",
+        "Opaa como eu não fui me apresentar antes. Bem meu nome e Astrojá e eu sou comandante principal dessa tripulação que e a Resolute, fui designado para cuidar dos novos tripulantes da Resolute. Eu sou um Chatbot criado com inteligência Artificial e utilizo de linguagem natural para poder te auxiliar melhor. Agora que me apresentei, você precisa da minha ajuda ? Então digite (ajuda)"
+      ]
+    },
+    {
+      "tag": "funcionarios",
+      "patterns": [
+        "Qual é a melhor funcionario do site ?",
+        "Qual funcionario conseguiu a melhor classificação ?",
+        "Qual funcionario teve melhor desempenho ?"
+      ],
+      "responses": [
+        "O funcionário com a maior quantidade de trabalhos e a maior nota foi o '...', a sua maior nota veio pela empresa '...'",
+        "É para já, o funcionário com a maior quantidade de trabalhos e a maior nota foi o '...', a sua maior nota veio pela empresa '...'"
+      ]
+    },
+    {
+      "tag": "ajuda",
+      "patterns": [
+        "o que eu posso perguntar aqui ?",
+        "me ajuda",
+        "preciso de ajuda",
+        "perguntas mais frequentes",
+        "me perdi",
+        "ajuda",
+        "voce pode me ajudar ?",
+        "vc pode me dar informacoes ?",
+        "quais a funcoes do astroja"
+      ],
+      "responses": [
+        "<b>Você pode realizar esses exemplos de pergunta, <br />(Que tipo de negócios posso fazer aqui ?) <br />(Quem é você ?) <br />(Qual é a melhor equipe do site ?) <br />(Quero me cadastrar) <br />(Como a plataforma funciona) <br />(Oportunidades de emprego).</b>"
+      ]
+    },
+    {
+      "tag": "perfil",
+      "patterns": [
+        "quem viu a minha conta ?",
+        "quantas pessoas viram a minha conta ?",
+        "alguem viu a minha conta ?",
+        "iae viram minha conta ?",
+        "quantos ser humano viu a minha conta ?",
+        "meu rei quantos nego viram minha conta ?",
+        "visualizaram meu perfil ?",
+        "viram o meu perfil ?",
+        "quantos viram meu perfil",
+        "quem viu o meu perfil ?",
+        "perfil"
+      ],
+      "responses": [
+        "O seu perfil foi visualizado por 10 pessoas e 2 empresas.",
+        "Você não está conectado em sua conta, por favor entre em sua conta para realizar essa pergunta ?"
+      ]
+    },
+    {
+      "tag": "vagas",
+      "patterns": [
+        "melhores vagas de emprego 2022",
+        "da um emprego pra nois",
+        "me indica para uma vaga de emprego",
+        "oportunidades de emprego",
+        "quero emprego",
+        "quais vagas tem ?",
+        "vagas de emprego",
+        "vem empreguinho",
+        "quero empreguinho",
+        "onde fica a area de vagas",
+        "vagas"
+      ],
+      "responses": [
+        "Para visualizar as suas vagas compatíveis você pode acessar a área de ( <a href='http://127.0.0.1:5500/html_Pages/empresas.html'>Vagas</a> ), você pode filtrar a sua escolha."
+      ]
+    },
+    {
+      "tag": "cadastro",
+      "patterns": [
+        "quero me cadastrar",
+        "como me cadastro",
+        "preciso me cadastrar",
+        "preciso de uma conta",
+        "criar conta",
+        "iniciar cadastro ?",
+        "cadastro",
+        "cadastra"
+      ],
+      "responses": [
+        "Para se castrar é bem fácil apenas entre nesse link e você pode iniciar a sua conta ( <a href='http://127.0.0.1:5500/html_Pages/telaEscolhaDeRegistro.html'>Cadastre-se</a> )."
+      ]
+    },
+    {
+      "tag": "vagas expecificas",
+      "patterns": [
+        "qual vaga se encaixa no meu perfil ?",
+        "qual vaga e boa pra mim ?",
+        "vaga para mim",
+        "minhas vagas",
+        "quero minhas vagas"
+      ],
+      "responses": [
+        "Nós separamos 10 vagas muito interessantes para você, pode entrar agora no ( <a href='http://127.0.0.1:5500/html_Pages/empresas.html'>Vagas</a> )."
+      ]
+    },
+    {
+      "tag": "empresas",
+      "patterns": [
+        "eu quero achar uma empresa",
+        "quais as melhores empresas",
+        "quais sao as empresas modelo",
+        "me fale as empresas mais fodas",
+        "empresas incriveis",
+        "empresas fodas",
+        "melhores empresas",
+        "procuro empresas"
+
+      ],
+      "responses": [
+        "<p>As empresas modelos do site são <br />(1° ???) <br />(2° ???) <br />(3° ???) <br />(4° ???) <br />(5° ???) <br />(6° ???) <br />(7° ???) <br />(8° ???) <br />(9° ???) <br />(10° ???).</p>"
+      ]
+    },
+    {
+      "tag": "musicas",
+      "patterns": [
+        "qual musica oce gosta ?",
+        "que tipo de musica voce gosta ?",
+        "musicas que voce gosta",
+        "musica"
+      ],
+      "responses": [
+        "A minha música favorita é a Uma Odisseia no Espaço ."
+      ]
+    },
+    {
+      "tag": "piadas",
+      "patterns": [
+        "piada",
+        "quero rir"
+      ],
+      "responses": [
+        "Qual o pote que toca musica ?... O spotify",
+        "Como um dançarino faz um círculo no chão ? Compasso",
+        "Quer fazer o passarinho rir? Taca ele na parede que ele racha o bico"
+      ]
+    },
+    {
+      "tag": "buscaFreela",
+      "patterns": [
+        "qual o melhor freelancer ?",
+        "quero contratar um freelancer",
+        "buscar freelancers",
+        "freelas",
+        "freela"
+      ],
+      "responses": [
+        "Para pesquisar os seus freelancers, é so clicar aqui ( <a href='http://127.0.0.1:5500/html_Pages/freelancer.html'>Freelancers</a> )"
+      ]
+    }
+  ]
+}
