@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+    
+<html lang="pt-br">
+    
+<head>
+   <!--Meta tags-->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="editar">
+   <meta name="description" content="editar">
+   <meta name="author" content="editar">
+
+   <!-- Font Awesome -->
+   <script src="https://kit.fontawesome.com/2bf2ec62ee.js" crossorigin="anonymous"></script>
+
+   <!-- Styles -->
+   <link rel="stylesheet" href="../_assets/Css/index/header.css">
+   <link rel="stylesheet" href="../_assets/Css/criarVaga/criarProjeto.css">
+   <link rel="stylesheet" href="../_assets/Css/freelancer/footer.css">
+   <link rel="stylesheet" href="../_assets/Css/global.css">
+  
+   
+   <title>Resolute - Vagas de empresas</title>
+</head>
+    
+<body>
+
+   <!--ínicio header-->
+   <header class="cont_header">
+      <div class="header_items">
+          <div class="logo">
+              <a href="index.html">
+                  <img src="../_assets/img/resolute2-depositphotos-bgremover.png" alt="Logo">
+                  <span>Resolute</span>
+              </a>
+          </div>
+
+          <navbar class="cont_navbar">
+              <ul class="lista">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="freelancer.html">Buscar profissinal</a></li>
+                  <li><a href="empresas.html">Vagas de empresa</a></li>
+                  <li><a href="comofunciona.html">Como funciona</a></li>
+                  <li><a href="contato.html">Entrar em contato</a></li>
+              </ul>
+          </navbar>
+
+          <div class="acesso">
+              <a href="#registro" class="btn-criar">
+                  <i class="fa-solid fa-user-plus"></i>
+                  Criar conta
+              </a>
+
+              <a href="#login">
+                  <button class="btn-entrar">Entrar</button>
+              </a>
+          </div>
+
+          
+          <button class="btn_mobile"></button>
+      </div>
+
+  
+      <div class="menu_mobile">
+        
+              <a href="index.html">
+                  <button class="mobile_home backgroundIconAtivo">
+                      <div class="iconHome iconHomeAtivo"></div>
+                  </button>
+              </a>
+
+              <a href="#">
+                  <button class="mobile_salvo">
+                      <div class="iconSalvo"></div>
+                  </button>
+              </a>
+
+              <a href="#">
+                  <button class="mobile_pesq">
+                      <div class="iconPesq"></div>
+                  </button>
+              </a>
+
+              <a href="#">
+                  <button class="mobile_user">
+                      <div class="iconUser"></div>
+                  </button>
+              </a>
+      
+      </div>
+  </header>
+  <!--Final header-->
+
+  <!-- Início Etapas de criação -->
+    <section class="etapa01">
+
+        <div class="div_nivel">
+            <div class="nivel nivel_atual" id="etapa01"> ETAPA 01 </div>
+            <div class="nivel" id="etapa02"> ETAPA 02 </div>
+            <div class="nivel" id="etapa03"> ETAPA 03 </div>
+        </div>
+
+        <!-- PRIMEIRO FORM -->
+
+        <div class="etapa form_ativo" id="form01">
+            <div class="sobre_projeto">
+                <h3>CRIANDO UM PROJETO RESOLUTE</h3>
+            </div>
+
+            <div class="formsProject" id="fP01">
+                <div class="titulo">
+                    <input type="text" placeholder="Digite o título do projeto" id="tituloProjeto">
+                </div>
+                <div class="descricao">
+                    <textarea placeholder="Descreva o projeto" cols="30" rows="10" id="descricao"></textarea>
+                    <textarea placeholder="Descreva as atividades que o profissional irá realizar " cols="30" rows="10" id="atividades"></textarea>
+                </div>
+                <div class="botao">
+                    <button class="continuar" id="btn_continuar01">Continuar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEGUNDO FORM -->
+
+        <div class="etapa" id="form02">
+            <div class="sobre_projeto">
+                <h3>CRIANDO UM PROJETO RESOLUTE</h3>
+            </div>
+
+            <div class="formsProject">
+                <div class="box-checked">
+                    <div class="check-align">
+                        <input class="checkbox-padrao" type="checkbox" id="pcdTrue" value="1">
+                        <label for="">Vaga PCD</label>
+                    </div>
+                    <div class="check-align">
+                        <input class="checkbox-padrao" type="checkbox" id="pcdFalse" value="0">                          
+                          <label for="">Não é uma vaga para profissionais PCD</label> 
+                    </div>
+                </div>
+
+                <div class="cont_infosPCD">
+                <div class="escolha_vaga">
+                
+                    <div class="pref-vaga">    
+                        <label for="preferencia_vaga"> Ambiente de trabalho adaptado</label>
+                        <select id="exclusiva" class="select-padrao" tabindex="0">
+                            <option value="1">Adaptado e acessível</option>
+                            <option value="0">Não adaptado</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select_defic">
+                    Deficiência Específica
+                    <div class="div_defic">
+                        <div class="tipo-defic">
+                            Deficiência Visual
+                            <input class="checkbox-padrao check-defic" type="checkbox" value="Deficiência Visual" id="visual">
+                        </div>
+                        <div class="tipo-defic">
+                            Deficiência Auditiva
+                            <input class="checkbox-padrao check-defic" type="checkbox" value="Deficiência Física" id="auditiva">
+                        </div>
+                        <div class="tipo-defic">
+                            Deficiência Fisica
+                            <input class="checkbox-padrao check-defic" type="checkbox" value="Deficiência Mental" id="fisica">
+                        </div>
+                        <div class="tipo-defic">
+                            Deficiência Mental
+                            <input class="checkbox-padrao check-defic" type="checkbox" value="Deficiência Mental" id="mental">
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+
+
+                <div class="botao">
+                    <button class="continuar" id="btn_continuar02">Continuar</button>
+                    <button class="voltar" id="btn_voltar01">Voltar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TERCEIRO FORM -->
+
+        <div class="etapa" id="form03">
+            <div class="sobre_projeto">
+                <h3>CRIANDO UM PROJETO RESOLUTE</h3>
+            </div>
+
+            <div class="formsProject">
+                <div class="area-atuacao" id="inicial-block">
+                    <div class="block-select">
+                        <label class="" for="atuacao-profissional">Área de atuação do profissinal </label>
+                        <select class="select-padrao" tabindex="0" id="categoria">
+                           <option value="Programacao e TI">Programação em TI</option>
+                           <option value="Design">Design</option>
+                           <option value="Infraestrutura">Infraestrutura</option>
+                           <option value="Marketing e Vendas">Marketing e Vendas</option>
+                           <option value="Administracao">Administração</option>
+                            
+                        </select>
+                    </div>
+                    <div class="block-add">
+                        <div class="plus">+</div>
+                        <label for="">Adicionar mais uma área</label>  
+                    </div>
+                </div>
+                <div class="area-atuacao">
+                    <div class="block-select">
+                        <label class="" for="atuacao-profissional">Especialidades exigidas </label>
+                        <select class="select-padrao" tabindex="0" id="especialidade">
+                            <option value="front-end" selected>Front-End</option>
+                            <option value="back-end">Back-End</option>
+                            <option value="design">Design UI/UX</option>
+                            <option value="banco-dados">Banco de Dados</option>
+                        </select>
+                    </div>
+                    <div class="block-select">
+                        <label  class="hack" for="">Sua experiência</label>
+                        <select  class="select-padrao" tabindex="0" id="experiencia">
+                            <option value="null">Experiência</option>
+                            <option value="1">Sim</option>
+                            <option value="0">Não</option>
+                        </select>
+                    </div>
+                    <div class="block-add">
+                        <div class="plus">+</div>
+                        <label for="">Adicionar mais uma área</label>  
+                    </div>
+                </div>
+                <div class="area-atuacao">
+                    <div class="block-select">
+                        <label class="" for="atuacao-profissional">Forma de pagamento</label>
+                        <select class="select-padrao" tabindex="0" id="formaPag">
+                            <option value="0" selected>Escolha o preço por hora</option>
+                            <option value="hora">Por hora</option>
+                            <option value="semana">Semanal</option>
+                            <option value="mes">Mensal</option>
+                            <option value="ano">Anual</option>
+                        </select>
+                    </div>
+                    <div class="block-select">
+                        <label for="">Digite o valor</label>
+                        <input type="number" id="valorPag" placeholder="Ex 20..." class="input">
+                    </div>
+                </div>
+                <div class="botao">
+                    <button class="continuar" id="btn_finalizar">Final</button>
+                    <button class="voltar" id="btn_voltar02">Voltar</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section> 
+    
+
+  <!-- Final Etapas de criação -->
+  
+  <!-- Inicio footer -->
+   <footer>
+      <div class="footerCopy">
+
+          <div class="logoFooter">
+              <div class="logoImg">
+                  <img src="../_assets/img/logoFooter.png">
+                  <h1>Resolute</h1>
+              </div>
+              <p>&copy; 2022 | resolute - todos os direitos reservados</p>
+          </div>
+
+
+         <div class="lang">
+          <select name="lang">
+              <option value="portugues">Português</option>
+              <option value="ingles">English</option>
+          </select>
+         </div>
+      </div>
+
+      <div class="footerLinks">
+          <div class="footerInfo">
+              <p>Informações sobre a Resolute</p>
+
+              <ul class="footerLista">
+                  <li><a href="#">Quem somos nós</a></li>
+                  <li><a href="#">Contatos</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">LGPD</a></li>
+                  <li><a href="#">Termos de Uso</a></li>
+                  <li><a href="#">Política de Privacidade</a></li>
+                  <li><a href="#">Parcerias e instituições</a></li>
+              </ul>
+          </div>
+
+
+          <div class="footerFreelas">
+              <p>Encontre os freelancers</p>
+              <ul class="footerLista">
+                  <li><a href="#">Design</a></li>
+                  <li><a href="#">Comunicação</a></li>
+                  <li><a href="#">Marketing e vendas</a></li>
+                  <li><a href="#">Programadores</a></li>
+              </ul>
+          </div>
+
+
+          <div class="footerParcerias">
+              <p>Parcerias</p>
+              <ul class="footerLista">
+                  <li><a href="#">Empresas parceiras</a></li>
+                  <li><a href="#">instituições parceiras</a></li>
+                  <li><a href="#">Torne-se uma empresa parceira</a></li>
+                  <li><a href="#">Benefícios</a></li>
+              </ul>
+          </div>
+
+
+          <div class="footerAcessibilidade">
+              <p>Acessibilidade</p>
+              <ul class="footerLista">
+                  <li><a href="#">Leitores da tela</a></li>
+                  <li><a href="#">Aumento de fonte e contraste</a></li>
+                  <li><a href="#">Cores para Daltonicos</a></li>
+                  <li><a href="#">Documentação da Acessibilidade</a></li>
+              </ul>
+          </div>
+      </div>
+  </footer>
+  <!-- Final footer -->
+
+  <script src="../_assets/js/projeto/cadastroProjeto.js"></script>
+  <script src="../_assets/js/index/mobileMenu.js"></script>
+
+</body>
+    
+</html>
