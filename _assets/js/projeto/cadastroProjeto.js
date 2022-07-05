@@ -80,11 +80,11 @@ class Projeto {
         this.auditiva = auditiva;
         this.fisica = fisica;
         this.mental = mental;
-        this.ramo = areaAtuacao;
-        this.habilidade = especialidade;
-        this.tempoExperiencia = experiencia;
-        this.formaPagamento = formaPag;
-        this.precoHora = valorPag;
+        this.areaAtuacao = areaAtuacao;
+        this.especialidade = especialidade;
+        this.experiencia = experiencia;
+        this.formaPag = formaPag;
+        this.valorPag = valorPag;
     }
 }
 

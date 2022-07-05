@@ -9,7 +9,6 @@
     justify-content: center;
     align-items: center;
     font-family: var(--font-secundaria);
-    justify-content: center;
     margin-top: 128px;
     position: relative;
 }
@@ -66,22 +65,53 @@
 /* --- Responsive progressBar --- */
 /* Extra small devices (portrait phones, less than 576px)*/
 @media screen and (max-width: 575.98px) {
+    .linha-vertical {
+       display: none;
+    }
+
+    .categ_profissional{
+        width: 100%;
+    }
+
+    .tipo_profissional{
+        width: 80%;
+        align-items: center;
+        padding: 3rem 0rem 3rem 1.8rem;
+    }
 
     .categ_profissional h3{
-        margin-left: 3rem;
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 0px;
     }
 
-    .linha-vertical {
-        height: 450px;
+    .profissao{
+        font-size: 0.8rem;
+        padding: 0.8rem 0.8rem;
     }
-
 }
 
 /* Small devices (tablet, 576px and up) */
 @media screen and (min-width: 576px) and (max-width: 767.98px) {
 
     .linha-vertical {
-        height: 200px;
+        display: none;
+    }
+
+    .categ_profissional{
+        width: 100%;
+    }
+
+    .categ_profissional h3{
+        margin-left: 1.6rem;
+    }
+
+    .tipo_profissional{
+        width: 680px;
+    }
+
+    .profissao{
+        font-size: 0.8rem;
     }
 
 }
@@ -90,8 +120,17 @@
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
 
     .linha-vertical {
-        height: 170px;
+       display: none;
     }
+
+    .tipo_profissional{
+        width: 860px;
+    }
+
+    .profissao{
+        font-size: 0.8rem;
+    }
+    
 
 }
 
@@ -100,6 +139,10 @@
 
     .linha-vertical {
         height: 130px;
+    }
+
+    .tipo_profissional{
+        width: 980px;
     }
 
 }

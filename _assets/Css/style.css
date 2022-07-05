@@ -13,6 +13,7 @@ html {
     bottom: 30px;
     right: 30px;
     font-family: "inter", sans-serif;
+    z-index: 99999;
 }
 
 /* CONTENT IS CLOSE */
@@ -23,7 +24,7 @@ html {
     width: 300px;
     height: 350px;
     z-index: -123456;
-    opacity: 0;
+    display: none;
     transition: all .5s ease-in-out;
     margin-bottom: 10px;
 }
@@ -32,7 +33,7 @@ html {
 .chatbox--active {
     transform: translateY(-40px);
     z-index: 123456;
-    opacity: 1;
+    display: block;
 
 }
 
@@ -194,4 +195,14 @@ html {
     right: 20px;
     bottom: 20px;
     position: fixed;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 767.98px) {
+
+    .chatbox{
+        bottom: 128px;
+
+    }
 }
